@@ -1,14 +1,9 @@
-# Fotografias da Clínica Essencial
+﻿# Essencial Care — assets
 
-As imagens ainda não estão disponíveis. Coloque arquivos WebP reais nesta pasta; a página substitui os fallbacks automaticamente. Não existem arquivos binários vazios.
+O Modelo Médico 01 usa o banco compartilhado em `../shared/`, sem duplicar fotos nesta pasta.
 
-| Arquivo | Conteúdo sugerido | Dimensão sugerida |
-| --- | --- | --- |
-| hero-doctor.webp | Médica em consultório, enquadramento vertical | 1000 × 1200 |
-| clinic-interior.webp | Recepção ou interior da clínica | 1200 × 900 |
-| dra-helena.webp | Retrato profissional ilustrativo | 800 × 1000 |
-| patient-01.webp | Retrato ilustrativo de Mariana | 160 × 160 |
-| patient-02.webp | Retrato ilustrativo de Rafael | 160 × 160 |
-| patient-03.webp | Retrato ilustrativo de Ana | 160 × 160 |
+Hero: `hero-doctor.webp`. Sobre: `clinic-reception.webp` e `clinic-detail.webp`. Equipe: `doctor-profile.webp`, `doctor-male.webp` e `team.webp`. Depoimentos e avatares: `patient-01.webp` a `patient-03.webp`. As imagens de especialidades, estrutura, conteúdos e agendamento também vêm do mesmo banco.
 
-Use fotografias licenciadas ou autorizadas. Profissionais e depoimentos são fictícios; os retratos não devem sugerir endosso real. Hero carregado com prioridade; demais fotos sob demanda. O layout original continua disponível se algum arquivo faltar ou falhar.
+A prévia do catálogo é construída em JSX com a fotografia compartilhada; o SVG antigo foi substituído. As referências em `../references/modelo-01/` são material de consulta e não aparecem dentro da página.
+
+Fotos de hero têm prioridade de carregamento; as demais usam lazy loading. Imagens são recortadas com object-fit e object-position. Nomes, indicadores e registros profissionais são fictícios. Algumas fotos do banco ainda incluem a marca anterior na própria imagem; os arquivos fornecidos foram preservados.

@@ -1,0 +1,32 @@
+:root {
+  --orbis-navy:#07133b;
+  --orbis-navy-deep:#061239;
+  --orbis-blue:#0a66f5;
+  --orbis-blue-strong:#004fce;
+  --orbis-button:#096bf5;
+  --orbis-cyan:#39c8ff;
+  --orbis-glow:#0f8fff;
+  --orbis-white:#fff;
+  --orbis-surface:#f1f5ff;
+  --orbis-text:#10204a;
+  --orbis-muted:#536287;
+  --orbis-whatsapp:#25d366;
+}
+.orbis-shell {
+  --oh-background:var(--orbis-navy);
+  --oh-panel:#0c1b45;
+  --oh-panel-alt:#10214c;
+  --oh-text:#fff;
+  --oh-muted:#a4b2d1;
+  --oh-border:#ffffff12;
+  --oh-shadow:0 20px 55px #03092330;
+}
+[data-theme="light"] .orbis-shell {
+  --oh-background:var(--orbis-surface);
+  --oh-panel:#fff;
+  --oh-panel-alt:#e8eefa;
+  --oh-text:var(--orbis-text);
+  --oh-muted:var(--orbis-muted);
+  --oh-border:#10204a18;
+  --oh-shadow:0 20px 55px #10204a0d;
+}

@@ -1,0 +1,25 @@
+.medical-essential {
+  --ec-primary: #174E4B;
+  --ec-primary-light: #2F6F69;
+  --ec-sage: #A8BDB3;
+  --ec-cream: #F6F2EA;
+  --ec-warm-white: #FCFBF8;
+  --ec-surface: #FFFFFF;
+  --ec-text: #18312F;
+  --ec-muted: #687B78;
+  --ec-border: #DFE7E3;
+  --ec-success: #4F8068;
+  --ec-accent: #D8B77A;
+
+  --ec-font-sans: "DM Sans", Arial, sans-serif;
+  --ec-font-serif: "Lora", Georgia, serif;
+
+  --ec-radius-card: 24px;
+  --ec-shadow-card: 0 18px 50px rgba(23, 49, 47, 0.08);
+
+  --ec-transition-fast: 180ms ease;
+  --ec-transition-card: 240ms ease;
+  --ec-transition-menu: 300ms ease;
+  --ec-transition-page: 400ms ease;
+  --ec-transition-image: 500ms ease;
+}

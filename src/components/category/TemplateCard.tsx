@@ -25,7 +25,7 @@ export function TemplateCard({
           <span />
         </div>}
 
-        {template.preview ? <img className="template-preview__image" src={template.preview} alt={`Composição visual do modelo ${template.name}, estilo ${template.style}`} loading="lazy" width={640} height={400} /> : <div className="template-preview__mockup">
+        {template.id === 'medico-01' ? <div className="orbis-care-preview"><div><span>ESSENCIAL CARE</span><strong>Cuidado médico<br />que começa<br /><em>ouvindo você.</em></strong><small>Agendar consulta →</small></div><img src="/images/medico/shared/hero-doctor.webp" alt="Prévia fotográfica da Essencial Care" loading="lazy" width={1672} height={941} /></div> : template.preview ? <img className="template-preview__image" src={template.preview} alt={`Composição visual do modelo ${template.name}, estilo ${template.style}`} loading="lazy" width={640} height={400} /> : <div className="template-preview__mockup">
           <span className="template-preview__label">
             {template.style}
           </span>
@@ -40,12 +40,15 @@ export function TemplateCard({
           </span>
         </div>}
 
+        <span className="orbis-preview-overlay">Ver demonstração<ArrowUpRight size={18} /></span>
+
         <span className="template-preview__open">
           <ArrowUpRight size={18} />
         </span>
       </Link>
 
       <div className="template-card__content">
+        <span className={`orbis-status ${template.available ? '' : 'orbis-status--pending'}`}><i />{template.available ? 'Disponível' : 'Em preparação'}</span>
         <div className="template-card__heading">
           <div>
             <span>

@@ -1,108 +1,23 @@
-import { ArrowLeft, LayoutGrid } from 'lucide-react'
+﻿import { ArrowLeft, ArrowUpRight, ChevronRight, LayoutGrid } from 'lucide-react'
 import { Link, Navigate, useParams } from 'react-router-dom'
-
 import { Header } from '../../components/common/Header'
+import { OrbisFooter } from '../../components/common/OrbisFooter'
 import { TemplateCard } from '../../components/category/TemplateCard'
 import { categories } from '../../data/categories'
 import { getTemplatesByCategory } from '../../data/templates'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle'
+import { useReveal } from '../../hooks/useReveal'
 
 export function CategoryPage() {
   const { categorySlug } = useParams()
-
-  const category = categories.find(
-    (item) => item.slug === categorySlug,
-  )
-
-  if (!category) {
-    return <Navigate to="/404" replace />
-  }
-
-  const categoryTemplates =
-    getTemplatesByCategory(category.slug)
-
-  return (
-    <>
-      <Header />
-
-      <main>
-        <section className="category-hero">
-          <div className="container">
-            <Link to="/" className="back-link">
-              <ArrowLeft size={17} />
-              Todas as categorias
-            </Link>
-
-            <div className="category-hero__content">
-              <div className="category-hero__icon">
-                <category.icon size={29} />
-              </div>
-
-              <span className="section-eyebrow">
-                Coleção {category.name}
-              </span>
-
-              <h1>
-                Landing pages para
-                <span> {category.name}</span>
-              </h1>
-
-              <p>{category.description}</p>
-
-              <div className="category-hero__count">
-                <LayoutGrid size={17} />
-                {categoryTemplates.length} designs disponíveis
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="templates-section">
-          <div className="container">
-            <div className="section-heading">
-              <div>
-                <span className="section-eyebrow">
-                  Escolha seu estilo
-                </span>
-
-                <h2>Explore os modelos</h2>
-
-                <p>
-                  Cada opção apresenta uma abordagem visual
-                  diferente para o mesmo segmento.
-                </p>
-              </div>
-            </div>
-
-            {categoryTemplates.length > 0 ? (
-              <div className="templates-grid">
-                {categoryTemplates.map((template, index) => (
-                  <TemplateCard
-                    key={template.id}
-                    template={template}
-                    index={index}
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="empty-state">
-                <h3>Modelos em preparação</h3>
-
-                <p>
-                  A coleção de {category.name} será adicionada
-                  em breve.
-                </p>
-
-                <Link
-                  to="/"
-                  className="empty-state__button"
-                >
-                  Explorar outras categorias
-                </Link>
-              </div>
-            )}
-          </div>
-        </section>
-      </main>
-    </>
-  )
+  const category = categories.find(item => item.slug === categorySlug)
+  useDocumentTitle(category ? `${category.slug === 'medico' ? 'Modelos para Médicos' : `Modelos de ${category.name}`} | OrbisCore` : 'Página não encontrada | OrbisCore')
+  const ref = useReveal()
+  if (!category) return <Navigate to="/404" replace />
+  const categoryTemplates = getTemplatesByCategory(category.slug)
+  const Icon = category.icon
+  return <div className="orbis-shell" ref={ref}><Header /><main>
+    <section className="orbis-category-hero"><div className="container"><nav className="orbis-breadcrumb" aria-label="Breadcrumb"><Link to="/">Início</Link><ChevronRight size={13} /><Link to="/#categorias">Categorias</Link><ChevronRight size={13} /><span aria-current="page">{category.name}</span></nav><Link to="/" className="orbis-text-link"><ArrowLeft size={16} />Todas as categorias</Link><div className="orbis-category-heading"><div><span className="orbis-category-icon"><Icon size={30} strokeWidth={1.5} /></span><span className="orbis-eyebrow">COLEÇÃO / {category.name.toLocaleUpperCase('pt-BR')}</span><h1>Experiências para<br /><span>{category.slug==='medico'?'cuidar da presença.':category.name+'.'}</span></h1><p>{category.description}</p><span className="orbis-collection-count"><LayoutGrid size={17} />{categoryTemplates.filter(template=>template.available).length} modelos disponíveis</span></div><div className="orbis-category-art" aria-hidden="true"><Icon size={150} strokeWidth={.65} /><span>0{categories.findIndex(item=>item.id===category.id)+1} / 08</span></div></div></div></section>
+    <section className="orbis-section" id="modelos"><div className="container"><div className="orbis-section-heading" data-reveal><div><span className="orbis-eyebrow">ESCOLHA SUA DIREÇÃO</span><h2>Oito modelos.<br />Diferentes pontos de partida.</h2></div><p>Explore composições, tipografias e experiências. Cada demonstração abre o universo visual do próprio modelo.</p></div>{categoryTemplates.length ? <div className="orbis-template-grid">{categoryTemplates.map((template,index)=><TemplateCard key={template.id} template={template} index={index} />)}</div> : <div className="orbis-empty"><h2>Modelos em preparação</h2><p>Esta coleção será adicionada em breve.</p><Link to="/" className="orbis-button">Explorar categorias<ArrowUpRight size={17} /></Link></div>}</div></section>
+  </main><OrbisFooter /></div>
 }

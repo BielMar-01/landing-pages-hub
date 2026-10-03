@@ -1,0 +1,224 @@
+.orbis-shell { min-height:100vh; background:var(--oh-background); color:var(--oh-text); font-family:var(--font-sans); overflow-x:clip; }
+.orbis-shell * { min-width:0; }
+.orbis-shell section[id] { scroll-margin-top:100px; }
+.orbis-shell h1,.orbis-shell h2 { letter-spacing:-.055em; line-height:1.08; font-weight:500; text-wrap:balance; }
+.orbis-shell h2 { font-size:clamp(31px,4vw,50px); }
+.orbis-shell p { line-height:1.8; color:var(--oh-muted); }
+[data-theme=light] .orbis-shell :focus-visible { outline-color:var(--orbis-blue); }
+.orbis-shell a,.orbis-shell button { transition:background 200ms,border-color 200ms,transform 200ms,color 200ms,box-shadow 240ms; }
+.orbis-eyebrow { display:flex; align-items:center; gap:10px; font-size:10px; letter-spacing:2.5px; font-weight:600; color:var(--orbis-cyan); margin-bottom:22px; }
+[data-theme=light] .orbis-shell .orbis-eyebrow { color:var(--orbis-blue); }
+.orbis-eyebrow i { display:block; width:6px; height:6px; background:var(--orbis-cyan); border-radius:50%; box-shadow:0 0 14px #39c8ff60; }
+.orbis-button { display:inline-flex; align-items:center; justify-content:center; gap:18px; min-height:48px; padding:14px 23px; border:1px solid #2786ff; border-radius:9px; color:white; background:var(--orbis-button); font-size:13px; font-weight:500; cursor:pointer; }
+.orbis-shell .orbis-button:hover { background:var(--orbis-blue-strong); transform:translateY(-2px); box-shadow:0 6px 24px #0a66f526; }
+.orbis-button svg,.orbis-text-link svg { transition:transform 200ms; flex-shrink:0; }
+.orbis-button:hover svg,.orbis-text-link:hover svg { transform:translateX(3px); }
+.orbis-text-link { display:inline-flex; align-items:center; gap:12px; min-height:44px; padding:12px 0; font-size:13px; }
+.orbis-actions { display:flex; align-items:center; flex-wrap:wrap; gap:24px; }
+.orbis-skip { position:fixed; top:10px; left:10px; padding:12px; background:var(--orbis-blue); color:white; z-index:110; transform:translateY(-200%); }
+.orbis-skip:focus { transform:none; }
+.orbis-header { position:sticky; top:0; z-index:60; background:var(--orbis-navy-deep); color:white; border-bottom:1px solid #ffffff0f; transition:background 300ms,box-shadow 300ms; }
+.orbis-header.is-scrolled { background:#061239eb; backdrop-filter:blur(18px); box-shadow:0 4px 28px #00000010; }
+.orbis-header-row { min-height:82px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.orbis-brand { display:inline-flex; align-items:center; gap:12px; color:white; }
+.orbis-brand > svg { color:var(--orbis-cyan); flex-shrink:0; }
+.orbis-brand > span { font-size:23px; font-weight:600; letter-spacing:-1px; line-height:1.15; }
+.orbis-brand small { display:block; font-size:9px; font-weight:400; letter-spacing:2.5px; text-transform:uppercase; margin-top:6px; color:#9baacb; }
+.orbis-header-controls { display:flex; align-items:center; gap:8px; }
+.orbis-shell .theme-toggle,.orbis-menu-toggle { display:grid; place-items:center; width:44px; height:44px; background:#ffffff07; color:white; border:1px solid #ffffff12; border-radius:9px; cursor:pointer; }
+.orbis-navigation { position:fixed; top:82px; inset-inline:0; height:calc(100dvh - 82px); padding:30px; background:var(--orbis-navy-deep); display:flex; flex-direction:column; gap:15px; opacity:0; visibility:hidden; transform:translateY(-10px); transition:opacity 300ms,visibility 300ms,transform 300ms; overflow-y:auto; }
+.orbis-navigation.is-open { opacity:1; visibility:visible; transform:none; }
+.orbis-navigation > a:not(.orbis-button) { min-height:44px; padding:12px 0; color:#c8d4ec; font-size:19px; }
+.orbis-navigation .orbis-button { margin-top:16px; align-self:start; }
+.orbis-hero { position:relative; background:radial-gradient(ellipse at 75% 28%,#0f8fff20,transparent 48%),var(--orbis-navy); color:white; padding:56px 0 24px; overflow:hidden; }
+.orbis-hero::before { content:''; position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(#ffffff03 1px,transparent 1px),linear-gradient(90deg,#ffffff03 1px,transparent 1px); background-size:66px 66px; mask-image:linear-gradient(90deg,transparent,#000); }
+.orbis-hero .container { position:relative; }
+.orbis-hero-grid { display:grid; gap:30px; }
+.orbis-hero-copy h1 { font-size:clamp(42px,5.7vw,78px); margin:0 0 26px; }
+.orbis-hero-copy h1 > span { color:var(--orbis-cyan); }
+.orbis-hero-copy > p { color:#a6b5d4; font-size:16px; max-width:49ch; margin-bottom:30px; }
+.orbis-hero .orbis-eyebrow { color:var(--orbis-cyan)!important; }
+.orbis-hero-stats { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; border-top:1px solid #ffffff14; margin-top:38px; padding-top:26px; }
+.orbis-hero-stats strong { display:block; font-size:25px; font-weight:500; letter-spacing:-1px; }
+.orbis-hero-stats span { display:block; font-size:10px; color:#95a6cc; margin-top:5px; }
+.orbis-hero-bottom { display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; margin-top:40px; padding-top:22px; border-top:1px solid #ffffff10; font-size:9px; letter-spacing:2px; color:#8396c4; }
+.orbis-hero-bottom > span:last-child { display:flex; align-items:center; gap:12px; letter-spacing:0; }
+.orbis-showcase { position:relative; min-height:350px; margin:20px 0 0; isolation:isolate; }
+.orbis-showcase-orbit { position:absolute; width:310px; height:310px; border:1px solid #39c8ff1f; border-radius:50%; top:0; left:15%; box-shadow:0 0 0 50px #39c8ff04,0 0 0 100px #39c8ff03; }
+.orbis-browser { position:absolute; border:1px solid #ffffff20; border-radius:13px; overflow:hidden; box-shadow:0 30px 70px #02092365; background:#0d214f; }
+.orbis-browser--main { width:88%; top:15px; left:0; transform:rotate(-4deg); }
+.orbis-browser-bar { display:flex; align-items:center; gap:4px; padding:13px 15px; color:#8298c6; background:#0b1b42; }
+.orbis-browser-bar > span { width:4px; height:4px; border-radius:50%; background:#8d9fc444; }
+.orbis-browser-bar small { margin-inline:auto; font-size:8px; letter-spacing:.5px; }
+.orbis-browser-page { display:grid; grid-template-columns:1fr 1fr; background:#f6f2ea; color:#174e4b; }
+.orbis-browser-page > div { padding:20px 14px; }
+.orbis-browser-page > div > span:first-child { font-size:7px; letter-spacing:1px; }
+.orbis-browser-page h2 { font-family:Lora,Georgia,serif; font-size:clamp(20px,2.2vw,30px); letter-spacing:-1px; margin:18px 0; }
+.orbis-browser-page img { width:100%; height:100%; object-fit:cover; object-position:45% center; }
+.orbis-mock-button { display:flex; align-items:center; justify-content:space-between; border-radius:30px; padding:9px 12px; background:#174e4b; color:white; font-size:7px; }
+.orbis-browser-services { display:flex; justify-content:space-around; padding:14px; background:#fbfaf6; color:#687b78; font-size:7px; }
+.orbis-browser--fitness { right:0; bottom:4px; width:38%; transform:rotate(7deg); background:#191b17; }
+.orbis-browser--fitness .orbis-browser-bar { background:#262a24; }
+.orbis-fitness-preview { padding:18px; color:#e3ef7d; position:relative; }
+.orbis-fitness-preview small { font-size:5px; letter-spacing:1px; }
+.orbis-fitness-preview strong { display:block; font-family:Arial,sans-serif; font-size:36px; letter-spacing:-2px; line-height:.98; margin-top:14px; }
+.orbis-fitness-preview em { font-style:normal; color:#fff; }
+.orbis-fitness-preview > svg { margin-top:20px; }
+.orbis-showcase-badge { position:absolute; left:2%; bottom:4px; display:flex; align-items:center; gap:12px; background:#0e2558ed; backdrop-filter:blur(12px); color:var(--orbis-cyan); border:1px solid #39c8ff26; border-radius:12px; padding:14px; box-shadow:0 20px 40px #02092330; }
+.orbis-showcase-badge strong { display:block; font-size:12px; color:white; margin-bottom:3px; }
+.orbis-showcase-badge span { font-size:9px; color:#99add6; }
+.orbis-showcase-ready { position:absolute; top:0; right:0; background:#0a285e; color:#c2d6f2; border:1px solid #39c8ff22; border-radius:40px; padding:10px 14px; display:flex; align-items:center; gap:8px; font-size:8px; }
+.orbis-showcase-ready svg { color:var(--orbis-cyan); }
+.orbis-section { padding:64px 0; }
+.orbis-section-heading { display:flex; flex-wrap:wrap; align-items:end; justify-content:space-between; gap:24px; margin-bottom:34px; }
+.orbis-section-heading h2 { margin:0; }
+.orbis-section-heading > p { max-width:39ch; font-size:14px; margin:0; }
+.orbis-category-tools { display:grid; gap:20px; margin-bottom:12px; }
+.orbis-shell .search-input { display:flex; align-items:center; gap:12px; border:1px solid var(--oh-border); border-radius:10px; padding:0 16px; background:var(--oh-panel); min-height:52px; color:var(--oh-muted); transition:box-shadow 200ms,border-color 200ms; }
+.orbis-shell .search-input:focus-within { border-color:var(--orbis-cyan); box-shadow:0 0 0 3px #39c8ff18; }
+.orbis-shell .search-input input { min-width:0; flex:1; width:100%; background:transparent; border:0; color:var(--oh-text); outline:none; padding:15px 0; font-size:13px; }
+.orbis-shell .search-input input::placeholder { color:var(--oh-muted); }
+.orbis-shell .search-input__clear { width:44px; height:44px; display:grid; place-items:center; background:none; color:var(--oh-muted); cursor:pointer; }
+.orbis-filters { display:flex; flex-wrap:wrap; gap:8px; }
+.orbis-filters button { padding:11px 15px; min-height:44px; color:var(--oh-muted); font-size:12px; border:1px solid var(--oh-border); background:none; border-radius:8px; cursor:pointer; }
+.orbis-filters button[aria-pressed=true] { color:#fff; background:var(--orbis-blue); border-color:var(--orbis-blue); }
+.orbis-results { display:block; font-size:10px; color:var(--oh-muted); margin:16px 0 24px; }
+.orbis-category-grid { display:grid; gap:22px; }
+.orbis-shell .category-card { display:flex; flex-direction:column; border:1px solid var(--oh-border); background:var(--oh-panel); padding:22px; border-radius:16px; overflow:hidden; box-shadow:var(--oh-shadow); }
+.orbis-shell .category-card:hover { transform:translateY(-6px); border-color:#39c8ff60; box-shadow:0 18px 45px #0a66f512; }
+.orbis-shell .category-card__top { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:22px; }
+.orbis-shell .category-card__icon { display:grid; place-items:center; background:#0a66f51a; color:var(--orbis-cyan); width:46px; height:46px; border:1px solid #39c8ff12; border-radius:12px; }
+[data-theme=light] .orbis-shell .category-card__icon { color:var(--orbis-blue); }
+.orbis-shell .category-card .badge { color:var(--oh-muted); background:var(--oh-panel-alt); border:1px solid var(--oh-border); }
+.orbis-category-preview { position:relative; aspect-ratio:8/5; overflow:hidden; border-radius:8px; background:#122552; }
+.orbis-category-preview > img { width:100%; height:100%; object-fit:cover; transition:transform 500ms; }
+.orbis-category-preview > span { display:flex; align-items:center; justify-content:space-between; position:absolute; inset:auto 0 0; padding:22px 14px 12px; background:linear-gradient(transparent,#061239de); color:white; font-size:10px; }
+.orbis-category-preview--medico img { object-position:65% center; }
+.orbis-shell .category-card:hover .orbis-category-preview img { transform:scale(1.025); }
+.orbis-shell .category-card__content { padding:22px 0; flex:1; }
+.orbis-shell .category-card__content h3 { font-size:20px; font-weight:500; letter-spacing:-.6px; margin:0 0 9px; }
+.orbis-shell .category-card__content p { font-size:12px; margin:0; }
+.orbis-shell .category-card__footer { display:flex; justify-content:space-between; align-items:center; padding-top:16px; border-top:1px solid var(--oh-border); color:var(--oh-muted); font-size:10px; }
+.orbis-shell .category-card__arrow { color:var(--orbis-cyan); transition:transform 200ms; }
+.orbis-shell .category-card:hover .category-card__arrow { transform:translate(3px,-3px); }
+.orbis-empty { border:1px solid var(--oh-border); background:var(--oh-panel); padding:48px 24px; text-align:center; border-radius:18px; }
+.orbis-empty > svg { margin:0 auto 24px; color:var(--orbis-cyan); }
+.orbis-empty h3 { font-size:22px; }
+.orbis-empty p { font-size:14px; }
+.orbis-models { background:var(--oh-panel); border-block:1px solid var(--oh-border); }
+.orbis-featured-grid,.orbis-template-grid { display:grid; gap:24px; }
+.orbis-shell .template-card { border:1px solid var(--oh-border); border-radius:16px; overflow:hidden; background:var(--oh-background); box-shadow:var(--oh-shadow); transition:transform 240ms,border-color 240ms,box-shadow 240ms; }
+.orbis-shell .template-card:hover { transform:translateY(-5px); border-color:#39c8ff60; box-shadow:0 18px 45px #0a66f516; }
+.orbis-shell .template-preview { display:block; position:relative; overflow:hidden; aspect-ratio:8/5; background:var(--oh-panel-alt); }
+.orbis-shell .template-preview__image { width:100%; height:100%; object-fit:cover; transition:transform 500ms; }
+.orbis-shell .template-card:hover .template-preview__image { transform:scale(1.025); }
+.orbis-shell .template-preview__open { display:grid; place-items:center; position:absolute; right:14px; top:14px; width:34px; height:34px; border-radius:50%; background:#061239c9; color:white; z-index:2; }
+.orbis-preview-overlay { position:absolute; inset:0; display:flex; align-items:end; justify-content:center; gap:12px; padding:25px; background:linear-gradient(transparent 20%,#061239b8); color:white; opacity:0; transition:opacity 240ms; font-size:13px; }
+.orbis-shell .template-card:hover .orbis-preview-overlay,.orbis-shell .template-preview:focus-visible .orbis-preview-overlay { opacity:1; }
+.orbis-shell .template-card__content { padding:24px; }
+.orbis-status { display:inline-flex; align-items:center; gap:6px; margin-bottom:18px; background:#43caa011; color:#57cba9; font-size:10px; padding:6px 9px; border-radius:30px; border:1px solid #43caa025; }
+[data-theme=light] .orbis-status { color:#28795e; }
+.orbis-status i { display:block; width:5px; height:5px; border-radius:50%; background:currentColor; }
+.orbis-status--pending { color:#ddb778; background:#ddb77812; }
+.orbis-shell .template-card__heading { display:flex; justify-content:space-between; align-items:start; gap:15px; }
+.orbis-shell .template-card__heading > div > span { color:var(--oh-muted); font-size:9px; letter-spacing:1.5px; text-transform:uppercase; }
+.orbis-shell .template-card__heading h3 { font-size:21px; font-weight:500; letter-spacing:-.6px; margin:9px 0 14px; }
+.orbis-shell .template-card__style { color:var(--oh-muted); font-size:9px; background:var(--oh-panel-alt); padding:6px 8px; border-radius:5px; text-align:right; }
+.orbis-shell .template-card__content > p { font-size:13px; margin-bottom:18px; }
+.orbis-shell .template-card__tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:22px; }
+.orbis-shell .template-card__tags span { padding:5px 8px; font-size:9px; color:var(--oh-muted); border:1px solid var(--oh-border); border-radius:5px; }
+.orbis-shell .template-card__link { display:flex; align-items:center; justify-content:space-between; min-height:44px; padding-top:15px; border-top:1px solid var(--oh-border); font-size:12px; color:var(--orbis-cyan); }
+[data-theme=light] .orbis-shell .template-card__link { color:var(--orbis-blue); }
+.orbis-care-preview { display:grid; grid-template-columns:1fr 1fr; height:100%; background:#f6f2ea; color:#174e4b; }
+.orbis-care-preview > div { padding:26px 16px; }
+.orbis-care-preview > div > span { display:block; font-size:7px; letter-spacing:1.5px; }
+.orbis-care-preview strong { display:block; margin:20px 0; font-family:Lora,Georgia,serif; font-size:clamp(18px,2.4vw,30px); line-height:1.15; font-weight:500; letter-spacing:-1px; }
+.orbis-care-preview small { display:block; color:white; background:#174e4b; padding:10px 12px; border-radius:30px; font-size:8px; width:fit-content; }
+.orbis-care-preview img { width:100%; height:100%; object-fit:cover; object-position:67% center; transition:transform 500ms; }
+.orbis-shell .template-card:hover .orbis-care-preview img { transform:scale(1.025); }
+.orbis-resource-grid { display:grid; gap:16px; }
+.orbis-resource { position:relative; padding:30px; border:1px solid var(--oh-border); background:var(--oh-panel); border-radius:13px; }
+.orbis-resource > svg { color:var(--orbis-cyan); margin-bottom:30px; }
+[data-theme=light] .orbis-resource > svg { color:var(--orbis-blue); }
+.orbis-resource > span { position:absolute; top:30px; right:30px; font-size:10px; color:var(--oh-muted); }
+.orbis-resource h3 { font-size:19px; font-weight:500; letter-spacing:-.5px; margin-bottom:12px; }
+.orbis-resource p { font-size:13px; margin-bottom:0; }
+.orbis-cta { padding:20px 0 80px; }
+.orbis-cta-panel { padding:44px 28px; position:relative; overflow:hidden; border:1px solid #ffffff15; border-radius:22px; background:radial-gradient(ellipse at 95% 50%,#0f8fff22,transparent 55%),#0b1d49; color:white; }
+.orbis-cta-panel .orbis-eyebrow { color:var(--orbis-cyan)!important; }
+.orbis-cta-panel h2 { font-size:clamp(30px,4.4vw,58px); margin-bottom:30px; position:relative; z-index:1; }
+.orbis-cta-panel h2 span { color:#a4b9e2; }
+.orbis-cta-panel .orbis-button { position:relative; z-index:1; }
+.orbis-cta-orbit { position:absolute; width:350px; height:350px; border:1px solid #39c8ff15; border-radius:50%; right:-180px; bottom:-80px; box-shadow:0 0 0 50px #39c8ff03,0 0 0 100px #39c8ff02; }
+.orbis-footer { background:var(--orbis-navy-deep); color:white; padding:42px 0 20px; border-top:1px solid #ffffff0f; }
+.orbis-footer-top { display:flex; flex-wrap:wrap; gap:28px; justify-content:space-between; }
+.orbis-footer p { color:#8496bf; font-size:12px; margin:20px 0 0; }
+.orbis-footer nav { display:flex; gap:24px; align-items:center; font-size:12px; color:#afbddb; }
+.orbis-footer nav a { padding:12px 0; min-height:44px; }
+.orbis-footer-bottom { display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; font-size:10px; color:#8396bf; border-top:1px solid #ffffff0f; padding-top:24px; margin-top:32px; }
+.orbis-category-hero { background:radial-gradient(ellipse at 85% 50%,#0f8fff1d,transparent 45%),var(--orbis-navy); color:white; padding:28px 0 60px; }
+.orbis-breadcrumb { display:flex; align-items:center; gap:12px; color:#99acd1; font-size:11px; margin-bottom:20px; }
+.orbis-breadcrumb a { min-height:44px; display:flex; align-items:center; }
+.orbis-category-hero .orbis-text-link { color:#99acd1; margin-bottom:25px; font-size:11px; }
+.orbis-category-heading { display:grid; }
+.orbis-category-icon { display:grid; place-items:center; width:58px; height:58px; border:1px solid #39c8ff22; border-radius:15px; color:var(--orbis-cyan); background:#0a66f512; margin-bottom:25px; }
+.orbis-category-heading .orbis-eyebrow { color:var(--orbis-cyan)!important; }
+.orbis-category-heading h1 { font-size:clamp(36px,5vw,65px); margin-bottom:24px; }
+.orbis-category-heading h1 span { color:#afc7f2; }
+.orbis-category-heading p { color:#a4b2d1; font-size:15px; max-width:52ch; }
+.orbis-collection-count { display:flex; align-items:center; gap:10px; color:#acbddd; font-size:12px; margin-top:28px; }
+.orbis-category-art { display:none; }
+.orbis-not-found { min-height:65vh; padding-block:70px; }
+.orbis-not-found > svg { color:var(--orbis-cyan); margin-bottom:28px; }
+.orbis-not-found h1 { font-size:clamp(38px,5vw,64px); }
+.orbis-not-found p { max-width:55ch; margin-bottom:32px; }
+.orbis-shell [data-reveal] { transition:opacity 650ms,transform 650ms; }
+.orbis-shell.reveal-enabled [data-reveal]:not(.is-visible) { opacity:0; transform:translateY(16px); }
+@media(min-width:640px) {
+ .orbis-hero-stats { grid-template-columns:repeat(4,minmax(0,1fr)); }
+ .orbis-category-grid,.orbis-resource-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .orbis-showcase { min-height:490px; max-width:650px; width:100%; margin:30px auto 0; }
+ .orbis-browser-page > div { padding:35px 28px; }
+ .orbis-browser-page h2 { font-size:36px; }
+ .orbis-browser-services { padding:20px; }
+ .orbis-browser--fitness { width:32%; bottom:35px; }
+ .orbis-fitness-preview { padding:26px; }
+ .orbis-fitness-preview strong { font-size:50px; }
+ .orbis-showcase-badge { bottom:20px; }
+ .orbis-showcase-ready { top:4px; font-size:10px; }
+ .orbis-featured-grid,.orbis-template-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .orbis-cta-panel { padding:56px; }
+}
+@media(min-width:960px) {
+ .orbis-header-controls { order:3; }
+ .orbis-menu-toggle { display:none; }
+ .orbis-navigation { position:static; display:flex; flex-direction:row; align-items:center; gap:30px; height:auto; padding:0; background:none; opacity:1; visibility:visible; transform:none; overflow:visible; margin-left:auto; }
+ .orbis-navigation > a:not(.orbis-button) { font-size:12px; }
+ .orbis-navigation .orbis-button { margin:0; }
+ .orbis-hero { padding-top:90px; }
+ .orbis-hero-grid { grid-template-columns:1.04fr .96fr; gap:50px; align-items:center; }
+ .orbis-showcase { margin:0; min-height:470px; }
+ .orbis-browser--main { width:94%; }
+ .orbis-browser-page h2 { font-size:27px; }
+ .orbis-browser-page > div { padding:28px 20px; }
+ .orbis-browser--fitness { width:34%; bottom:10px; right:-5px; }
+ .orbis-showcase-badge { bottom:60px; left:-20px; padding:18px; }
+ .orbis-showcase-ready { top:-5px; right:-10px; }
+ .orbis-hero-bottom { margin-top:64px; }
+ .orbis-section { padding:90px 0; }
+ .orbis-category-tools { grid-template-columns:minmax(220px,320px) 1fr; align-items:center; gap:30px; }
+ .orbis-filters { justify-content:end; }
+ .orbis-category-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
+ .orbis-resource-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .orbis-cta-panel { padding:66px; }
+ .orbis-cta-orbit { right:30px; bottom:-30px; }
+ .orbis-category-heading { grid-template-columns:1.3fr .7fr; align-items:center; gap:60px; }
+ .orbis-category-art { position:relative; display:grid; place-items:center; width:260px; height:260px; margin-inline:auto; border-radius:50%; border:1px solid #39c8ff17; color:#39c8ff60; box-shadow:0 0 0 40px #39c8ff03,0 0 0 80px #39c8ff02; }
+ .orbis-category-art span { position:absolute; bottom:25px; font-size:10px; letter-spacing:2px; color:#8396bf; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .orbis-shell *, .orbis-shell *::before, .orbis-shell *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+ .orbis-shell.reveal-enabled [data-reveal]:not(.is-visible) { opacity:1; transform:none; }
+ .orbis-shell .category-card:hover,.orbis-shell .template-card:hover,.orbis-shell .orbis-button:hover { transform:none; }
+ .orbis-shell img { transform:none!important; }
+}

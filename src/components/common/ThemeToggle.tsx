@@ -5,20 +5,17 @@ type Theme = 'light' | 'dark'
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>(() => {
-    const savedTheme = localStorage.getItem('landinghub-theme')
-
-    if (savedTheme === 'light' || savedTheme === 'dark') {
-      return savedTheme
-    }
-
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
+    if (typeof window === 'undefined') return 'dark'
+    try {
+      const savedTheme = localStorage.getItem('landinghub-theme')
+      if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme
+    } catch { /* Storage can be disabled; theme remains usable. */ }
+    return 'dark'
   })
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
-    localStorage.setItem('landinghub-theme', theme)
+    try { localStorage.setItem('landinghub-theme', theme) } catch { /* Optional preference persistence. */ }
   }, [theme])
 
   function toggleTheme() {

@@ -1,64 +1,40 @@
-:root {
-  /* Fontes */
-  --font-sans:
-    "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-
-  /* Layout */
-  --container-max: 1280px;
-  --container-padding: 20px;
-
-  /* Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --radius-xl: 24px;
-  --radius-full: 999px;
-
-  /* Transições */
-  --transition-fast: 160ms ease;
-  --transition-normal: 250ms ease;
-  --transition-slow: 400ms ease;
-
-  /* Light */
-  --background: #f7f8fa;
-  --surface: #ffffff;
-  --surface-secondary: #f0f2f5;
-
-  --text-primary: #15171a;
-  --text-secondary: #646a73;
-  --text-muted: #8b919a;
-
-  --border: #e4e7eb;
-
-  --primary: #6558f5;
-  --primary-hover: #5749e8;
-  --primary-soft: #eeecff;
-
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.08);
+﻿:root {
+  --font-sans:'DM Sans','Segoe UI',Arial,sans-serif;
+  --container-max:1320px;
+  --container-padding:20px;
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:18px;
+  --radius-xl:24px;
+  --radius-full:999px;
+  --transition-fast:180ms ease;
+  --transition-normal:250ms ease;
+  --transition-slow:400ms ease;
+  --background:#f1f5ff;
+  --surface:#fff;
+  --surface-secondary:#e8eefa;
+  --text-primary:#10204a;
+  --text-secondary:#536287;
+  --text-muted:#68789a;
+  --border:#dce4f3;
+  --primary:#0a66f5;
+  --primary-hover:#004fce;
+  --primary-soft:#e3edff;
+  --shadow-sm:0 2px 8px #10204a08;
+  --shadow-md:0 12px 32px #10204a12;
 }
-
-[data-theme="dark"] {
-  --background: #0c0d10;
-  --surface: #15171b;
-  --surface-secondary: #1c1f24;
-
-  --text-primary: #f7f7f8;
-  --text-secondary: #a5a9b0;
-  --text-muted: #767b84;
-
-  --border: #292d34;
-
-  --primary: #8177ff;
-  --primary-hover: #978fff;
-  --primary-soft: #201d42;
-
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.18);
-  --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.28);
+[data-theme='dark'] {
+  --background:#07133b;
+  --surface:#0c1b45;
+  --surface-secondary:#10214c;
+  --text-primary:#fff;
+  --text-secondary:#a4b2d1;
+  --text-muted:#8495bc;
+  --border:#ffffff12;
+  --primary:#39c8ff;
+  --primary-hover:#70d8ff;
+  --primary-soft:#0a66f520;
+  --shadow-sm:0 2px 8px #03092325;
+  --shadow-md:0 16px 40px #03092335;
 }
-
-@media (min-width: 768px) {
-  :root {
-    --container-padding: 32px;
-  }
-}
+@media(min-width:768px) { :root { --container-padding:32px; } }

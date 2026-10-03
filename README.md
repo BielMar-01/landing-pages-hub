@@ -24,8 +24,8 @@ As páginas têm JSX e CSS próprios em `src/pages/templates`. O catálogo está
 
 ## Imagens e demonstrações
 
-Fotografias ainda precisam ser fornecidas. Os caminhos estão preparados em `public/images/{categoria}/{modelo}`; cada pasta contém instruções para seus assets. Até que as imagens sejam adicionadas, fallbacks preservam a apresentação sem imagens quebradas. Os previews SVG locais já estão disponíveis.
+O Modelo Médico 01, Essencial Care, usa fotografias reais do banco local `public/images/medico/shared`, sem duplicá-las. A Central e as categorias usam a identidade OrbisCore em azul/ciano. Os outros modelos mantêm suas implementações e seus fallbacks onde ainda faltam fotos. As referências em `public/images/medico/references/modelo-01` orientam o design e não são exibidas dentro do site.
 
 Todos os nomes, registros, imóveis e conteúdos profissionais são fictícios. Formulários simulam envio, sem transmitir ou armazenar dados. Não há backend, autenticação ou deploy nesta implementação.
 
-Consulte [a documentação da implementação](docs/IMPLEMENTACAO.md) para detalhes de rotas, imagens e interações. QA visual em navegador fica para a revisão do projeto.
+Consulte [a documentação das coleções](docs/IMPLEMENTACAO.md) e [a evolução OrbisCore / Essencial Care](docs/ORBISCORE-ESSENCIAL-CARE.md) para detalhes de arquivos, rotas, imagens e interações. QA visual em navegador fica para a revisão do projeto.

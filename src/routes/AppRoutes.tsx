@@ -6,6 +6,7 @@ import { HubPage } from '../pages/Hub/HubPage'
 import { NotFoundPage } from '../pages/NotFound/NotFoundPage'
 import { landingRoutes } from './landingRoutes'
 import { RouteScroll } from '../components/common/RouteScroll'
+import { PageTransition } from '../components/common/PageTransition'
 
 import { MedicalEssentialPage } from '../pages/templates/medico/modelo-01/MedicalEssentialPage'
 
@@ -23,9 +24,10 @@ export function AppRoutes() {
           Carregando demonstração…
         </main>
       }>
-        <Routes>
+        <PageTransition><Routes>
           <Route path="/" element={<HubPage />} />
           <Route path="/medico/modelo-01" element={<MedicalEssentialPage />} />
+          <Route path="/404" element={<NotFoundPage />} />
 
           {landingRoutes.map(({ path, component: Page }) => (
             <Route key={path} path={path} element={<Page />} />
@@ -38,7 +40,7 @@ export function AppRoutes() {
 
           <Route path="/:categorySlug" element={<CategoryPage />} />
           <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        </Routes></PageTransition>
       </Suspense>
     </>
   )

@@ -1,305 +1,50 @@
-import { useMemo, useState } from 'react'
-import {
-  ArrowRight,
-  Layers3,
-  Palette,
-  SearchX,
-  Smartphone,
-  Sparkles,
-} from 'lucide-react'
-
+﻿import { useMemo, useState } from 'react'
+import { ArrowRight, ArrowUpRight, Code2, Gauge, Layers3, Palette, SearchX, Settings2, Smartphone } from 'lucide-react'
 import { Header } from '../../components/common/Header'
+import { OrbisFooter } from '../../components/common/OrbisFooter'
 import { SearchInput } from '../../components/common/SearchInput'
 import { CategoryCard } from '../../components/hub/CategoryCard'
+import { HeroShowcase } from '../../components/hub/HeroShowcase'
+import { TemplateCard } from '../../components/category/TemplateCard'
 import { categories } from '../../data/categories'
+import { templates } from '../../data/templates'
+import { useDocumentTitle } from '../../hooks/useDocumentTitle'
+import { useReveal } from '../../hooks/useReveal'
 import type { CategoryGroup } from '../../types/category'
 
 type Filter = 'todos' | CategoryGroup
-
-const filters: Array<{ label: string; value: Filter }> = [
-  { label: 'Todos', value: 'todos' },
-  { label: 'Saúde', value: 'saude' },
-  { label: 'Bem-estar', value: 'bem-estar' },
-  { label: 'Fitness', value: 'fitness' },
-  { label: 'Serviços', value: 'servicos' },
-  { label: 'Imobiliário', value: 'imobiliario' },
+const filters: Array<{label:string; value:Filter}> = [
+  {label:'Todos',value:'todos'}, {label:'Saúde',value:'saude'}, {label:'Bem-estar',value:'bem-estar'},
+  {label:'Fitness',value:'fitness'}, {label:'Serviços',value:'servicos'}, {label:'Imobiliário',value:'imobiliario'},
 ]
+const resources = [
+  {icon:Smartphone,title:'Mobile-first',description:'Composição e navegação pensadas para diferentes tamanhos de tela.'},
+  {icon:Palette,title:'Design moderno',description:'Direções visuais que consideram o público e a personalidade de cada segmento.'},
+  {icon:Gauge,title:'Alta performance',description:'Carregamento por página, imagens WebP e interações sem bibliotecas pesadas.'},
+  {icon:Settings2,title:'Pronto para personalização',description:'Páginas independentes, conteúdo editável e estilos organizados por modelo.'},
+  {icon:Code2,title:'React + TypeScript',description:'Uma base clara para desenvolver, adaptar e transformar o modelo em projeto.'},
+  {icon:Layers3,title:'Preparado para Vercel',description:'Build com Vite e estrutura pronta para uma futura publicação.'},
+]
+const featuredIds = ['medico-01','nutricionista-02','advogado-07','imobiliario-05']
 
 export function HubPage() {
-  const [search, setSearch] = useState('')
-  const [activeFilter, setActiveFilter] = useState<Filter>('todos')
-
+  useDocumentTitle('OrbisCore | Landing Pages Hub')
+  const ref = useReveal()
+  const [search,setSearch] = useState('')
+  const [activeFilter,setActiveFilter] = useState<Filter>('todos')
   const filteredCategories = useMemo(() => {
-    const normalizedSearch = search
-      .trim()
-      .toLocaleLowerCase('pt-BR')
-
-    return categories.filter((category) => {
-      const matchesFilter =
-        activeFilter === 'todos' ||
-        category.group === activeFilter
-
-      const searchableContent = [
-        category.name,
-        category.description,
-        category.shortDescription,
-      ]
-        .join(' ')
-        .toLocaleLowerCase('pt-BR')
-
-      const matchesSearch =
-        normalizedSearch.length === 0 ||
-        searchableContent.includes(normalizedSearch)
-
-      return matchesFilter && matchesSearch
-    })
-  }, [activeFilter, search])
-
-  return (
-    <>
-      <Header />
-
-      <main>
-        <section className="hub-hero">
-          <div className="container hub-hero__content">
-            <div className="hub-hero__badge">
-              <Sparkles size={15} />
-              Biblioteca de landing pages
-            </div>
-
-            <h1>
-              Encontre o design ideal para o seu
-              <span> negócio.</span>
-            </h1>
-
-            <p className="hub-hero__description">
-              Explore coleções de landing pages desenvolvidas
-              especialmente para diferentes profissões e segmentos.
-              Cada categoria possui 8 experiências visuais únicas.
-            </p>
-
-            <div className="hub-hero__stats">
-              <div>
-                <strong>{categories.length}</strong>
-                <span>Categorias</span>
-              </div>
-
-              <span className="hub-hero__divider" />
-
-              <div>
-                <strong>
-                  {categories.reduce(
-                    (total, category) =>
-                      total + category.templateCount,
-                    0,
-                  )}
-                </strong>
-                <span>Modelos</span>
-              </div>
-
-              <span className="hub-hero__divider" />
-
-              <div>
-                <strong>100%</strong>
-                <span>Responsivo</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="categories-section"
-          id="categorias"
-        >
-          <div className="container">
-            <div className="section-heading">
-              <div>
-                <span className="section-eyebrow">
-                  Explore por segmento
-                </span>
-
-                <h2>Escolha uma categoria</h2>
-
-                <p>
-                  Encontre modelos pensados para as necessidades
-                  específicas de cada área.
-                </p>
-              </div>
-            </div>
-
-            <div className="category-tools">
-              <SearchInput
-                value={search}
-                onChange={setSearch}
-                placeholder="Buscar profissão ou segmento..."
-              />
-
-              <div
-                className="filter-list"
-                aria-label="Filtrar categorias"
-              >
-                {filters.map((filter) => (
-                  <button
-                    key={filter.value}
-                    type="button"
-                    className={`filter-button ${
-                      activeFilter === filter.value
-                        ? 'filter-button--active'
-                        : ''
-                    }`}
-                    onClick={() =>
-                      setActiveFilter(filter.value)
-                    }
-                  >
-                    {filter.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {filteredCategories.length > 0 ? (
-              <div className="categories-grid">
-                {filteredCategories.map((category) => (
-                  <CategoryCard
-                    key={category.id}
-                    category={category}
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="empty-state">
-                <span className="empty-state__icon">
-                  <SearchX size={27} />
-                </span>
-
-                <h3>Nenhuma categoria encontrada</h3>
-
-                <p>
-                  Tente pesquisar outro termo ou remover o
-                  filtro selecionado.
-                </p>
-
-                <button
-                  type="button"
-                  className="empty-state__button"
-                  onClick={() => {
-                    setSearch('')
-                    setActiveFilter('todos')
-                  }}
-                >
-                  Limpar filtros
-                </button>
-              </div>
-            )}
-          </div>
-        </section>
-
-        <section className="platform-section">
-          <div className="container">
-            <div className="platform-heading">
-              <span className="section-eyebrow">
-                Uma biblioteca em crescimento
-              </span>
-
-              <h2>
-                Mais do que templates.
-                <br />
-                Designs pensados para cada segmento.
-              </h2>
-
-              <p>
-                Cada coleção é construída considerando o público,
-                a comunicação e as necessidades específicas
-                daquele profissional.
-              </p>
-            </div>
-
-            <div className="platform-features">
-              <article className="feature-card">
-                <span className="feature-card__icon">
-                  <Palette size={23} />
-                </span>
-
-                <h3>Designs únicos</h3>
-
-                <p>
-                  Cada modelo possui identidade, composição e
-                  experiência visual próprias.
-                </p>
-              </article>
-
-              <article className="feature-card">
-                <span className="feature-card__icon">
-                  <Smartphone size={23} />
-                </span>
-
-                <h3>Mobile-first</h3>
-
-                <p>
-                  Experiências pensadas primeiro para celular e
-                  adaptadas para qualquer tamanho de tela.
-                </p>
-              </article>
-
-              <article className="feature-card">
-                <span className="feature-card__icon">
-                  <Layers3 size={23} />
-                </span>
-
-                <h3>Por segmento</h3>
-
-                <p>
-                  Coleções organizadas por profissão para facilitar
-                  a descoberta do modelo ideal.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section className="hub-cta">
-          <div className="container">
-            <div className="hub-cta__box">
-              <div>
-                <span className="section-eyebrow">
-                  Comece explorando
-                </span>
-
-                <h2>64 modelos. 8 segmentos. Muitas possibilidades.</h2>
-
-                <p>
-                  Escolha uma categoria e descubra diferentes
-                  formas de apresentar um negócio na web.
-                </p>
-              </div>
-
-              <a
-                href="#categorias"
-                className="hub-cta__button"
-              >
-                Ver categorias
-                <ArrowRight size={18} />
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="site-footer">
-        <div className="container site-footer__content">
-          <div>
-            <strong>
-              Landing<span>Hub</span>
-            </strong>
-
-            <p>Uma coleção de experiências para a web.</p>
-          </div>
-
-          <span className="site-footer__copy">
-            © 2026 LandingHub
-          </span>
-        </div>
-      </footer>
-    </>
-  )
+    const normalize = (text:string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR')
+    const term = normalize(search.trim())
+    return categories.filter(category => (activeFilter === 'todos' || category.group === activeFilter) && normalize(`${category.name} ${category.description} ${category.shortDescription}`).includes(term))
+  },[activeFilter,search])
+  return <div className="orbis-shell" ref={ref}>
+    <a className="orbis-skip" href="#hub-main">Pular para o conteúdo</a><Header />
+    <main id="hub-main">
+      <section className="orbis-hero" id="inicio"><div className="container orbis-hero-grid"><div className="orbis-hero-copy"><span className="orbis-eyebrow"><i />ORBISCORE PRESENTS</span><h1>Presença digital.<br /><span>Experiências</span><br />que conectam.</h1><p>Explore landing pages modernas, responsivas e cuidadosamente desenvolvidas para diferentes segmentos. Encontre um ponto de partida com personalidade.</p><div className="orbis-actions"><a href="#modelos" className="orbis-button">Explorar modelos<ArrowUpRight size={18} /></a><a href="#categorias" className="orbis-text-link">Ver categorias<ArrowRight size={18} /></a></div><div className="orbis-hero-stats"><div><strong>{categories.length}</strong><span>Categorias</span></div><div><strong>{templates.length}</strong><span>Modelos disponíveis</span></div><div><strong>100%</strong><span>Responsivo</span></div><div><strong>React</strong><span>Front-end ready</span></div></div></div><HeroShowcase /></div><div className="container orbis-hero-bottom"><span>UM HUB. DIFERENTES POSSIBILIDADES.</span><span>Explore, escolha, personalize.<ArrowRight size={15} /></span></div></section>
+      <section className="orbis-section orbis-categories" id="categorias"><div className="container"><div className="orbis-section-heading" data-reveal><div><span className="orbis-eyebrow">01 / ENCONTRE SEU SEGMENTO</span><h2>O seu próximo projeto<br />começa por aqui.</h2></div><p>Oito coleções. Diferentes formas de apresentar o que torna cada negócio único.</p></div><div className="orbis-category-tools"><SearchInput value={search} onChange={setSearch} placeholder="Buscar categoria..." /><div className="orbis-filters" aria-label="Filtrar categorias">{filters.map(filter=><button key={filter.value} type="button" aria-pressed={activeFilter===filter.value} onClick={()=>setActiveFilter(filter.value)}>{filter.label}</button>)}</div></div><span className="orbis-results" role="status">{filteredCategories.length} {filteredCategories.length===1?'categoria encontrada':'categorias encontradas'}</span>{filteredCategories.length ? <div className="orbis-category-grid">{filteredCategories.map(category=><CategoryCard key={category.id} category={category} />)}</div> : <div className="orbis-empty"><SearchX size={32} /><h3>Nenhuma categoria encontrada</h3><p>Tente outro termo ou remova o filtro selecionado.</p><button className="orbis-button" type="button" onClick={()=>{setSearch('');setActiveFilter('todos')}}>Limpar filtros</button></div>}</div></section>
+      <section className="orbis-section orbis-models" id="modelos"><div className="container"><div className="orbis-section-heading" data-reveal><div><span className="orbis-eyebrow">02 / EXPLORE AS EXPERIÊNCIAS</span><h2>Um design.<br />Um universo de possibilidades.</h2></div><p>Uma seleção para começar a explorar. Abra uma demonstração e descubra a experiência completa.</p></div><div className="orbis-featured-grid">{featuredIds.map(id=>templates.find(template=>template.id===id)).filter(template=>template!==undefined).map(template=><TemplateCard key={template.id} template={template} index={Number(template.slug.slice(-2))-1} />)}</div></div></section>
+      <section className="orbis-section orbis-resources" id="recursos"><div className="container"><div className="orbis-section-heading" data-reveal><div><span className="orbis-eyebrow">03 / FEITO PARA CONSTRUIR</span><h2>Do primeiro olhar<br />ao próximo projeto.</h2></div><p>Design e desenvolvimento no mesmo ponto de partida. Uma base para criar experiências digitais com propósito.</p></div><div className="orbis-resource-grid">{resources.map(({icon:Icon,title,description},i)=><article className="orbis-resource" key={title} data-reveal style={{transitionDelay:`${i%3*70}ms`}}><Icon size={26} strokeWidth={1.5} /><span>0{i+1}</span><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>
+      <section className="orbis-cta"><div className="container"><div className="orbis-cta-panel" data-reveal><span className="orbis-eyebrow">SUA PRÓXIMA EXPERIÊNCIA</span><h2>Escolha um segmento.<br />Encontre um design.<br /><span>Transforme em projeto.</span></h2><a href="#categorias" className="orbis-button">Explorar categorias<ArrowUpRight size={18} /></a><span className="orbis-cta-orbit" aria-hidden="true" /></div></div></section>
+    </main><OrbisFooter />
+  </div>
 }

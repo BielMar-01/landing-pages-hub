@@ -4,18 +4,18 @@ export const templates: LandingTemplate[] = [
   {
     "id": "medico-01",
     "categorySlug": "medico",
-    "name": "Clínica Essencial",
+    "name": "Essencial Care",
     "slug": "modelo-01",
-    "description": "Medicina próxima e humana.",
-    "style": "Clínico",
+    "description": "Clínica moderna com foco em cuidado, confiança e experiência.",
+    "style": "Clean • Humanizado",
     "tags": [
-      "Clássico",
-      "Clínica Geral",
-      "Medicina"
+      "Clean",
+      "Clínico",
+      "Moderno"
     ],
     "route": "/medico/modelo-01",
     "available": true,
-    "preview": "/images/medico/modelo-01/preview.svg"
+    "preview": "/images/medico/shared/hero-doctor.webp"
   },
   {
     "id": "medico-02",

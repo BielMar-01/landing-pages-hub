@@ -25,17 +25,17 @@ As composições variam entre hero dividido, apresentação centralizada, perfil
 
 O compartilhamento se limita à infraestrutura: imagens opcionais, formulários demonstrativos, navegação e catálogo. CSS de cada nova página fica restrito à classe raiz da própria landing. Previews SVG locais representam suas composições e paletas; são ilustrações de interface, não capturas de tela.
 
-## Clínica Essencial preservada
+## Essencial Care — evolução do Modelo Médico 01
 
-O Modelo 01 médico mantém seu conteúdo, layout, ilustrações, FAQ, menu, seções e formulário. Foi adicionada a possibilidade de fotografias locais sobre os visuais existentes, incluindo avatares dos depoimentos. O formulário agora informa o resultado da simulação sem enviar dados.
+O Modelo 01 médico foi reconstruído como Essencial Care, conforme o branding e as cinco referências fornecidas. Usa fotografias do banco médico compartilhado, dezesseis seções, menu mobile, perfis e conteúdos em modal, galeria ampliável, FAQ animado e formulário demonstrativo. A rota permanece `/medico/modelo-01`. A Central e a CategoryPage mantêm seu funcionamento com novo visual OrbisCore. Consulte `ORBISCORE-ESSENCIAL-CARE.md` para os detalhes deste bloco.
 
 ## Fotografias pendentes
 
-Não havia fotografias no workspace. **Nenhuma fotografia foi gerada, baixada ou criada como arquivo vazio.** Os fallbacks são intencionais: a Clínica Essencial conserva as ilustrações existentes; as demais páginas usam composições editoriais com sua identidade.
+O banco médico compartilhado foi adicionado ao workspace e está em uso no Modelo 01. As demais páginas ainda usam fallbacks editoriais onde suas fotos não foram fornecidas. Nenhuma fotografia foi gerada, baixada ou criada como arquivo vazio neste bloco.
 
 As imagens opcionais ficam em `public/images/{categoria}/{modelo}/`. Cada pasta contém um README com nomes e enquadramentos sugeridos. Quando um WebP real é adicionado, a página o mostra automaticamente. Falhas de carregamento mantêm o fallback, sem ícones de imagem quebrada. O carregamento abaixo da dobra é adiado; fotos de hero têm prioridade. Nos modelos com hero digital, a interface é o visual principal.
 
-Arquivos da Clínica Essencial:
+No Modelo 01, as imagens vêm de `public/images/medico/shared`; os antigos caminhos de fotos individuais foram substituídos. A documentação da pasta do modelo foi atualizada. Nomes antigos previstos no primeiro bloco (não utilizados pela versão atual):
 
 - `hero-doctor.webp`: fotografia principal, vertical, 1000 × 1200.
 - `clinic-interior.webp`: interior, 1200 × 900.
