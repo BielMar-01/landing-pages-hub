@@ -1,69 +1,31 @@
-# React + TypeScript + Vite
+# Landing Pages Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Central de demonstração de landing pages profissionais: oito categorias, oito modelos por categoria, 64 páginas navegáveis.
 
-Currently, two official plugins are available:
+React + TypeScript + Vite + React Router + Lucide + CSS. Projeto exclusivamente front-end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Desenvolvimento
 
-## Expanding the ESLint configuration
+`npm install` e `npm run dev`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Validação técnica
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- `npm run build`: TypeScript e build de produção.
+- `npm run lint`: ESLint.
+- `npm run check:catalog`: renderização dos 64 modelos, integridade do catálogo, previews, âncoras e escopo dos estilos.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+No PowerShell com scripts bloqueados, use `npm.cmd`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Coleções
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+`/medico`, `/nutricionista`, `/psicologo`, `/dentista`, `/personal-trainer`, `/advogado`, `/imobiliario` e `/estetica-beleza`. Cada uma possui `/modelo-01` a `/modelo-08`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+As páginas têm JSX e CSS próprios em `src/pages/templates`. O catálogo está em `src/data/templates.ts` e os imports dinâmicos em `src/routes/landingRoutes.ts`. A Central e a CategoryPage existentes foram mantidas.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Imagens e demonstrações
+
+Fotografias ainda precisam ser fornecidas. Os caminhos estão preparados em `public/images/{categoria}/{modelo}`; cada pasta contém instruções para seus assets. Até que as imagens sejam adicionadas, fallbacks preservam a apresentação sem imagens quebradas. Os previews SVG locais já estão disponíveis.
+
+Todos os nomes, registros, imóveis e conteúdos profissionais são fictícios. Formulários simulam envio, sem transmitir ou armazenar dados. Não há backend, autenticação ou deploy nesta implementação.
+
+Consulte [a documentação da implementação](docs/IMPLEMENTACAO.md) para detalhes de rotas, imagens e interações. QA visual em navegador fica para a revisão do projeto.

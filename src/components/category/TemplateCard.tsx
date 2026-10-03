@@ -16,16 +16,16 @@ export function TemplateCard({
     <article className="template-card">
       <Link
         to={template.route}
-        className={`template-preview template-preview--${(index % 8) + 1}`}
+        className={`template-preview ${template.preview ? 'template-preview--asset' : `template-preview--${(index % 8) + 1}`}`}
         aria-label={`Abrir demonstração ${template.name}`}
       >
-        <div className="template-preview__browser">
+        {!template.preview && <div className="template-preview__browser">
           <span />
           <span />
           <span />
-        </div>
+        </div>}
 
-        <div className="template-preview__mockup">
+        {template.preview ? <img className="template-preview__image" src={template.preview} alt={`Composição visual do modelo ${template.name}, estilo ${template.style}`} loading="lazy" width={640} height={400} /> : <div className="template-preview__mockup">
           <span className="template-preview__label">
             {template.style}
           </span>
@@ -38,7 +38,7 @@ export function TemplateCard({
           <span className="template-preview__button">
             Agendar consulta
           </span>
-        </div>
+        </div>}
 
         <span className="template-preview__open">
           <ArrowUpRight size={18} />

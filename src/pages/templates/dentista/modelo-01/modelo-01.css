@@ -1,0 +1,125 @@
+/* lp-dentista-1: independent stylesheet, scoped to this landing. */
+.lp-dentista-1 { --lp-bg:#f5fbfc; --lp-ink:#173746; --lp-accent:#28788a; --lp-soft:#d9eff1; color:var(--lp-ink); background:var(--lp-bg); min-height:100vh; font-family:Arial, Helvetica, sans-serif; }
+.lp-dentista-1 * { min-width:0; }
+.lp-dentista-1 .wrap { width:min(100% - 40px, 1200px); margin-inline:auto; }
+.lp-dentista-1 section[id] { scroll-margin-top:100px; }
+.lp-dentista-1 .back { display:inline-flex; align-items:center; gap:8px; font:12px Arial,sans-serif; padding:12px 0; opacity:.8; }
+.lp-dentista-1 header { border-bottom:1px solid color-mix(in srgb,var(--lp-ink) 18%,transparent); }
+.lp-dentista-1 .header-row { min-height:80px; display:flex; align-items:center; justify-content:space-between; gap:16px; position:relative; }
+.lp-dentista-1 .brand { font-size:20px; font-weight:700; letter-spacing:-.6px; }
+.lp-dentista-1 .brand small { display:block; font:10px Arial,sans-serif; text-transform:uppercase; letter-spacing:2px; margin-top:6px; opacity:.7; }
+.lp-dentista-1 .menu { display:grid; place-items:center; background:var(--lp-soft); color:var(--lp-ink); width:44px; height:44px; border-radius:6px; cursor:pointer; }
+.lp-dentista-1 nav { display:none; }
+.lp-dentista-1 nav.open { display:flex; position:absolute; top:100%; inset-inline:0; z-index:10; background:var(--lp-bg); padding:20px; box-shadow:0 18px 30px #0002; flex-direction:column; gap:16px; border:1px solid var(--lp-soft); }
+.lp-dentista-1 nav a { font:13px Arial,sans-serif; padding:10px 0; }
+.lp-dentista-1 .hero { padding:48px 0 64px; }
+.lp-dentista-1 .hero-grid { display:grid; gap:32px; align-items:center; }
+.lp-dentista-1 .eyebrow { display:block; font:11px Arial,sans-serif; text-transform:uppercase; letter-spacing:2px; color:var(--lp-accent); margin-bottom:24px; }
+.lp-dentista-1 h1 { font-size:clamp(36px,8.5vw,76px); line-height:1.05; letter-spacing:-.04em; font-weight:400; max-width:850px; margin-bottom:24px; text-wrap:balance; }
+.lp-dentista-1 h2 { font-size:clamp(28px,5vw,46px); line-height:1.14; font-weight:400; letter-spacing:-.025em; text-wrap:balance; }
+.lp-dentista-1 h3 { font-size:22px; line-height:1.25; font-weight:500; }
+.lp-dentista-1 p { font:16px/1.8 Arial,sans-serif; max-width:62ch; opacity:.86; }
+.lp-dentista-1 .lead { font-size:17px; }
+.lp-dentista-1 .actions { display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-top:30px; }
+.lp-dentista-1 .button { display:inline-flex; justify-content:center; align-items:center; gap:14px; background:var(--lp-accent); color:#fff; padding:16px 23px; min-height:48px; font:600 13px Arial,sans-serif; }
+.lp-dentista-1 .text-link { font:13px Arial,sans-serif; border-bottom:1px solid var(--lp-accent); padding:12px 0; }
+.lp-dentista-1 .visual { min-height:360px; background:var(--lp-soft); }
+.lp-dentista-1 .visual > img { object-position:50% 30%; }
+.lp-dentista-1 .photo-fallback { min-height:inherit; padding:36px; display:flex; flex-direction:column; justify-content:space-between; }
+.lp-dentista-1 .photo-fallback > span { font:11px Arial,sans-serif; letter-spacing:3px; text-transform:uppercase; }
+.lp-dentista-1 .photo-fallback strong { font-size:clamp(54px,14vw,120px); line-height:1; font-weight:400; color:var(--lp-accent); }
+.lp-dentista-1 .photo-fallback small { font:13px/1.7 Arial,sans-serif; }
+.lp-dentista-1 .facts { display:flex; flex-wrap:wrap; gap:24px; padding:25px 0; border-block:1px solid color-mix(in srgb,var(--lp-ink) 18%,transparent); font:12px Arial,sans-serif; }
+.lp-dentista-1 .facts strong { display:block; font-size:18px; margin-bottom:7px; }
+.lp-dentista-1 .section { padding:64px 0; }
+.lp-dentista-1 .section-title { display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px; align-items:end; margin-bottom:34px; }
+.lp-dentista-1 .section-title h2 { margin:0; max-width:700px; }
+.lp-dentista-1 .service-list { display:grid; gap:0; }
+.lp-dentista-1 .service { padding:25px 0; border-top:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
+.lp-dentista-1 .service > span { display:block; color:var(--lp-accent); font:12px Arial,sans-serif; margin-bottom:18px; }
+.lp-dentista-1 .service p { font-size:14px; }
+.lp-dentista-1 .service a { display:inline-block; padding:12px 0; font:12px Arial,sans-serif; color:var(--lp-accent); }
+.lp-dentista-1 .story { display:grid; gap:32px; align-items:center; }
+.lp-dentista-1 .story .visual { min-height:320px; }
+.lp-dentista-1 .steps { display:grid; gap:22px; counter-reset:step; }
+.lp-dentista-1 .step { border-left:2px solid var(--lp-accent); padding:8px 0 8px 22px; }
+.lp-dentista-1 .step strong { display:block; font-size:20px; margin-bottom:12px; }
+.lp-dentista-1 .step p { font-size:14px; }
+.lp-dentista-1 .credentials { padding:24px; background:var(--lp-soft); font:14px/1.8 Arial,sans-serif; }
+.lp-dentista-1 .credentials ul { padding-left:18px; }
+.lp-dentista-1 .feature { padding:32px; background:var(--lp-soft); }
+.lp-dentista-1 .feature-grid { display:grid; gap:24px; }
+.lp-dentista-1 .faq { max-width:850px; margin-inline:auto; }
+.lp-dentista-1 details { padding:22px 0; border-top:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
+.lp-dentista-1 summary { cursor:pointer; font:600 15px/1.5 Arial,sans-serif; padding:4px 0; }
+.lp-dentista-1 details p { margin-top:16px; font-size:14px; }
+.lp-dentista-1 .contact { background:var(--lp-soft); }
+.lp-dentista-1 .contact-grid { display:grid; gap:40px; }
+.lp-dentista-1 address { font:14px/1.9 Arial,sans-serif; font-style:normal; }
+.lp-dentista-1 .demo-inquiry { display:grid; gap:16px; font:14px Arial,sans-serif; }
+.lp-dentista-1 .demo-inquiry label { display:grid; gap:8px; }
+.lp-dentista-1 .demo-inquiry input,.lp-dentista-1 .demo-inquiry select,.lp-dentista-1 .demo-inquiry textarea { width:100%; min-height:48px; border:1px solid color-mix(in srgb,var(--lp-ink) 25%,transparent); color:var(--lp-ink); background:var(--lp-bg); padding:12px; border-radius:0; }
+.lp-dentista-1 .demo-inquiry button { cursor:pointer; display:flex; justify-content:space-between; min-height:48px; padding:16px; color:#fff; background:var(--lp-accent); }
+.lp-dentista-1 .demo-inquiry small { font-size:11px; line-height:1.7; }
+.lp-dentista-1 .demo-inquiry [role=status] { padding:16px; border:1px solid var(--lp-accent); font-size:14px; }
+.lp-dentista-1 footer { padding:36px 0; }
+.lp-dentista-1 .footer-row { display:flex; flex-wrap:wrap; gap:24px; justify-content:space-between; font:12px/1.8 Arial,sans-serif; }
+.lp-dentista-1 .footer-row p { font-size:11px; margin-bottom:0; }
+.lp-dentista-1 .filter-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+.lp-dentista-1 .filter-row button { padding:12px 18px; cursor:pointer; background:var(--lp-soft); color:var(--lp-ink); border:1px solid transparent; }
+.lp-dentista-1 .filter-row button[aria-pressed=true] { border-color:var(--lp-accent); }
+.lp-dentista-1 .property-grid { display:grid; gap:24px; }
+.lp-dentista-1 .property .local-photo { min-height:230px; background:var(--lp-soft); }
+.lp-dentista-1 .property h3 { margin:18px 0 8px; }
+.lp-dentista-1 .property p { font-size:13px; }
+.lp-dentista-1 .gallery { display:grid; gap:12px; }
+.lp-dentista-1 .gallery .local-photo { min-height:240px; background:var(--lp-soft); }
+.lp-dentista-1 .gallery-caption { font:12px/1.8 Arial,sans-serif; margin:16px 0; }
+.lp-dentista-1 .article-list { display:grid; gap:25px; }
+.lp-dentista-1 .article-list article { border-top:1px solid var(--lp-accent); padding-top:22px; }
+.lp-dentista-1 .article-list p { font-size:14px; }
+.lp-dentista-1 .team-list { display:grid; gap:20px; }
+.lp-dentista-1 .team-person { background:var(--lp-soft); padding:24px; }
+.lp-dentista-1 .team-person strong { display:block; font-size:20px; margin-bottom:8px; }
+.lp-dentista-1 .team-person small { font:12px Arial,sans-serif; }
+.lp-dentista-1 .schedule { display:grid; gap:12px; }
+.lp-dentista-1 .schedule div { padding:20px; border:1px solid var(--lp-accent); font:14px/1.8 Arial,sans-serif; }
+.lp-dentista-1 .schedule strong { display:block; }
+.lp-dentista-1 .note { font:11px/1.8 Arial,sans-serif; opacity:.75; margin-top:20px; }
+.lp-dentista-1 .context-grid { display:grid; gap:26px; }
+.lp-dentista-1 .context-point { padding:24px; border:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
+.lp-dentista-1 .context-point strong { display:block; font-size:22px; margin-bottom:14px; }
+.lp-dentista-1 .context-letter { max-width:780px; border-left:3px solid var(--lp-accent); padding-left:28px; }
+.lp-dentista-1 .context-letter blockquote { font-size:clamp(24px,4vw,40px); line-height:1.5; margin:0 0 24px; }
+.lp-dentista-1 .context-letter cite { font:13px Arial,sans-serif; font-style:normal; }
+.lp-dentista-1 .context-table { width:100%; border-collapse:collapse; font:14px/1.8 Arial,sans-serif; }
+.lp-dentista-1 .context-table th,.lp-dentista-1 .context-table td { border-bottom:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); padding:20px 8px; text-align:left; }
+.lp-dentista-1 .topic-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:28px 0; }
+.lp-dentista-1 .topic-tabs button { padding:14px 18px; cursor:pointer; background:var(--lp-soft); color:var(--lp-ink); border:1px solid transparent; }
+.lp-dentista-1 .topic-tabs button[aria-pressed=true] { border-color:var(--lp-accent); }
+.lp-dentista-1 .topic-panel { padding:30px; background:var(--lp-soft); }
+.lp-dentista-1 .context-strip { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+.lp-dentista-1 .context-strip span { border:1px solid var(--lp-accent); padding:14px 20px; font:12px Arial,sans-serif; border-radius:30px; }
+.lp-dentista-1 .context-index { display:grid; gap:24px; }
+.lp-dentista-1 .context-index article { display:grid; grid-template-columns:40px 1fr; gap:16px; border-top:1px solid var(--lp-accent); padding:20px 0; }
+.lp-dentista-1 .context-index span { font:13px Arial,sans-serif; color:var(--lp-accent); }
+.lp-dentista-1 .context-index h3 { margin:0 0 12px; }
+.lp-dentista-1 .context-index p { grid-column:2; font-size:14px; }
+.lp-dentista-1 :focus-visible { outline:3px solid var(--lp-accent); outline-offset:5px; }
+@media(min-width:768px) {
+ .lp-dentista-1 .hero-grid,.lp-dentista-1 .story,.lp-dentista-1 .contact-grid { grid-template-columns:1fr 1fr; gap:48px; }
+ .lp-dentista-1 .service-list,.lp-dentista-1 .steps,.lp-dentista-1 .property-grid,.lp-dentista-1 .team-list,.lp-dentista-1 .schedule,.lp-dentista-1 .article-list { grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px; }
+ .lp-dentista-1 .feature-grid,.lp-dentista-1 .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .lp-dentista-1 .context-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .lp-dentista-1 .visual { min-height:480px; }
+ .lp-dentista-1 .section { padding:88px 0; }
+}
+@media(min-width:960px) {
+ .lp-dentista-1 .menu { display:none; }
+ .lp-dentista-1 nav,.lp-dentista-1 nav.open { position:static; display:flex; flex-direction:row; padding:0; box-shadow:none; border:0; align-items:center; gap:26px; background:transparent; }
+ .lp-dentista-1 .hero { padding:70px 0 90px; }
+}
+.lp-dentista-1 .utility { background:var(--lp-accent); color:var(--lp-bg); padding:10px 20px; font:11px Arial,sans-serif; text-align:center; } .lp-dentista-1 h1 { font-weight:700; font-size:clamp(36px,7vw,64px); } .lp-dentista-1 .hero .visual { border-radius:8px; } .lp-dentista-1 .service { padding:24px; background:var(--lp-soft); border-top:4px solid var(--lp-accent); } .lp-dentista-1 .facts { justify-content:space-around; } .lp-dentista-1 .brand { font-family:Arial,sans-serif; }
+@media(prefers-reduced-motion:reduce) { .lp-dentista-1 * { scroll-behavior:auto; transition:none; animation:none; } }
+
+.lp-dentista-1 .story .photo-fallback strong { font-size:clamp(36px,4vw,64px); }

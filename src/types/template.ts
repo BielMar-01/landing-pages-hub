@@ -8,4 +8,5 @@ export interface LandingTemplate {
   tags: string[]
   route: string
   available: boolean
+  preview?: string
 }

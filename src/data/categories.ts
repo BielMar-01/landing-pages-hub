@@ -62,7 +62,7 @@ export const categories: Category[] = [
   {
     id: 'personal',
     name: 'Personal Trainer',
-    slug: 'personal',
+    slug: 'personal-trainer',
     description:
       'Landing pages para personal trainers, coaches e profissionais de performance física.',
     shortDescription: 'Treinamento e performance',
@@ -95,7 +95,7 @@ export const categories: Category[] = [
   {
     id: 'estetica',
     name: 'Estética & Beleza',
-    slug: 'estetica',
+    slug: 'estetica-beleza',
     description:
       'Modelos elegantes para clínicas de estética e profissionais de beleza.',
     shortDescription: 'Estética, beleza e cuidados',

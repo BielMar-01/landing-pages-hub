@@ -1,5 +1,6 @@
 @import "./variables.css";
 
+
 *,
 *::before,
 *::after {
@@ -1428,3 +1429,7 @@ select {
     padding: 24px;
   }
 }
+
+/* Each preview uses the composition and palette of its landing. */
+.template-preview.template-preview--asset { min-height: 0; padding: 0; background: transparent; }
+.template-preview__image { width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; }
