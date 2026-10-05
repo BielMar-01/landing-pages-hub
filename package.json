@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "check:catalog": "node scripts/check-catalog.mjs",
+    "check:prime": "node scripts/check-prime.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

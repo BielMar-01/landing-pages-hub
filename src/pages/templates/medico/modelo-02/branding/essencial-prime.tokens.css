@@ -1,0 +1,32 @@
+.lp-medico-2 {
+  --prime-navy: #071B2D;
+  --prime-navy-light: #102B42;
+  --prime-champagne: #C8A96B;
+  --prime-champagne-light: #E6D4AD;
+  --prime-ivory: #F7F3EA;
+  --prime-warm-white: #FCFBF8;
+  --prime-surface: #FFFFFF;
+  --prime-text: #15222D;
+  --prime-muted: #71808A;
+  --prime-border: #DED8CC;
+  --prime-success: #3F8A68;
+  --prime-error: #C65353;
+  --prime-whatsapp: #25D366;
+
+  --prime-font-display: "Cormorant Garamond", Georgia, serif;
+  --prime-font-sans: "Manrope", Arial, sans-serif;
+
+  --prime-radius-sm: 12px;
+  --prime-radius-md: 18px;
+  --prime-radius-lg: 24px;
+  --prime-radius-pill: 999px;
+
+  --prime-shadow-card: 0 18px 50px rgba(7, 27, 45, 0.08);
+  --prime-shadow-hover: 0 24px 70px rgba(7, 27, 45, 0.14);
+
+  --prime-transition-fast: 180ms ease;
+  --prime-transition-card: 260ms ease;
+  --prime-transition-menu: 350ms ease;
+  --prime-transition-page: 450ms ease;
+  --prime-transition-image: 700ms cubic-bezier(.2,.7,.2,1);
+}

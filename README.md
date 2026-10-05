@@ -13,6 +13,7 @@ React + TypeScript + Vite + React Router + Lucide + CSS. Projeto exclusivamente 
 - `npm run build`: TypeScript e build de produção.
 - `npm run lint`: ESLint.
 - `npm run check:catalog`: renderização dos 64 modelos, integridade do catálogo, previews, âncoras e escopo dos estilos.
+- `npm run check:prime`: integridade das 12 páginas da Essencial Prime e limites do calendário de agendamento.
 
 No PowerShell com scripts bloqueados, use `npm.cmd`.
 
@@ -25,6 +26,8 @@ As páginas têm JSX e CSS próprios em `src/pages/templates`. O catálogo está
 ## Imagens e demonstrações
 
 O Modelo Médico 01, Essencial Care, usa fotografias reais do banco local `public/images/medico/shared`, sem duplicá-las. A Central e as categorias usam a identidade OrbisCore em azul/ciano. Os outros modelos mantêm suas implementações e seus fallbacks onde ainda faltam fotos. As referências em `public/images/medico/references/modelo-01` orientam o design e não são exibidas dentro do site.
+
+O Modelo Médico 02, Essencial Prime, possui 12 páginas próprias, identidade navy/champagne, especialidades, equipe, galeria, conteúdo e agendamento demonstrativo em cinco etapas. Também usa o banco compartilhado de fotografias. Consulte [a documentação da Essencial Prime](docs/ESSENCIAL-PRIME.md).
 
 Todos os nomes, registros, imóveis e conteúdos profissionais são fictícios. Formulários simulam envio, sem transmitir ou armazenar dados. Não há backend, autenticação ou deploy nesta implementação.
 

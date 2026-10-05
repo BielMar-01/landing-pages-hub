@@ -1,125 +1,450 @@
-/* lp-medico-2: independent stylesheet, scoped to this landing. */
-.lp-medico-2 { --lp-bg:#181f20; --lp-ink:#f4eddf; --lp-accent:#d3b98a; --lp-soft:#303a3b; color:var(--lp-ink); background:var(--lp-bg); min-height:100vh; font-family:Georgia, 'Times New Roman', serif; }
-.lp-medico-2 * { min-width:0; }
-.lp-medico-2 .wrap { width:min(100% - 40px, 1200px); margin-inline:auto; }
-.lp-medico-2 section[id] { scroll-margin-top:100px; }
-.lp-medico-2 .back { display:inline-flex; align-items:center; gap:8px; font:12px Arial,sans-serif; padding:12px 0; opacity:.8; }
-.lp-medico-2 header { border-bottom:1px solid color-mix(in srgb,var(--lp-ink) 18%,transparent); }
-.lp-medico-2 .header-row { min-height:80px; display:flex; align-items:center; justify-content:space-between; gap:16px; position:relative; }
-.lp-medico-2 .brand { font-size:20px; font-weight:700; letter-spacing:-.6px; }
-.lp-medico-2 .brand small { display:block; font:10px Arial,sans-serif; text-transform:uppercase; letter-spacing:2px; margin-top:6px; opacity:.7; }
-.lp-medico-2 .menu { display:grid; place-items:center; background:var(--lp-soft); color:var(--lp-ink); width:44px; height:44px; border-radius:6px; cursor:pointer; }
-.lp-medico-2 nav { display:none; }
-.lp-medico-2 nav.open { display:flex; position:absolute; top:100%; inset-inline:0; z-index:10; background:var(--lp-bg); padding:20px; box-shadow:0 18px 30px #0002; flex-direction:column; gap:16px; border:1px solid var(--lp-soft); }
-.lp-medico-2 nav a { font:13px Arial,sans-serif; padding:10px 0; }
-.lp-medico-2 .hero { padding:48px 0 64px; }
-.lp-medico-2 .hero-grid { display:grid; gap:32px; align-items:center; }
-.lp-medico-2 .eyebrow { display:block; font:11px Arial,sans-serif; text-transform:uppercase; letter-spacing:2px; color:var(--lp-accent); margin-bottom:24px; }
-.lp-medico-2 h1 { font-size:clamp(36px,8.5vw,76px); line-height:1.05; letter-spacing:-.04em; font-weight:400; max-width:850px; margin-bottom:24px; text-wrap:balance; }
-.lp-medico-2 h2 { font-size:clamp(28px,5vw,46px); line-height:1.14; font-weight:400; letter-spacing:-.025em; text-wrap:balance; }
-.lp-medico-2 h3 { font-size:22px; line-height:1.25; font-weight:500; }
-.lp-medico-2 p { font:16px/1.8 Arial,sans-serif; max-width:62ch; opacity:.86; }
-.lp-medico-2 .lead { font-size:17px; }
-.lp-medico-2 .actions { display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-top:30px; }
-.lp-medico-2 .button { display:inline-flex; justify-content:center; align-items:center; gap:14px; background:var(--lp-accent); color:#181f20; padding:16px 23px; min-height:48px; font:600 13px Arial,sans-serif; }
-.lp-medico-2 .text-link { font:13px Arial,sans-serif; border-bottom:1px solid var(--lp-accent); padding:12px 0; }
-.lp-medico-2 .visual { min-height:360px; background:var(--lp-soft); }
-.lp-medico-2 .visual > img { object-position:50% 30%; }
-.lp-medico-2 .photo-fallback { min-height:inherit; padding:36px; display:flex; flex-direction:column; justify-content:space-between; }
-.lp-medico-2 .photo-fallback > span { font:11px Arial,sans-serif; letter-spacing:3px; text-transform:uppercase; }
-.lp-medico-2 .photo-fallback strong { font-size:clamp(54px,14vw,120px); line-height:1; font-weight:400; color:var(--lp-accent); }
-.lp-medico-2 .photo-fallback small { font:13px/1.7 Arial,sans-serif; }
-.lp-medico-2 .facts { display:flex; flex-wrap:wrap; gap:24px; padding:25px 0; border-block:1px solid color-mix(in srgb,var(--lp-ink) 18%,transparent); font:12px Arial,sans-serif; }
-.lp-medico-2 .facts strong { display:block; font-size:18px; margin-bottom:7px; }
-.lp-medico-2 .section { padding:64px 0; }
-.lp-medico-2 .section-title { display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px; align-items:end; margin-bottom:34px; }
-.lp-medico-2 .section-title h2 { margin:0; max-width:700px; }
-.lp-medico-2 .service-list { display:grid; gap:0; }
-.lp-medico-2 .service { padding:25px 0; border-top:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
-.lp-medico-2 .service > span { display:block; color:var(--lp-accent); font:12px Arial,sans-serif; margin-bottom:18px; }
-.lp-medico-2 .service p { font-size:14px; }
-.lp-medico-2 .service a { display:inline-block; padding:12px 0; font:12px Arial,sans-serif; color:var(--lp-accent); }
-.lp-medico-2 .story { display:grid; gap:32px; align-items:center; }
-.lp-medico-2 .story .visual { min-height:320px; }
-.lp-medico-2 .steps { display:grid; gap:22px; counter-reset:step; }
-.lp-medico-2 .step { border-left:2px solid var(--lp-accent); padding:8px 0 8px 22px; }
-.lp-medico-2 .step strong { display:block; font-size:20px; margin-bottom:12px; }
-.lp-medico-2 .step p { font-size:14px; }
-.lp-medico-2 .credentials { padding:24px; background:var(--lp-soft); font:14px/1.8 Arial,sans-serif; }
-.lp-medico-2 .credentials ul { padding-left:18px; }
-.lp-medico-2 .feature { padding:32px; background:var(--lp-soft); }
-.lp-medico-2 .feature-grid { display:grid; gap:24px; }
-.lp-medico-2 .faq { max-width:850px; margin-inline:auto; }
-.lp-medico-2 details { padding:22px 0; border-top:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
-.lp-medico-2 summary { cursor:pointer; font:600 15px/1.5 Arial,sans-serif; padding:4px 0; }
-.lp-medico-2 details p { margin-top:16px; font-size:14px; }
-.lp-medico-2 .contact { background:var(--lp-soft); }
-.lp-medico-2 .contact-grid { display:grid; gap:40px; }
-.lp-medico-2 address { font:14px/1.9 Arial,sans-serif; font-style:normal; }
-.lp-medico-2 .demo-inquiry { display:grid; gap:16px; font:14px Arial,sans-serif; }
-.lp-medico-2 .demo-inquiry label { display:grid; gap:8px; }
-.lp-medico-2 .demo-inquiry input,.lp-medico-2 .demo-inquiry select,.lp-medico-2 .demo-inquiry textarea { width:100%; min-height:48px; border:1px solid color-mix(in srgb,var(--lp-ink) 25%,transparent); color:var(--lp-ink); background:var(--lp-bg); padding:12px; border-radius:0; }
-.lp-medico-2 .demo-inquiry button { cursor:pointer; display:flex; justify-content:space-between; min-height:48px; padding:16px; color:#181f20; background:var(--lp-accent); }
-.lp-medico-2 .demo-inquiry small { font-size:11px; line-height:1.7; }
-.lp-medico-2 .demo-inquiry [role=status] { padding:16px; border:1px solid var(--lp-accent); font-size:14px; }
-.lp-medico-2 footer { padding:36px 0; }
-.lp-medico-2 .footer-row { display:flex; flex-wrap:wrap; gap:24px; justify-content:space-between; font:12px/1.8 Arial,sans-serif; }
-.lp-medico-2 .footer-row p { font-size:11px; margin-bottom:0; }
-.lp-medico-2 .filter-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
-.lp-medico-2 .filter-row button { padding:12px 18px; cursor:pointer; background:var(--lp-soft); color:var(--lp-ink); border:1px solid transparent; }
-.lp-medico-2 .filter-row button[aria-pressed=true] { border-color:var(--lp-accent); }
-.lp-medico-2 .property-grid { display:grid; gap:24px; }
-.lp-medico-2 .property .local-photo { min-height:230px; background:var(--lp-soft); }
-.lp-medico-2 .property h3 { margin:18px 0 8px; }
-.lp-medico-2 .property p { font-size:13px; }
-.lp-medico-2 .gallery { display:grid; gap:12px; }
-.lp-medico-2 .gallery .local-photo { min-height:240px; background:var(--lp-soft); }
-.lp-medico-2 .gallery-caption { font:12px/1.8 Arial,sans-serif; margin:16px 0; }
-.lp-medico-2 .article-list { display:grid; gap:25px; }
-.lp-medico-2 .article-list article { border-top:1px solid var(--lp-accent); padding-top:22px; }
-.lp-medico-2 .article-list p { font-size:14px; }
-.lp-medico-2 .team-list { display:grid; gap:20px; }
-.lp-medico-2 .team-person { background:var(--lp-soft); padding:24px; }
-.lp-medico-2 .team-person strong { display:block; font-size:20px; margin-bottom:8px; }
-.lp-medico-2 .team-person small { font:12px Arial,sans-serif; }
-.lp-medico-2 .schedule { display:grid; gap:12px; }
-.lp-medico-2 .schedule div { padding:20px; border:1px solid var(--lp-accent); font:14px/1.8 Arial,sans-serif; }
-.lp-medico-2 .schedule strong { display:block; }
-.lp-medico-2 .note { font:11px/1.8 Arial,sans-serif; opacity:.75; margin-top:20px; }
-.lp-medico-2 .context-grid { display:grid; gap:26px; }
-.lp-medico-2 .context-point { padding:24px; border:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
-.lp-medico-2 .context-point strong { display:block; font-size:22px; margin-bottom:14px; }
-.lp-medico-2 .context-letter { max-width:780px; border-left:3px solid var(--lp-accent); padding-left:28px; }
-.lp-medico-2 .context-letter blockquote { font-size:clamp(24px,4vw,40px); line-height:1.5; margin:0 0 24px; }
-.lp-medico-2 .context-letter cite { font:13px Arial,sans-serif; font-style:normal; }
-.lp-medico-2 .context-table { width:100%; border-collapse:collapse; font:14px/1.8 Arial,sans-serif; }
-.lp-medico-2 .context-table th,.lp-medico-2 .context-table td { border-bottom:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); padding:20px 8px; text-align:left; }
-.lp-medico-2 .topic-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:28px 0; }
-.lp-medico-2 .topic-tabs button { padding:14px 18px; cursor:pointer; background:var(--lp-soft); color:var(--lp-ink); border:1px solid transparent; }
-.lp-medico-2 .topic-tabs button[aria-pressed=true] { border-color:var(--lp-accent); }
-.lp-medico-2 .topic-panel { padding:30px; background:var(--lp-soft); }
-.lp-medico-2 .context-strip { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
-.lp-medico-2 .context-strip span { border:1px solid var(--lp-accent); padding:14px 20px; font:12px Arial,sans-serif; border-radius:30px; }
-.lp-medico-2 .context-index { display:grid; gap:24px; }
-.lp-medico-2 .context-index article { display:grid; grid-template-columns:40px 1fr; gap:16px; border-top:1px solid var(--lp-accent); padding:20px 0; }
-.lp-medico-2 .context-index span { font:13px Arial,sans-serif; color:var(--lp-accent); }
-.lp-medico-2 .context-index h3 { margin:0 0 12px; }
-.lp-medico-2 .context-index p { grid-column:2; font-size:14px; }
-.lp-medico-2 :focus-visible { outline:3px solid var(--lp-accent); outline-offset:5px; }
-@media(min-width:768px) {
- .lp-medico-2 .hero-grid,.lp-medico-2 .story,.lp-medico-2 .contact-grid { grid-template-columns:1fr 1fr; gap:48px; }
- .lp-medico-2 .service-list,.lp-medico-2 .steps,.lp-medico-2 .property-grid,.lp-medico-2 .team-list,.lp-medico-2 .schedule,.lp-medico-2 .article-list { grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px; }
- .lp-medico-2 .feature-grid,.lp-medico-2 .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
- .lp-medico-2 .context-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
- .lp-medico-2 .visual { min-height:480px; }
- .lp-medico-2 .section { padding:88px 0; }
+﻿.lp-medico-2{background:var(--prime-warm-white);color:var(--prime-text);font:16px/1.75 var(--prime-font-sans);--ep-gutter:clamp(20px,4vw,64px)}
+.lp-medico-2 *{box-sizing:border-box}
+.lp-medico-2 h1,.lp-medico-2 h2,.lp-medico-2 h3,.lp-medico-2 p{margin:0}
+.lp-medico-2 h1,.lp-medico-2 h2,.lp-medico-2 h3,.lp-medico-2 blockquote{font-family:var(--prime-font-display);font-weight:500;letter-spacing:-.035em;line-height:1.07}
+.lp-medico-2 h1{font-size:clamp(3rem,5.5vw,5.7rem)}
+.lp-medico-2 h2{font-size:clamp(2.35rem,3.6vw,3.8rem)}
+.lp-medico-2 h3{font-size:1.85rem}
+.lp-medico-2 h2 em,.lp-medico-2 h1 em{font-weight:400;color:#997940}
+.lp-medico-2 p{color:#53616b;margin:20px 0;max-width:65ch}
+.lp-medico-2 small{font-size:.875rem}
+.lp-medico-2 button,.lp-medico-2 input,.lp-medico-2 select,.lp-medico-2 textarea{font:inherit}
+.lp-medico-2 button{cursor:pointer;color:inherit}
+.lp-medico-2 a{text-decoration:none;color:inherit}
+.lp-medico-2 :focus-visible{outline:3px solid #b28d47;outline-offset:5px}
+.lp-medico-2 .ep-container{width:min(100%,1440px);padding-inline:var(--ep-gutter);margin-inline:auto}
+.lp-medico-2 .ep-section{padding-block:clamp(64px,7.5vw,112px)}
+.lp-medico-2 .ep-section--ivory{background:var(--prime-ivory)}
+.lp-medico-2 .ep-section--navy{background:var(--prime-navy);color:var(--prime-ivory)}
+.lp-medico-2 .ep-section--navy p{color:#c3cbd1}
+.lp-medico-2 .ep-section--navy h2 em{color:var(--prime-champagne-light)}
+.lp-medico-2 .ep-eyebrow{display:block;font-size:.75rem;letter-spacing:.19em;text-transform:uppercase;font-weight:600;color:#92733a;margin-bottom:20px}
+.lp-medico-2 .ep-section-title{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:40px}
+.lp-medico-2 .ep-section-title p{margin-bottom:0}
+.lp-medico-2 .ep-section-title>.ep-text-link{flex-shrink:0}
+.lp-medico-2 .ep-button{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:52px;padding:14px 25px;border:1px solid var(--prime-champagne);border-radius:999px;background:var(--prime-champagne);color:var(--prime-navy);font-size:.875rem;font-weight:700;line-height:1.5;transition:background 180ms,transform 180ms; text-align:center}
+.lp-medico-2 .ep-button:hover{background:var(--prime-champagne-light);transform:translateY(-2px)}
+.lp-medico-2 .ep-button--outline{background:transparent;border-color:var(--prime-border);color:var(--prime-navy)}
+.lp-medico-2 .ep-button--outline:hover{background:#c8a96b14}
+.lp-medico-2 .ep-button:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.lp-medico-2 .ep-text-link{min-height:44px;display:inline-flex;align-items:center;gap:14px;font-size:.875rem;font-weight:600;color:#85652f;border:0;background:transparent;padding:8px 0}
+.lp-medico-2 .ep-text-link svg{transition:transform 180ms;flex-shrink:0}
+.lp-medico-2 .ep-text-link:hover svg{transform:translateX(4px)}
+.lp-medico-2 .ep-actions{display:flex;flex-wrap:wrap;align-items:center;gap:15px;margin-top:32px}
+.lp-medico-2 .ep-icon-button{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid var(--prime-border);border-radius:50%;background:transparent;flex-shrink:0}
+.lp-medico-2 .ep-icon-button:hover{background:#c8a96b1f}
+.lp-medico-2 .ep-photo{display:block;width:100%;height:100%;object-fit:cover;background:var(--prime-ivory)}
+.lp-medico-2 .ep-header{position:fixed;z-index:30;inset:0 0 auto;color:var(--prime-ivory);background:#071b2d9c;border-bottom:1px solid #e6d4ad24;transition:background 350ms;backdrop-filter:blur(16px)}
+.lp-medico-2 .ep-header--scrolled{background:#071b2df2}
+.lp-medico-2 .ep-header__row{min-height:94px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.lp-medico-2 .ep-logo{display:inline-flex;align-items:center;gap:12px;white-space:nowrap}
+.lp-medico-2 .ep-logo svg{width:44px;height:53px;color:var(--prime-champagne)}
+.lp-medico-2 .ep-logo strong{display:block;font:500 1.8rem/1.1 var(--prime-font-display);letter-spacing:-.03em}
+.lp-medico-2 .ep-logo small{display:block;font-size:.57rem;letter-spacing:.23em;color:var(--prime-champagne-light);margin-top:8px}
+.lp-medico-2 .ep-desktop-nav{display:flex;gap:clamp(13px,1.7vw,25px);align-items:center}
+.lp-medico-2 .ep-desktop-nav a{font-size:.75rem;min-height:52px;display:flex;align-items:center;position:relative;white-space:nowrap}
+.lp-medico-2 .ep-desktop-nav a::after{position:absolute;content:'';height:1px;background:var(--prime-champagne);bottom:0;inset-inline:0;transform:scaleX(0);transition:transform 200ms}
+.lp-medico-2 .ep-desktop-nav a:hover,.lp-medico-2 .ep-desktop-nav a.active{color:var(--prime-champagne-light)}
+.lp-medico-2 .ep-desktop-nav a.active::after{transform:scaleX(1)}
+.lp-medico-2 .ep-header__actions{display:flex;gap:12px;align-items:center}
+.lp-medico-2 .ep-header .ep-button{min-height:44px;padding:11px 19px;font-size:.75rem;gap:14px}
+.lp-medico-2 .ep-menu-button{display:none;border-color:#ffffff38}
+.lp-medico-2 .ep-skip{position:fixed;top:-100px;left:20px;padding:12px 20px;border-radius:8px;z-index:100;background:var(--prime-champagne);color:var(--prime-navy)}
+.lp-medico-2 .ep-skip:focus{top:12px}
+.lp-medico-2 .ep-hero{min-height:560px;position:relative;color:var(--prime-ivory);background:var(--prime-navy);overflow:hidden;display:flex;align-items:center}
+.lp-medico-2 .ep-hero--home{min-height:clamp(730px,100svh,1000px)}
+.lp-medico-2 .ep-hero__image{position:absolute;inset:0;object-position:70% 50%}
+.lp-medico-2 .ep-hero::after{position:absolute;inset:0;content:'';background:linear-gradient(90deg,#071b2dfc 0%,#071b2ded 22%,#071b2dba 43%,#071b2d2b 78%),linear-gradient(0deg,#071b2d96,transparent 40%)}
+.lp-medico-2 .ep-hero__mobile{display:none}
+.lp-medico-2 .ep-hero__content{position:relative;z-index:2;padding-block:140px 64px}
+.lp-medico-2 .ep-hero--home .ep-hero__content{padding-block:170px 48px}
+.lp-medico-2 .ep-hero__copy{max-width:650px}
+.lp-medico-2 .ep-hero--home h1{font-size:clamp(4rem,6.7vw,7rem);line-height:.98}
+.lp-medico-2 .ep-hero h1 em{color:var(--prime-champagne-light)}
+.lp-medico-2 .ep-hero p{color:#e3e4e1;max-width:46ch;font-size:1rem;margin-top:25px}
+.lp-medico-2 .ep-hero .ep-eyebrow{color:var(--prime-champagne-light)}
+.lp-medico-2 .ep-hero .ep-button--outline,.lp-medico-2 .ep-cta .ep-button--outline{color:var(--prime-ivory);border-color:#e6d4ad66}
+.lp-medico-2 .ep-hero__signature{display:flex;gap:30px;border-top:1px solid #e6d4ad44;margin-top:80px;padding-top:22px;font-size:.75rem;letter-spacing:.03em;color:#e6d4adbd}
+.lp-medico-2 .ep-hero__signature span+span{margin-left:auto}
+.lp-medico-2 .ep-hero__botanical{color:var(--prime-champagne);opacity:.2;position:absolute;z-index:1;bottom:-60px;left:-70px;width:240px;pointer-events:none}
+.lp-medico-2 .ep-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:12px;font-size:.75rem;color:#e1dfd8;margin-bottom:27px}
+.lp-medico-2 .ep-breadcrumb a{min-height:44px;display:inline-flex;align-items:center}
+.lp-medico-2 .ep-benefits{background:var(--prime-ivory);border-bottom:1px solid var(--prime-border)}
+.lp-medico-2 .ep-benefits>div{display:grid;grid-template-columns:repeat(4,1fr);padding-block:32px}
+.lp-medico-2 .ep-benefits>div>div{display:flex;align-items:center;gap:18px;padding:0 24px;border-right:1px solid var(--prime-border)}
+.lp-medico-2 .ep-benefits>div>div:first-child{padding-left:0}
+.lp-medico-2 .ep-benefits>div>div:last-child{border-right:0}
+.lp-medico-2 .ep-benefits svg{color:#98773e;flex-shrink:0}
+.lp-medico-2 .ep-benefits strong{display:block;font-size:.875rem;font-weight:600}
+.lp-medico-2 .ep-benefits small{display:block;color:#647078;font-size:.75rem;margin-top:4px}
+.lp-medico-2 .ep-story{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(32px,6vw,90px)}
+.lp-medico-2 .ep-story__photos{position:relative;padding:0 24px 28px 0}
+.lp-medico-2 .ep-story__photos>img{aspect-ratio:4/4.1;height:auto;border-radius:24px 24px 4px 24px}
+.lp-medico-2 .ep-photo-caption{position:absolute;right:0;bottom:0;padding:26px 35px;background:var(--prime-navy);color:var(--prime-ivory);border-radius:18px 2px 18px 2px}
+.lp-medico-2 .ep-photo-caption span{font-size:.75rem;color:var(--prime-champagne-light)}
+.lp-medico-2 .ep-photo-caption strong{display:block;font:italic 400 2.4rem var(--prime-font-display)}
+.lp-medico-2 .ep-mini-pillars{display:flex;gap:24px;border-block:1px solid var(--prime-border);padding-block:22px;margin:30px 0}
+.lp-medico-2 .ep-mini-pillars strong{font:400 1.8rem var(--prime-font-display);color:#9b7b41}
+.lp-medico-2 .ep-mini-pillars span{display:block;font-size:.75rem}
+.lp-medico-2 .ep-specialties-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.lp-medico-2 .ep-specialty-card,.lp-medico-2 .ep-doctor-card{background:var(--prime-surface);border:1px solid var(--prime-border);border-radius:18px;overflow:hidden;transition:transform 260ms,box-shadow 260ms,border-color 260ms}
+.lp-medico-2 .ep-specialty-card:hover,.lp-medico-2 .ep-doctor-card:hover{transform:translateY(-5px);box-shadow:var(--prime-shadow-hover);border-color:var(--prime-champagne)}
+.lp-medico-2 .ep-specialty-card>a{display:block;height:100%}
+.lp-medico-2 .ep-card-photo{aspect-ratio:1.7;overflow:hidden;background:var(--prime-ivory)}
+.lp-medico-2 .ep-card-photo img{transition:transform 700ms cubic-bezier(.2,.7,.2,1)}
+.lp-medico-2 .ep-specialty-card:hover .ep-card-photo img,.lp-medico-2 .ep-doctor-card:hover .ep-card-photo img{transform:scale(1.04)}
+.lp-medico-2 .ep-card-body{padding:25px 26px;position:relative}
+.lp-medico-2 .ep-card-body p{font-size:.875rem;margin-block:13px}
+.lp-medico-2 .ep-card-number{position:absolute;right:24px;top:27px;font-size:.75rem;color:#a18a64}
+.lp-medico-2 .ep-specialty-card h3{padding-right:30px}
+.lp-medico-2 .ep-doctors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.lp-medico-2 .ep-doctor-card .ep-card-photo{aspect-ratio:.88}
+.lp-medico-2 .ep-doctor-card .ep-card-body{padding:22px 20px}
+.lp-medico-2 .ep-doctor-card .ep-eyebrow{font-size:.6rem;letter-spacing:.1em;margin-bottom:10px}
+.lp-medico-2 .ep-doctor-card h3{font-size:1.6rem}
+.lp-medico-2 .ep-doctor-card small{color:#68747c;font-size:.7rem;display:block;margin-top:10px}
+.lp-medico-2 .ep-doctor-card .ep-button{width:100%;min-height:46px;padding:10px 18px;margin-top:4px}
+.lp-medico-2 .ep-note{font-size:.875rem;color:#65727b}
+.lp-medico-2 .ep-center{text-align:center;margin-inline:auto}
+.lp-medico-2 .ep-journey{display:grid;grid-template-columns:repeat(4,1fr);gap:35px;margin-top:60px}
+.lp-medico-2 .ep-journey article{border-top:1px solid #c8a96b66;padding-top:24px}
+.lp-medico-2 .ep-journey article>span{font:400 2.8rem var(--prime-font-display);color:var(--prime-champagne)}
+.lp-medico-2 .ep-journey h3{font-size:1.65rem;margin-top:15px}
+.lp-medico-2 .ep-journey p{font-size:.875rem}
+.lp-medico-2 .ep-numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-top:1px solid #c8a96b44;padding-top:40px;margin-top:40px}
+.lp-medico-2 .ep-numbers strong{display:block;color:var(--prime-champagne-light);font:400 3.4rem var(--prime-font-display)}
+.lp-medico-2 .ep-numbers span{font-size:.75rem;color:#d4dbdf}
+.lp-medico-2 .ep-facility-collage{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.lp-medico-2 .ep-facility-collage img{border-radius:16px;aspect-ratio:1.1;height:auto}
+.lp-medico-2 .ep-facility-collage img:first-child{grid-column:1/-1;aspect-ratio:1.85}
+.lp-medico-2 .ep-testimonials{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.lp-medico-2 .ep-testimonial{background:#fcfbf8;border:1px solid var(--prime-border);border-radius:24px;padding:38px 42px}
+.lp-medico-2 .ep-testimonial>svg{color:var(--prime-champagne)}
+.lp-medico-2 .ep-stars{display:flex;gap:3px;color:#98773e;margin:15px 0}
+.lp-medico-2 .ep-testimonial blockquote{font-size:1.9rem;margin:20px 0 30px;line-height:1.35}
+.lp-medico-2 .ep-testimonial__person{display:flex;align-items:center;gap:15px}
+.lp-medico-2 .ep-testimonial__person img{width:54px;height:54px;border-radius:50%}
+.lp-medico-2 .ep-testimonial__person strong,.lp-medico-2 .ep-testimonial__person small{display:block;font-size:.875rem}
+.lp-medico-2 .ep-testimonial__person small{font-size:.75rem;color:#647078}
+.lp-medico-2 .ep-testimonial-controls{display:flex;gap:20px;align-items:center;margin-top:26px;font-size:.75rem}
+.lp-medico-2 .ep-editorial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.lp-medico-2 .ep-editorial-grid article>img{border-radius:18px;aspect-ratio:1.55;height:auto}
+.lp-medico-2 .ep-editorial-grid article>div{padding:22px 4px}
+.lp-medico-2 .ep-editorial-grid .ep-eyebrow{font-size:.65rem;margin-bottom:12px}
+.lp-medico-2 .ep-editorial-grid h3{font-size:2rem}
+.lp-medico-2 .ep-editorial-grid p{font-size:.875rem;margin-block:15px}
+.lp-medico-2 .ep-cta{position:relative;background:var(--prime-navy);color:var(--prime-ivory);overflow:hidden}
+.lp-medico-2 .ep-cta>img{position:absolute;inset:0;opacity:.15;object-position:40% 50%}
+.lp-medico-2 .ep-cta>div{position:relative;display:flex;align-items:center;justify-content:space-between;gap:40px;padding-block:64px}
+.lp-medico-2 .ep-cta p{color:#d2d9dd}
+.lp-medico-2 .ep-cta .ep-eyebrow{color:var(--prime-champagne-light)}
+.lp-medico-2 .ep-cta>div>div:last-child{display:flex;flex-direction:column;gap:14px}
+.lp-medico-2 .ep-faq-home{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.lp-medico-2 .ep-accordion{border:1px solid var(--prime-border);border-radius:12px;margin-bottom:12px;background:var(--prime-surface);transition:background 260ms,border-color 260ms}
+.lp-medico-2 .ep-accordion h3{font-family:var(--prime-font-sans);font-size:1rem;letter-spacing:0}
+.lp-medico-2 .ep-accordion h3 button{display:flex;width:100%;gap:24px;align-items:center;justify-content:space-between;padding:21px 22px;text-align:left;border:0;background:transparent;font-size:.875rem;line-height:1.7;min-height:60px;border-radius:12px}
+.lp-medico-2 .ep-accordion svg{flex-shrink:0;transition:transform 260ms}
+.lp-medico-2 .ep-accordion p{padding:0 22px 22px;margin:0;font-size:.875rem}
+.lp-medico-2 .ep-accordion--open{background:var(--prime-ivory);border-color:var(--prime-champagne-light)}
+.lp-medico-2 .ep-accordion--open svg{transform:rotate(180deg)}
+.lp-medico-2 .ep-location{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center}
+.lp-medico-2 .ep-map{position:relative;min-height:350px;overflow:hidden;border:1px solid var(--prime-border);border-radius:20px;background:repeating-linear-gradient(28deg,transparent 0 38px,#ffffffce 38px 43px,transparent 43px 80px),repeating-linear-gradient(118deg,#e6e8e2 0 45px,white 45px 49px,#f0eee7 49px 90px)}
+.lp-medico-2 .ep-map__avenue{position:absolute;top:51%;left:-10%;width:120%;padding:12px;background:#e5d4af;transform:rotate(-24deg);font-size:.7rem;letter-spacing:.15em;text-align:center}
+.lp-medico-2 .ep-map__park{position:absolute;bottom:-30px;right:-30px;width:170px;height:170px;border-radius:50%;background:#cbd8c0;text-align:center;padding-top:55px;font-size:.75rem;color:#47593e}
+.lp-medico-2 .ep-map__pin{position:absolute;left:50%;top:39%;transform:translate(-50%,-50%);background:#fcfbf8;box-shadow:var(--prime-shadow-card);border-radius:14px;padding:18px 22px 18px 60px;white-space:nowrap}
+.lp-medico-2 .ep-map__pin svg{position:absolute;left:18px;top:23px;color:#8b6a33}
+.lp-medico-2 .ep-map__pin strong,.lp-medico-2 .ep-map__pin small{display:block;font-size:.875rem}
+.lp-medico-2 .ep-map__pin small{font-size:.7rem;color:#65727b}
+.lp-medico-2 .ep-location__copy p svg{display:inline;vertical-align:middle;margin-right:8px;color:#95783f}
+.lp-medico-2 .ep-footer{background:var(--prime-navy);color:var(--prime-ivory);padding-top:70px}
+.lp-medico-2 .ep-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:50px}
+.lp-medico-2 .ep-footer p{font-size:.875rem;color:#aebbc5;line-height:1.85}
+.lp-medico-2 .ep-footer h3{font:600 .875rem var(--prime-font-sans);margin-bottom:24px;letter-spacing:0}
+.lp-medico-2 .ep-footer__grid>div>a:not(.ep-button){display:flex;min-height:44px;align-items:center;color:#c5cdd2;font-size:.875rem}
+.lp-medico-2 .ep-footer .ep-logo strong{color:var(--prime-ivory)}
+.lp-medico-2 .ep-footer .ep-eyebrow{color:var(--prime-champagne-light);font-size:.65rem}
+.lp-medico-2 .ep-footer__social{border:0;background:transparent;display:flex;align-items:center;gap:12px;color:#c5cdd2;font-size:.75rem;min-height:44px;margin-top:8px;padding:0}
+.lp-medico-2 .ep-footer__bottom{border-top:1px solid #e6d4ad26;padding-block:24px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#aebbc5}
+.lp-medico-2 .ep-footer__bottom small{font-size:.65rem;max-width:500px}
+.lp-medico-2 .ep-footer__bottom>div{display:flex;align-items:center;flex-wrap:wrap;gap:22px}
+.lp-medico-2 .ep-footer__bottom a,.lp-medico-2 .ep-footer__bottom button{display:inline-flex;align-items:center;gap:8px;border:0;background:transparent;color:#c5cdd2;font-size:.75rem;padding:0;min-height:44px}
+.lp-medico-2 .ep-whatsapp{position:fixed;bottom:24px;right:24px;z-index:29;width:56px;height:56px;border-radius:50%;border:1px solid #9ce4bb;background:var(--prime-whatsapp);color:#071b2d;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px #071b2d25}
+.lp-medico-2 .ep-modal{border:1px solid var(--prime-border);border-radius:24px;color:var(--prime-text);background:var(--prime-warm-white);margin:auto;width:min(620px,calc(100% - 32px));max-height:calc(100svh - 40px);padding:0;box-shadow:var(--prime-shadow-hover)}
+.lp-medico-2 .ep-modal::backdrop{background:#071b2dbd;backdrop-filter:blur(6px)}
+.lp-medico-2 .ep-modal__body{padding:48px 36px 36px;position:relative}
+.lp-medico-2 .ep-modal__close{position:absolute;top:12px;right:12px;width:44px;height:44px}
+.lp-medico-2 .ep-modal h2{font-size:2.5rem;padding-right:14px}
+.lp-medico-2 .ep-modal .ep-photo{max-height:55svh;height:auto;border-radius:12px;object-fit:contain;margin-top:25px}
+.lp-medico-2 .ep-mobile-nav{margin-top:24px}
+.lp-medico-2 .ep-mobile-nav>a:not(.ep-button){display:flex;min-height:55px;align-items:center;gap:14px;border-bottom:1px solid var(--prime-border);font-size:.875rem}
+.lp-medico-2 .ep-mobile-nav a>span{color:#997a40;font-size:.7rem}
+.lp-medico-2 .ep-mobile-nav a>svg{margin-left:auto}
+.lp-medico-2 .ep-mobile-nav .ep-button{width:100%;margin-top:24px}
+.lp-medico-2 .ep-back{display:inline-flex;min-height:44px;align-items:center;gap:10px;font-size:.875rem}
+.lp-medico-2 .ep-toolbar{display:flex;gap:20px;justify-content:space-between;align-items:center;margin-bottom:36px;flex-wrap:wrap}
+.lp-medico-2 .ep-search{display:flex;align-items:center;background:white;border:1px solid var(--prime-border);border-radius:12px;padding-right:18px;width:min(400px,100%)}
+.lp-medico-2 .ep-search:focus-within{outline:2px solid var(--prime-champagne)}
+.lp-medico-2 .ep-search input{width:100%;min-width:0;min-height:50px;padding:12px 18px;border:0;border-radius:12px;background:transparent;color:var(--prime-text);outline:none;font-size:.875rem}
+.lp-medico-2 .ep-search svg{flex-shrink:0}
+.lp-medico-2 .ep-filters{display:flex;flex-wrap:wrap;gap:8px}
+.lp-medico-2 .ep-filters button{background:transparent;border:1px solid var(--prime-border);border-radius:999px;min-height:44px;padding:10px 16px;font-size:.75rem;transition:background 180ms}
+.lp-medico-2 .ep-filters button[aria-pressed='true']{background:var(--prime-navy);color:var(--prime-ivory);border-color:var(--prime-navy)}
+.lp-medico-2 .ep-empty{text-align:center;padding:60px 24px;background:var(--prime-ivory);border-radius:18px;border:1px solid var(--prime-border)}
+.lp-medico-2 .ep-empty>svg{color:#92733a;margin-bottom:20px}
+.lp-medico-2 .ep-empty p{margin-inline:auto}
+.lp-medico-2 .ep-check-list{list-style:none;padding:0;margin:25px 0}
+.lp-medico-2 .ep-check-list li{display:flex;align-items:start;gap:12px;padding-block:12px;border-bottom:1px solid var(--prime-border);font-size:.875rem}
+.lp-medico-2 .ep-check-list svg{color:#92733a;flex-shrink:0;margin-top:4px}
+.lp-medico-2 .ep-pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.lp-medico-2 .ep-pillar-grid article{padding:30px 26px;background:var(--prime-surface);border:1px solid var(--prime-border);border-radius:18px}
+.lp-medico-2 .ep-pillar-grid svg{color:#94743a;margin-bottom:25px}
+.lp-medico-2 .ep-pillar-grid h3{font-size:1.75rem}
+.lp-medico-2 .ep-pillar-grid p{font-size:.875rem;margin-bottom:0}
+.lp-medico-2 .ep-wide-photo{aspect-ratio:2.4;height:auto;border-radius:24px;margin-top:45px}
+.lp-medico-2 .ep-story>.ep-wide-photo{aspect-ratio:1.1;margin:0}
+.lp-medico-2 .ep-profile-photo{aspect-ratio:.85;height:auto;border-radius:24px;object-position:50% 25%}
+.lp-medico-2 .ep-profile-nav{display:flex;gap:32px;border-bottom:1px solid var(--prime-border);flex-wrap:wrap;padding-block:12px}
+.lp-medico-2 .ep-profile-nav a{min-height:44px;display:flex;align-items:center;font-size:.875rem}
+.lp-medico-2 .ep-doctor-quote{margin:25px 0;padding:25px;background:var(--prime-ivory);border-left:2px solid var(--prime-champagne);font-size:1.8rem;line-height:1.3}
+.lp-medico-2 main section[id]{scroll-margin-top:110px}
+.lp-medico-2 .ep-manifesto{max-width:850px;margin:auto;text-align:center}
+.lp-medico-2 .ep-manifesto p{margin-inline:auto}
+.lp-medico-2 .ep-reading-time{display:flex;align-items:center;gap:10px;font-size:.875rem}
+.lp-medico-2 .ep-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.lp-medico-2 .ep-gallery button{display:block;border:0;padding:0;text-align:left;background:transparent;border-radius:18px}
+.lp-medico-2 .ep-gallery img{aspect-ratio:1.35;height:auto;border-radius:18px;transition:filter 260ms}
+.lp-medico-2 .ep-gallery button:hover img{filter:brightness(.88)}
+.lp-medico-2 .ep-gallery span{min-height:50px;display:flex;align-items:center;justify-content:space-between;font-size:.875rem;padding-inline:5px}
+.lp-medico-2 .ep-gallery button:first-child{grid-column:span 2;grid-row:span 2}
+.lp-medico-2 .ep-gallery button:first-child img{aspect-ratio:.98}
+.lp-medico-2 .ep-newsletter{display:grid;grid-template-columns:1fr 1fr;gap:60px;background:var(--prime-navy);color:var(--prime-ivory);padding:45px;border-radius:24px;margin-top:45px;align-items:center}
+.lp-medico-2 .ep-newsletter h2{font-size:2.5rem}
+.lp-medico-2 .ep-newsletter p{color:#c3cbd1;font-size:.875rem}
+.lp-medico-2 .ep-newsletter .ep-eyebrow{color:var(--prime-champagne-light)}
+.lp-medico-2 .ep-newsletter .ep-success{background:#fcfbf8}
+.lp-medico-2 .ep-newsletter .ep-success p{color:#325b49}
+.lp-medico-2 .ep-form{display:grid;gap:20px}
+.lp-medico-2 .ep-form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.lp-medico-2 .ep-form label{display:grid;gap:8px;font-size:.875rem;font-weight:600}
+.lp-medico-2 .ep-form input,.lp-medico-2 .ep-form select,.lp-medico-2 .ep-form textarea,.lp-medico-2 .ep-toolbar select{width:100%;min-height:50px;padding:12px 14px;border:1px solid var(--prime-border);border-radius:10px;background:white;color:var(--prime-text);font-size:.875rem;font-weight:400}
+.lp-medico-2 .ep-form textarea{min-height:130px;resize:vertical}
+.lp-medico-2 .ep-form input:hover,.lp-medico-2 .ep-form select:hover{border-color:var(--prime-champagne)}
+.lp-medico-2 .ep-form input[aria-invalid='true']{border-color:var(--prime-error)}
+.lp-medico-2 .ep-form .ep-consent{display:flex;flex-direction:row;align-items:start;gap:12px;font-size:.75rem;font-weight:400}
+.lp-medico-2 .ep-form .ep-consent input{width:20px;min-height:20px;height:20px;margin-top:3px;flex-shrink:0;accent-color:var(--prime-navy)}
+.lp-medico-2 .ep-select-label{display:grid;gap:6px;font-size:.75rem}
+.lp-medico-2 .ep-success{background:#3f8a6810;color:#236348;border:1px solid #3f8a683d;border-radius:12px;padding:25px}
+.lp-medico-2 .ep-success svg{margin-bottom:15px}
+.lp-medico-2 .ep-success p{color:#325b49}
+.lp-medico-2 .ep-error{color:#a93636;font-size:.875rem;margin-block:12px}
+.lp-medico-2 .ep-article{display:grid;grid-template-columns:240px 1fr;gap:60px;align-items:start}
+.lp-medico-2 .ep-article aside{position:sticky;top:125px;background:var(--prime-ivory);border:1px solid var(--prime-border);padding:26px;border-radius:16px}
+.lp-medico-2 .ep-article aside h2{font-size:1.8rem}
+.lp-medico-2 .ep-article aside a{display:flex;align-items:center;min-height:44px;font-size:.875rem;margin-top:10px}
+.lp-medico-2 .ep-article aside img{width:68px;height:68px;border-radius:50%;margin-top:30px}
+.lp-medico-2 .ep-article aside p{font-size:.75rem}
+.lp-medico-2 .ep-article section{scroll-margin-top:125px;padding-bottom:35px}
+.lp-medico-2 .ep-article section h2{font-size:2.65rem}
+.lp-medico-2 .ep-article blockquote{background:var(--prime-ivory);padding:30px;margin:32px 0;border-left:2px solid var(--prime-champagne);font-size:2rem;line-height:1.3}
+.lp-medico-2 .ep-article .ep-photo{aspect-ratio:1.8;height:auto;border-radius:18px;margin-block:30px}
+.lp-medico-2 .ep-contact-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:55px;align-items:start}
+.lp-medico-2 .ep-contact-grid .ep-location{grid-template-columns:1fr;gap:30px}
+.lp-medico-2 .ep-contact-grid .ep-location__copy{order:-1}
+.lp-medico-2 .ep-contact-panel{padding:35px;border:1px solid var(--prime-border);border-radius:20px;background:white}
+.lp-medico-2 .ep-contact-panel h2{font-size:2.6rem}
+.lp-medico-2 .ep-contact-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.lp-medico-2 .ep-contact-methods button{padding:18px 12px;min-height:90px;border:1px solid var(--prime-border);border-radius:12px;background:var(--prime-ivory);font-size:.75rem;display:flex;flex-direction:column;align-items:center;gap:8px;overflow-wrap:anywhere}
+.lp-medico-2 .ep-contact-methods small{font-size:.65rem}
+.lp-medico-2 .ep-contact-methods svg{color:#91703a}
+.lp-medico-2 .ep-faq-layout{display:grid;grid-template-columns:1fr 340px;gap:45px;align-items:start}
+.lp-medico-2 .ep-faq-group{margin-bottom:40px}
+.lp-medico-2 .ep-faq-group>h2{font-size:2.4rem;margin-bottom:22px}
+.lp-medico-2 .ep-faq-concierge{position:sticky;top:124px;background:white;border:1px solid var(--prime-border);border-radius:18px;overflow:hidden}
+.lp-medico-2 .ep-faq-concierge>img{aspect-ratio:1.4;height:auto}
+.lp-medico-2 .ep-faq-concierge>div{padding:28px}
+.lp-medico-2 .ep-booking-section{padding-top:155px;min-height:90svh;background:var(--prime-ivory)}
+.lp-medico-2 .ep-booking-title{margin-bottom:40px}
+.lp-medico-2 .ep-booking-title h1{font-size:clamp(2.8rem,5vw,4.8rem)}
+.lp-medico-2 .ep-booking-grid{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start}
+.lp-medico-2 .ep-booking-sidebar{border:1px solid var(--prime-border);border-radius:20px;background:#fcfbf8;padding:24px}
+.lp-medico-2 .ep-booking-steps{list-style:none;margin:0;padding:0}
+.lp-medico-2 .ep-booking-steps li+li{margin-top:14px}
+.lp-medico-2 .ep-booking-steps button{border:0;background:transparent;display:flex;align-items:center;gap:14px;min-height:56px;width:100%;text-align:left;font-size:.875rem;padding:8px 0}
+.lp-medico-2 .ep-booking-steps button:disabled{cursor:default;opacity:.55}
+.lp-medico-2 .ep-booking-steps button>span{display:flex;align-items:center;justify-content:center;border:1px solid var(--prime-border);width:33px;height:33px;flex-shrink:0;border-radius:50%;font-size:.75rem}
+.lp-medico-2 .ep-booking-steps button[aria-current='step']>span{background:var(--prime-navy);color:var(--prime-champagne-light);border-color:var(--prime-navy)}
+.lp-medico-2 .ep-booking-steps button small{display:block;font-size:.7rem;font-weight:400;color:#67747c;margin-top:3px}
+.lp-medico-2 .ep-booking-card{background:white;border:1px solid var(--prime-border);border-radius:20px;padding:38px;min-width:0}
+.lp-medico-2 .ep-booking-card>h2{font-size:2.65rem}
+.lp-medico-2 .ep-choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-block:28px}
+.lp-medico-2 .ep-choice{display:flex;align-items:center;text-align:left;padding:18px;gap:18px;border:1px solid var(--prime-border);border-radius:14px;background:var(--prime-warm-white);min-height:100px}
+.lp-medico-2 .ep-choice img{width:64px;height:64px;border-radius:12px}
+.lp-medico-2 .ep-choice strong{display:block;font-size:.875rem}
+.lp-medico-2 .ep-choice small{font-size:.75rem;color:#60707c;display:block;margin-top:5px}
+.lp-medico-2 .ep-choice[aria-pressed='true'],.lp-medico-2 .ep-slot[aria-pressed='true']{border-color:#9a773b;background:var(--prime-ivory);box-shadow:inset 0 0 0 1px #9a773b}
+.lp-medico-2 .ep-choice>svg{color:#98763c;flex-shrink:0}
+.lp-medico-2 .ep-booking-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid var(--prime-border);padding-top:25px;margin-top:30px}
+.lp-medico-2 .ep-booking-controls button:disabled{opacity:.45;cursor:not-allowed}
+.lp-medico-2 .ep-calendar-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;margin-top:30px}
+.lp-medico-2 .ep-calendar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:8px}
+.lp-medico-2 .ep-calendar-header strong{text-transform:capitalize;font-size:.875rem}
+.lp-medico-2 .ep-calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.lp-medico-2 .ep-calendar-grid>span{text-align:center;font-size:.65rem;padding-block:8px;color:#6c7780}
+.lp-medico-2 .ep-calendar-grid button{min-height:44px;border:1px solid transparent;border-radius:8px;background:transparent;font-size:.875rem;padding:4px}
+.lp-medico-2 .ep-calendar-grid button:disabled{color:#b1b6b7;cursor:not-allowed}
+.lp-medico-2 .ep-calendar-grid button[aria-pressed='true']{background:var(--prime-champagne);color:var(--prime-navy)}
+.lp-medico-2 .ep-calendar-grid button:not(:disabled):hover{border-color:var(--prime-champagne)}
+.lp-medico-2 .ep-calendar-header button:disabled{opacity:.4;cursor:not-allowed}
+.lp-medico-2 .ep-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:15px}
+.lp-medico-2 .ep-slot{min-height:46px;border:1px solid var(--prime-border);border-radius:8px;background:white;font-size:.875rem}
+.lp-medico-2 .ep-booking-summary{border:1px solid var(--prime-border);border-radius:14px;padding:24px;margin-block:25px;background:var(--prime-warm-white)}
+.lp-medico-2 .ep-booking-summary dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:14px 20px;font-size:.875rem}
+.lp-medico-2 .ep-booking-summary dt{color:#647078}
+.lp-medico-2 .ep-booking-summary dd{margin:0;overflow-wrap:anywhere}
+.lp-medico-2 .ep-booking-card .ep-success h2{font-size:2.5rem}
+.lp-medico-2.reveal-enabled [data-reveal]{transition:opacity 650ms ease,transform 650ms cubic-bezier(.2,.7,.2,1)}
+.lp-medico-2.reveal-enabled [data-reveal]:not(.is-visible){opacity:0;transform:translateY(24px)}
+@media(max-width:1199px){
+.lp-medico-2 .ep-desktop-nav{display:none}
+.lp-medico-2 .ep-menu-button{display:inline-flex}
+.lp-medico-2 .ep-benefits>div{grid-template-columns:repeat(2,1fr);gap:25px}
+.lp-medico-2 .ep-benefits>div>div{padding:0;border:0}
+.lp-medico-2 .ep-doctors-grid,.lp-medico-2 .ep-pillar-grid,.lp-medico-2 .ep-specialties-grid,.lp-medico-2 .ep-journey{grid-template-columns:repeat(2,1fr)}
+.lp-medico-2 .ep-doctor-card .ep-card-photo{aspect-ratio:1.2}
+.lp-medico-2 .ep-testimonials,.lp-medico-2 .ep-location,.lp-medico-2 .ep-faq-home{gap:35px}
+.lp-medico-2 .ep-footer__grid{grid-template-columns:repeat(2,1fr);gap:35px}
+.lp-medico-2 .ep-footer__bottom{flex-direction:column;align-items:start}
+.lp-medico-2 .ep-newsletter{gap:30px;padding:35px}
+.lp-medico-2 .ep-faq-layout{grid-template-columns:1fr 280px;gap:25px}
+.lp-medico-2 .ep-booking-grid{grid-template-columns:220px 1fr;gap:20px}
+.lp-medico-2 .ep-booking-card{padding:28px}
+.lp-medico-2 .ep-calendar-layout{grid-template-columns:1fr}
 }
-@media(min-width:960px) {
- .lp-medico-2 .menu { display:none; }
- .lp-medico-2 nav,.lp-medico-2 nav.open { position:static; display:flex; flex-direction:row; padding:0; box-shadow:none; border:0; align-items:center; gap:26px; background:transparent; }
- .lp-medico-2 .hero { padding:70px 0 90px; }
+@media(max-width:767px){
+.lp-medico-2 .ep-header__row{min-height:78px;gap:14px}
+.lp-medico-2 .ep-header__actions>.ep-button{display:none}
+.lp-medico-2 .ep-logo svg{width:35px;height:42px}
+.lp-medico-2 .ep-logo strong{font-size:1.55rem}
+.lp-medico-2 .ep-logo small{font-size:.48rem;letter-spacing:.2em;margin-top:5px}
+.lp-medico-2 .ep-logo{gap:8px}
+.lp-medico-2 .ep-hero{min-height:690px;align-items:end}
+.lp-medico-2 .ep-hero--home{min-height:max(760px,100svh)}
+.lp-medico-2 .ep-hero__image{object-position:65% top;height:65%}
+.lp-medico-2 .ep-hero--home .ep-hero__image{display:none}
+.lp-medico-2 .ep-hero__mobile{position:absolute;inset:78px 0 auto;display:block;height:62%;object-position:50% 28%}
+.lp-medico-2 .ep-hero::after{background:linear-gradient(0deg,#071b2d 0%,#071b2dfa 24%,#071b2dbf 48%,#071b2d00 80%)}
+.lp-medico-2 .ep-hero__content{padding-block:330px 35px}
+.lp-medico-2 .ep-hero--home .ep-hero__content{padding-block:320px 28px}
+.lp-medico-2 .ep-hero--home h1{font-size:clamp(3.35rem,12.5vw,5rem)}
+.lp-medico-2 .ep-hero h1{font-size:clamp(2.8rem,10vw,4rem)}
+.lp-medico-2 .ep-hero p{font-size:.875rem;margin-top:20px}
+.lp-medico-2 .ep-hero .ep-eyebrow{font-size:.65rem;margin-bottom:14px}
+.lp-medico-2 .ep-hero .ep-actions{display:grid;grid-template-columns:1fr;gap:12px;margin-top:25px}
+.lp-medico-2 .ep-hero__signature{margin-top:28px;padding-top:18px;font-size:.65rem}
+.lp-medico-2 .ep-hero__signature span+span{display:none}
+.lp-medico-2 .ep-breadcrumb{font-size:.7rem;margin-bottom:12px}
+.lp-medico-2 .ep-hero__botanical{width:180px;opacity:.14}
+.lp-medico-2 .ep-benefits>div{gap:25px 16px;padding-block:25px}
+.lp-medico-2 .ep-benefits>div>div{align-items:start;gap:10px}
+.lp-medico-2 .ep-benefits strong{font-size:.75rem}
+.lp-medico-2 .ep-benefits small{font-size:.65rem}
+.lp-medico-2 .ep-benefits svg{width:24px}
+.lp-medico-2 .ep-story,.lp-medico-2 .ep-testimonials,.lp-medico-2 .ep-faq-home,.lp-medico-2 .ep-location,.lp-medico-2 .ep-newsletter,.lp-medico-2 .ep-contact-grid,.lp-medico-2 .ep-faq-layout,.lp-medico-2 .ep-article{grid-template-columns:1fr;gap:32px}
+.lp-medico-2 .ep-story:not(.ep-story--reverse)>div:first-child{order:2}
+.lp-medico-2 .ep-mini-pillars{gap:16px}
+.lp-medico-2 .ep-mini-pillars span{font-size:.7rem}
+.lp-medico-2 .ep-section-title{display:block;margin-bottom:30px}
+.lp-medico-2 .ep-section-title>.ep-text-link{margin-top:20px}
+.lp-medico-2 .ep-specialties-grid,.lp-medico-2 .ep-doctors-grid{gap:14px}
+.lp-medico-2 .ep-card-body{padding:19px 16px}
+.lp-medico-2 .ep-specialty-card h3{font-size:1.55rem;padding:0;overflow-wrap:anywhere}
+.lp-medico-2 .ep-specialty-card p{font-size:.75rem}
+.lp-medico-2 .ep-specialty-card .ep-text-link{font-size:.7rem;gap:7px;align-items:start;line-height:1.6}
+.lp-medico-2 .ep-card-number{display:none}
+.lp-medico-2 .ep-card-photo{aspect-ratio:1.2}
+.lp-medico-2 .ep-doctor-card .ep-card-photo{aspect-ratio:.82}
+.lp-medico-2 .ep-doctor-card .ep-card-body{padding:18px 14px}
+.lp-medico-2 .ep-doctor-card h3{font-size:1.5rem}
+.lp-medico-2 .ep-doctor-card small{font-size:.6rem}
+.lp-medico-2 .ep-doctor-card .ep-text-link{font-size:.7rem;gap:8px}
+.lp-medico-2 .ep-doctor-card .ep-button{padding:10px;gap:10px;font-size:.75rem}
+.lp-medico-2 .ep-numbers{grid-template-columns:repeat(2,1fr);gap:25px}
+.lp-medico-2 .ep-numbers strong{font-size:2.8rem}
+.lp-medico-2 .ep-journey{gap:25px;margin-top:35px}
+.lp-medico-2 .ep-journey h3{font-size:1.55rem}
+.lp-medico-2 .ep-journey p{font-size:.75rem}
+.lp-medico-2 .ep-testimonial{padding:28px}
+.lp-medico-2 .ep-testimonial blockquote{font-size:1.75rem}
+.lp-medico-2 .ep-editorial-grid{grid-template-columns:1fr;gap:25px}
+.lp-medico-2 .ep-editorial-grid article:not(:first-child){display:grid;grid-template-columns:100px 1fr;gap:18px;border-top:1px solid var(--prime-border);padding-top:20px;align-items:start}
+.lp-medico-2 .ep-editorial-grid article:not(:first-child)>img{aspect-ratio:1;border-radius:12px}
+.lp-medico-2 .ep-editorial-grid article:not(:first-child)>div{padding:0}
+.lp-medico-2 .ep-editorial-grid article:not(:first-child) h3{font-size:1.6rem}
+.lp-medico-2 .ep-editorial-grid article:not(:first-child) p{display:none}
+.lp-medico-2 .ep-cta>div{display:block;padding-block:50px}
+.lp-medico-2 .ep-cta>div>div:last-child{margin-top:30px}
+.lp-medico-2 .ep-map{min-height:300px}
+.lp-medico-2 .ep-footer__grid{gap:35px 20px}
+.lp-medico-2 .ep-footer__grid>div:first-child,.lp-medico-2 .ep-footer__grid>div:last-child{grid-column:1/-1}
+.lp-medico-2 .ep-footer__grid>div:last-child .ep-button{width:100%}
+.lp-medico-2 .ep-footer__bottom{padding-bottom:90px;gap:12px}
+.lp-medico-2 .ep-whatsapp{bottom:18px;right:18px;width:50px;height:50px}
+.lp-medico-2 .ep-modal__body{padding:50px 24px 26px}
+.lp-medico-2 .ep-modal h2{font-size:2rem}
+.lp-medico-2 .ep-pillar-grid{gap:15px}
+.lp-medico-2 .ep-pillar-grid article{padding:22px 18px}
+.lp-medico-2 .ep-pillar-grid h3{font-size:1.5rem}
+.lp-medico-2 .ep-pillar-grid p{font-size:.75rem}
+.lp-medico-2 .ep-wide-photo{aspect-ratio:1.1}
+.lp-medico-2 .ep-profile-nav{gap:8px 22px}
+.lp-medico-2 .ep-profile-nav a{font-size:.75rem}
+.lp-medico-2 .ep-gallery{grid-template-columns:repeat(2,1fr);gap:18px}
+.lp-medico-2 .ep-gallery button:first-child{grid-column:1/-1;grid-row:auto}
+.lp-medico-2 .ep-gallery button:first-child img{aspect-ratio:1.5}
+.lp-medico-2 .ep-gallery span{font-size:.75rem}
+.lp-medico-2 .ep-toolbar{gap:18px}
+.lp-medico-2 .ep-search{width:100%}
+.lp-medico-2 .ep-filters button{font-size:.7rem;padding:8px 12px}
+.lp-medico-2 .ep-newsletter{padding:30px 24px}
+.lp-medico-2 .ep-form-row{grid-template-columns:1fr}
+.lp-medico-2 .ep-article aside{position:static}
+.lp-medico-2 .ep-article aside img,.lp-medico-2 .ep-article aside p{display:none}
+.lp-medico-2 .ep-article section h2{font-size:2.3rem}
+.lp-medico-2 .ep-article aside nav{display:flex;gap:8px 20px;flex-wrap:wrap}
+.lp-medico-2 .ep-contact-panel{padding:28px 22px}
+.lp-medico-2 .ep-faq-concierge{position:static}
+.lp-medico-2 .ep-booking-section{padding-top:115px}
+.lp-medico-2 .ep-booking-grid{grid-template-columns:1fr}
+.lp-medico-2 .ep-booking-sidebar{padding:14px}
+.lp-medico-2 .ep-booking-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.lp-medico-2 .ep-booking-steps li+li{margin:0}
+.lp-medico-2 .ep-booking-steps button{flex-direction:column;gap:7px;font-size:.65rem;align-items:center;text-align:center;line-height:1.4}
+.lp-medico-2 .ep-booking-steps button small{display:none}
+.lp-medico-2 .ep-booking-sidebar>p{display:none}
+.lp-medico-2 .ep-booking-card{padding:27px 20px}
+.lp-medico-2 .ep-booking-card>h2{font-size:2.15rem}
+.lp-medico-2 .ep-choice-grid{grid-template-columns:1fr;gap:12px}
+.lp-medico-2 .ep-choice{min-height:85px;padding:14px}
+.lp-medico-2 .ep-calendar-layout{gap:25px}
+.lp-medico-2 .ep-booking-controls{gap:12px}
+.lp-medico-2 .ep-booking-controls .ep-button{padding-inline:18px;gap:10px}
+.lp-medico-2 .ep-booking-summary{padding:20px}
+.lp-medico-2 .ep-booking-summary dl{grid-template-columns:1fr;gap:5px}
+.lp-medico-2 .ep-booking-summary dd{margin-bottom:14px}
 }
-.lp-medico-2 .brand { font-style:italic; } .lp-medico-2 .hero { text-align:center; } .lp-medico-2 .hero-grid { display:flex; flex-direction:column; } .lp-medico-2 h1 { max-width:850px; margin-inline:auto; } .lp-medico-2 .lead { margin-inline:auto; } .lp-medico-2 .actions { justify-content:center; } .lp-medico-2 .hero .visual { width:100%; min-height:290px; } .lp-medico-2 .hero .photo-fallback { flex-direction:row; align-items:center; } .lp-medico-2 .service { border:1px solid var(--lp-accent); padding:30px; } .lp-medico-2 .facts { justify-content:center; gap:45px; }
-@media(prefers-reduced-motion:reduce) { .lp-medico-2 * { scroll-behavior:auto; transition:none; animation:none; } }
-
-.lp-medico-2 .story .photo-fallback strong { font-size:clamp(36px,4vw,64px); }
+@media(prefers-reduced-motion:reduce){
+.lp-medico-2 *,.lp-medico-2 *::before,.lp-medico-2 *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+.lp-medico-2.reveal-enabled [data-reveal]:not(.is-visible){opacity:1;transform:none}
+}
+.lp-medico-2 .ep-hero__picture{position:absolute;inset:0;width:100%;height:100%}
+.lp-medico-2 .ep-card-photo--crop{position:relative}
+.lp-medico-2 .ep-card-photo--crop img{width:300%;max-width:none;height:100%;position:relative;left:calc(50% - 3 * var(--portrait-x));object-position:50% 30%}
+.lp-medico-2 .ep-drawer{margin:0 0 0 auto;width:min(430px,100%);height:100svh;max-height:100svh;border-radius:0;border:0;border-left:1px solid #e6d4ad33;background:var(--prime-navy);color:var(--prime-ivory)}
+.lp-medico-2 .ep-drawer .ep-eyebrow{color:var(--prime-champagne-light)}
+.lp-medico-2 .ep-drawer .ep-modal__close{border-color:#e6d4ad44}
+.lp-medico-2 .ep-drawer .ep-mobile-nav>a:not(.ep-button){border-color:#e6d4ad26}
+.lp-medico-2 .ep-drawer .ep-mobile-nav a>span{color:var(--prime-champagne)}
+.lp-medico-2 .ep-drawer .ep-mobile-nav .active{color:var(--prime-champagne-light)}
+@media(max-width:767px){
+.lp-medico-2 .ep-hero--home .ep-hero__image{display:block;inset:78px 0 auto;height:62%;object-position:50% 28%}
+}

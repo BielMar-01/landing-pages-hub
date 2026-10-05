@@ -1,7 +1,9 @@
-# Medicina Prime: assets locais
+﻿# Essencial Prime: assets locais
 
-Fotos opcionais: `hero.webp`, `space.webp`.
+As fotos do modelo são servidas de `public/images/medico/shared/`, sem duplicação. Hero desktop: `clinic-reception-02.webp`; mobile: `doctor-profile.webp`, selecionado por `picture`.
 
-Hero: fotografia profissional coerente com Consulta particular, aproximadamente 1200 × 1400. Ambiente: 1200 × 900. Galerias e imóveis: 1000 × 750. Use imagens autorizadas/licenciadas, comprimidas em WebP. Nomes e personagens são fictícios: fotos não devem sugerir endosso real.
+O cartão do catálogo recria a composição da home em HTML/CSS com fotografia compartilhada. `preview.svg` conserva uma representação vetorial independente para consumidores do metadado de preview.
 
-Os arquivos não estão disponíveis neste workspace. Fallbacks editoriais são exibidos sem ícones de imagem quebrada. Para ativar as fotos, coloque arquivos reais nesta pasta. Hero com prioridade; demais fotos usam lazy loading. Preview SVG representa a composição e a identidade, sem simular fotografia.
+As referências em `public/images/medico/references/modelo-02/` orientam a implementação e não são exibidas no site. As fotografias compartilhadas podem conter sinalização da clínica ilustrativa original. Os retratos adicionais usam enquadramentos da foto de equipe; todos os personagens são fictícios.
+
+Veja `docs/ESSENCIAL-PRIME.md` para rotas, interações e validação técnica.

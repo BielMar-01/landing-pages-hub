@@ -1,206 +1,28 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, Menu, X } from 'lucide-react';
-import { LocalPhoto } from '../../../../components/common/LocalPhoto';
-import { DemoInquiry } from '../../../../components/common/DemoInquiry';
-import './modelo-02.css';
+﻿import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react'
+import { articles, doctors, faqItems, primePath } from './prime-data'
+import { PrimeAccordion, PrimeBenefits, PrimeButton, PrimeCTA, PrimeDoctorCards, PrimeHero, PrimeLayout, PrimeLocation, PrimePhoto, PrimeSectionTitle, PrimeSpecialtyCards } from './PrimeLayout'
+
+const stories = [
+  { name: 'Marina S.', photo: 'patient-01', quote: 'Uma experiência em que cada detalhe transmite acolhimento. Ter espaço para conversar fez toda a diferença.' },
+  { name: 'Ricardo A.', photo: 'patient-02', quote: 'Gostei da atenção, do ambiente tranquilo e da clareza em cada etapa. O cuidado começa antes da consulta.' },
+  { name: 'Ana C.', photo: 'patient-03', quote: 'Encontrar uma equipe que escuta com calma muda a forma como a gente vive o atendimento.' },
+]
 export default function MedicoModel02Page() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    return <div className="lp-medico-2">
-      <div className="wrap">
-        <Link to="/medico" className="back">
-          <ArrowLeft size={15}/> Voltar aos modelos de Medicina</Link>
-      </div>
-      
-      <header>
-        <div className="wrap header-row">
-          <a href="#inicio" className="brand">Medicina Prime<small>Medicina </small>
-          </a>
-          <nav id="lp-medico-2-nav" className={menuOpen ? 'open' : ''} aria-label="Navegação de Medicina Prime">
-            <a href="#servicos" onClick={() => setMenuOpen(false)}>Áreas de atuação</a>
-            <a href="#sobre" onClick={() => setMenuOpen(false)}>Conheça</a>
-            <a href="#contato" onClick={() => setMenuOpen(false)}>Contato ↗</a>
-          </nav>
-          <button className="menu" type="button" aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menuOpen} aria-controls="lp-medico-2-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={22}/> : <Menu size={22}/>}</button>
-        </div>
-      </header>
-      <main>
-        <section className="hero" id="inicio">
-          <div className="wrap">
-            <div className="hero-grid">
-              <div className="hero-copy">
-                <span className="eyebrow">Medicina · Premium</span>
-                <h1>Atenção ao detalhe. Tempo para você.</h1>
-                <p className="lead">Medicina particular em uma experiência reservada, do primeiro contato ao acompanhamento.</p>
-                <div className="actions">
-                  <a className="button" href="#contato">Solicitar consulta <ArrowUpRight size={17}/>
-                  </a>
-                  <a className="text-link" href="#servicos">Conheça o trabalho</a>
-                </div>
-              </div>
-              <LocalPhoto src="/images/medico/modelo-02/hero.webp" alt="Medicina: profissional em seu ambiente de atendimento — fotografia demonstrativa" className="visual" eager>
-                <div className="photo-fallback">
-                  <span>Medicina / 02</span>
-                  <strong>HP</strong>
-                  <small>Cuidado com atenção aos detalhes.</small>
-                </div>
-              </LocalPhoto>
-            </div>
-            <div className="facts">
-              <div>
-                <strong>Individual</strong>Planejamento atento ao contexto</div>
-              <div>
-                <strong>Próximo</strong>Espaço para suas perguntas</div>
-              <div>
-                <strong>Transparente</strong>Etapas explicadas com clareza</div>
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="wrap">
-            <div className="story">
-              <div>
-                <span className="eyebrow">Medicina / 02</span>
-                <h2>Uma consulta com tempo reservado</h2>
-                <p>Informações organizadas antes do encontro e um ambiente tranquilo para conversar.</p>
-                <a className="button" href="#contato">Conhecer a experiência ↗</a>
-              </div>
-              <div className="context-index">
-                <article>
-                  <span>01</span>
-                  <h3>Preparação</h3>
-                  <p>Preparação faz parte da primeira conversa. Informações organizadas antes do encontro e um ambiente tranquilo para conversar.</p>
-                </article>
-                <article>
-                  <span>02</span>
-                  <h3>Consulta</h3>
-                  <p>Conheça as possibilidades de consulta no seu contexto. Uma conversa cuidadosa sobre sua saúde, com orientação individual e decisões compartilhadas.</p>
-                </article>
-                <article>
-                  <span>03</span>
-                  <h3>Retorno</h3>
-                  <p>Retorno merece espaço no planejamento. As orientações são conversadas e podem ser revistas ao longo do processo.</p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="section" id="sobre">
-          <div className="wrap story">
-            <LocalPhoto src="/images/medico/modelo-02/space.webp" alt="Ambiente de atendimento de Medicina Prime — fotografia demonstrativa" className="visual">
-              <div className="photo-fallback">
-                <span>Medicina / 02</span>
-                <strong>Presença</strong>
-                <small>Um espaço pensado para você.</small>
-              </div>
-            </LocalPhoto>
-            <div>
-              <span className="eyebrow">Nossa proposta</span>
-              <h2>Henrique Prado</h2>
-              <p>Uma conversa cuidadosa sobre sua saúde, com orientação individual e decisões compartilhadas.</p>
-              <p>Medicina particular em uma experiência reservada, do primeiro contato ao acompanhamento. Cada encontro é uma oportunidade de compreender melhor o que faz sentido para você.</p>
-              <div className="credentials">
-                <strong>Uma prática com responsabilidade</strong>
-                <ul>
-                  <li>Consulta particular como área de atuação.</li>
-                  <li>Atenção à comunicação e às decisões individuais.</li>
-                  <li>Orientação clara em cada etapa.</li>
-                </ul>
-                <small>CRM/SP 000000 · Perfil e trajetória demonstrativos.</small>
-              </div>
-              <a href="#contato" className="text-link">Solicitar consulta ↗</a>
-            </div>
-          </div>
-        </section>
-        <section className="section" id="destaque">
-          <div className="wrap">
-            <div className="feature">
-              <span className="eyebrow">Um olhar mais próximo</span>
-              <h2>Tempo para cada detalhe</h2>
-              <div className="feature-grid">
-                <div>
-                  <h3>Consulta particular</h3>
-                  <p>Medicina particular em uma experiência reservada, do primeiro contato ao acompanhamento. Uma conversa cuidadosa sobre sua saúde, com orientação individual e decisões compartilhadas.</p>
-                </div>
-                <div>
-                  <h3>O que levar para o primeiro encontro</h3>
-                  <p>Traga suas dúvidas, expectativas e informações que considera importantes. A proposta é começar com uma conversa clara, respeitando seu contexto.</p>
-                  <a href="#contato" className="text-link">Conversar com Henrique Prado ↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="section" id="servicos">
-          <div className="wrap">
-            <div className="section-title">
-              <div>
-                <span className="eyebrow">Áreas de atuação</span>
-                <h2>O cuidado também está nos detalhes.</h2>
-              </div>
-            </div>
-            <div className="service-list">
-              <article className="service">
-                <span>01</span>
-                <h3>Consulta particular</h3>
-                <p>Avaliação clínica com espaço para ouvir seu histórico e suas dúvidas.</p>
-                <a href="#contato">Conversar sobre consulta particular ↗</a>
-              </article>
-              <article className="service">
-                <span>02</span>
-                <h3>Revisão de saúde</h3>
-                <p>Orientação preventiva considerando as necessidades individuais.</p>
-                <a href="#contato">Conversar sobre revisão de saúde ↗</a>
-              </article>
-              <article className="service">
-                <span>03</span>
-                <h3>Acompanhamento clínico</h3>
-                <p>Continuidade do cuidado com revisões e orientações compartilhadas.</p>
-                <a href="#contato">Conversar sobre acompanhamento clínico ↗</a>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="wrap faq">
-            <span className="eyebrow">Perguntas frequentes</span>
-            <h2>Antes de dar o próximo passo.</h2>
-            <details>
-              <summary>O atendimento substitui uma avaliação médica?</summary>
-              <p>Não. Este site apresenta uma clínica fictícia. Condutas, exames e tratamentos dependem de avaliação médica individual.</p>
-            </details>
-            <details>
-              <summary>Como solicitar consulta?</summary>
-              <p>Escolha seu interesse no formulário desta página. Neste modelo, o envio é apenas uma simulação e não gera atendimento real.</p>
-            </details>
-            <details>
-              <summary>Como conhecer as condições e horários?</summary>
-              <p>Em um atendimento real, condições, valores e disponibilidade seriam esclarecidos no contato inicial, antes de qualquer confirmação. Não há cobrança ou reserva neste site.</p>
-            </details>
-          </div>
-        </section>
-        <section className="section contact" id="contato">
-          <div className="wrap contact-grid">
-            <div>
-              <span className="eyebrow">Vamos conversar</span>
-              <h2>O primeiro passo pode ser uma conversa.</h2>
-              <p>Medicina particular em uma experiência reservada, do primeiro contato ao acompanhamento.</p>
-              <address>Rua Exemplo, 110 · Jardim Modelo<br />São Paulo, SP · endereço fictício<br />Segunda a sexta, 9h às 18h<br />contato@example.com</address>
-              <p className="note">Site de demonstração. Não há atendimento real ou envio de dados.</p>
-            </div>
-            <DemoInquiry services={["Consulta particular", "Revisão de saúde", "Acompanhamento clínico"]} action="Solicitar consulta"/>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div className="wrap footer-row">
-          <div>
-            <strong>Medicina Prime</strong>
-            <p>CRM/SP 000000 · Dados e profissionais fictícios.<br />Demonstração do Landing Pages Hub.</p>
-          </div>
-          <a href="#inicio">Voltar ao início ↑</a>
-          <Link to="/medico">Explorar outros modelos ↗</Link>
-        </div>
-      </footer>
-    </div>;
+  const [story, setStory] = useState(0)
+  return <PrimeLayout>
+    <PrimeHero home eyebrow="Essencial Prime · Medicina Particular" image="clinic-reception-02" title={<>Um novo padrão<br />de cuidado.<br /><em>Para você.</em></>} text="Medicina particular com tempo, presença e atenção a cada detalhe. Uma experiência feita para você e sua família."><PrimeButton /><PrimeButton secondary to={primePath('experiencia')}>Conheça a experiência</PrimeButton></PrimeHero>
+    <PrimeBenefits />
+    <section className="ep-section"><div className="ep-container ep-story" data-reveal><div className="ep-story__photos"><PrimePhoto name="doctor-consultation" alt="Conversa atenta entre médica e paciente" /><div className="ep-photo-caption"><span>O cuidado começa</span><strong>na escuta.</strong></div></div><div><span className="ep-eyebrow">A experiência Essencial Prime</span><h2>Mais que uma consulta.<br /><em>Um encontro com você.</em></h2><p>Uma história merece ser ouvida com calma. Um cuidado merece olhar para a pessoa inteira.</p><p>Reunimos uma equipe próxima e ambientes acolhedores para uma medicina particular que respeita seu tempo, sua privacidade e o seu momento de vida.</p><div className="ep-mini-pillars"><div><strong>01</strong><span>Escuta de verdade</span></div><div><strong>02</strong><span>Atenção individual</span></div><div><strong>03</strong><span>Cuidado contínuo</span></div></div><PrimeButton secondary to={primePath('experiencia')}>Descubra a Experiência Prime</PrimeButton></div></div></section>
+    <section className="ep-section ep-section--ivory"><div className="ep-container" data-reveal><PrimeSectionTitle eyebrow="Especialidades" title={<>Um olhar completo.<br /><em>Em cada fase da vida.</em></>} text="Diferentes especialidades, uma mesma forma de cuidar." link="Todas as especialidades" to={primePath('especialidades')} /><PrimeSpecialtyCards /></div></section>
+    <section className="ep-section"><div className="ep-container" data-reveal><PrimeSectionTitle eyebrow="Pessoas que cuidam de pessoas" title={<>Competência que acolhe.<br /><em>Presença que aproxima.</em></>} link="Conheça a equipe" to={primePath('equipe')} /><PrimeDoctorCards items={doctors.slice(0, 4)} /><p className="ep-note ep-center">Profissionais, registros e perfis demonstrativos. Fotografias ilustrativas.</p></div></section>
+    <section className="ep-section ep-section--navy"><div className="ep-container" data-reveal><PrimeSectionTitle eyebrow="A sua jornada" title={<>Tudo começa com uma conversa.<br /><em>E continua com cuidado.</em></>} /><div className="ep-journey">{[['Seu primeiro contato', 'Escolha a especialidade e conheça quem vai acolher você.'], ['Um encontro com tempo', 'Um espaço reservado para compartilhar sua história.'], ['Decisões compartilhadas', 'Clareza para conversar sobre os próximos passos.'], ['Seguimos por perto', 'Uma proposta de acompanhamento, com atenção individual.']].map(([title, text], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div><div className="ep-numbers"><div><strong>06</strong><span>especialidades em conexão</span></div><div><strong>01</strong><span>experiência centrada em você</span></div><div><strong>05</strong><span>passos para simular seu agendamento</span></div><div><strong>100%</strong><span>atenção à experiência particular</span></div></div></div></section>
+    <section className="ep-section"><div className="ep-container ep-story ep-story--reverse" data-reveal><div><span className="ep-eyebrow">Seu bem-estar em cada detalhe</span><h2>Um lugar para<br /><em>se sentir bem.</em></h2><p>Luz natural, materiais acolhedores e espaços reservados. Um ambiente pensado para deixar o cuidado acontecer com tranquilidade.</p><PrimeButton secondary to={primePath('estrutura')}>Conheça nossa estrutura</PrimeButton></div><div className="ep-facility-collage"><PrimePhoto name="clinic-corridor" alt="Corredor iluminado da clínica ilustrativa" /><PrimePhoto name="consultation-room" alt="Consultório particular ilustrativo" /><PrimePhoto name="clinic-detail" alt="Detalhes acolhedores do ambiente" /></div></div></section>
+    <section className="ep-section ep-section--ivory"><div className="ep-container ep-testimonials" data-reveal><div><span className="ep-eyebrow">Histórias de acolhimento</span><h2>O cuidado também<br /><em>se sente.</em></h2><p className="ep-note">Relatos fictícios que ilustram a experiência proposta.</p><div className="ep-testimonial-controls"><button className="ep-icon-button" aria-label="Depoimento anterior" onClick={() => setStory((story + stories.length - 1) % stories.length)}><ChevronLeft /></button><span>{story + 1} / {stories.length}</span><button className="ep-icon-button" aria-label="Próximo depoimento" onClick={() => setStory((story + 1) % stories.length)}><ChevronRight /></button></div></div><div className="ep-testimonial" aria-live="polite"><Quote size={45} strokeWidth={1} /><div className="ep-stars" aria-label="Avaliação ilustrativa de cinco estrelas">{[1, 2, 3, 4, 5].map(n => <Star key={n} size={15} fill="currentColor" />)}</div><blockquote>{stories[story].quote}</blockquote><div className="ep-testimonial__person"><PrimePhoto name={stories[story].photo} alt="Retrato ilustrativo de paciente" /><div><strong>{stories[story].name}</strong><small>Depoimento demonstrativo</small></div></div></div></div></section>
+    <section className="ep-section"><div className="ep-container" data-reveal><PrimeSectionTitle eyebrow="Conteúdos Prime" title={<>Informação com cuidado.<br /><em>Para o seu dia a dia.</em></>} link="Explore nossos conteúdos" to={primePath('conteudos')} /><div className="ep-editorial-grid">{articles.slice(0, 3).map(article => <article key={article.id}><PrimePhoto name={article.image} alt="Fotografia ilustrativa sobre cuidado e bem-estar" /><div><span className="ep-eyebrow">{article.category} · {article.time} de leitura</span><h3>{article.title}</h3><p>{article.text}</p><Link className="ep-text-link" to={primePath(article.id === 'habitos-vida-saudavel' ? 'conteudos/habitos-vida-saudavel' : 'conteudos')}>{article.id === 'habitos-vida-saudavel' ? 'Ler artigo' : 'Ver conteúdos'}<ArrowRight size={16} /></Link></div></article>)}</div></div></section>
+    <PrimeCTA />
+    <section className="ep-section"><div className="ep-container ep-faq-home" data-reveal><div><span className="ep-eyebrow">Podemos ajudar?</span><h2>Clareza desde<br /><em>o primeiro contato.</em></h2><Link className="ep-text-link" to={primePath('faq')}>Todas as dúvidas<ArrowRight size={17} /></Link></div><div>{faqItems.slice(0, 4).map(item => <PrimeAccordion key={item.question} {...item} />)}</div></div></section>
+    <section className="ep-section ep-section--ivory"><div className="ep-container" data-reveal><PrimeLocation /></div></section>
+  </PrimeLayout>
 }

@@ -20,9 +20,9 @@ export const templates: LandingTemplate[] = [
   {
     "id": "medico-02",
     "categorySlug": "medico",
-    "name": "Medicina Prime",
+    "name": "Essencial Prime",
     "slug": "modelo-02",
-    "description": "Medicina particular em uma experiência reservada, do primeiro contato ao acompanhamento.",
+    "description": "Medicina particular premium, com 12 páginas, equipe, conteúdos e uma experiência de agendamento em cinco etapas.",
     "style": "Premium",
     "tags": [
       "Premium",

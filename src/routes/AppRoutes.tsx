@@ -5,6 +5,7 @@ import { CategoryPage } from '../pages/Category/CategoryPage'
 import { HubPage } from '../pages/Hub/HubPage'
 import { NotFoundPage } from '../pages/NotFound/NotFoundPage'
 import { landingRoutes } from './landingRoutes'
+import { primeRoutes } from './primeRoutes'
 import { RouteScroll } from '../components/common/RouteScroll'
 import { PageTransition } from '../components/common/PageTransition'
 
@@ -29,7 +30,7 @@ export function AppRoutes() {
           <Route path="/medico/modelo-01" element={<MedicalEssentialPage />} />
           <Route path="/404" element={<NotFoundPage />} />
 
-          {landingRoutes.map(({ path, component: Page }) => (
+          {[...landingRoutes, ...primeRoutes].map(({ path, component: Page }) => (
             <Route key={path} path={path} element={<Page />} />
           ))}
 

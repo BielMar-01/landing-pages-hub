@@ -25,7 +25,7 @@ export function TemplateCard({
           <span />
         </div>}
 
-        {template.id === 'medico-01' ? <div className="orbis-care-preview"><div><span>ESSENCIAL CARE</span><strong>Cuidado médico<br />que começa<br /><em>ouvindo você.</em></strong><small>Agendar consulta →</small></div><img src="/images/medico/shared/hero-doctor.webp" alt="Prévia fotográfica da Essencial Care" loading="lazy" width={1672} height={941} /></div> : template.preview ? <img className="template-preview__image" src={template.preview} alt={`Composição visual do modelo ${template.name}, estilo ${template.style}`} loading="lazy" width={640} height={400} /> : <div className="template-preview__mockup">
+        {template.id === 'medico-01' ? <div className="orbis-care-preview"><div><span>ESSENCIAL CARE</span><strong>Cuidado médico<br />que começa<br /><em>ouvindo você.</em></strong><small>Agendar consulta →</small></div><img src="/images/medico/shared/hero-doctor.webp" alt="Prévia fotográfica da Essencial Care" loading="lazy" width={1672} height={941} /></div> : template.id === 'medico-02' ? <div className="orbis-prime-preview"><img src="/images/medico/shared/clinic-reception-02.webp" alt="Prévia fotográfica da Essencial Prime" loading="lazy" width={1536} height={1024} /><div><span>ESSENCIAL PRIME</span><strong>Um novo padrão<br />de cuidado.<br /><em>Para você.</em></strong><small>Agendar consulta →</small></div></div> : template.preview ? <img className="template-preview__image" src={template.preview} alt={`Composição visual do modelo ${template.name}, estilo ${template.style}`} loading="lazy" width={640} height={400} /> : <div className="template-preview__mockup">
           <span className="template-preview__label">
             {template.style}
           </span>
