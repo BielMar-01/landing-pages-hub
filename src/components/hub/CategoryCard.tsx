@@ -11,7 +11,9 @@ interface CategoryCardProps {
 
 export function CategoryCard({ category }: CategoryCardProps) {
   const Icon = category.icon
-  const preview = getTemplatesByCategory(category.slug)[0]
+  const models = getTemplatesByCategory(category.slug)
+  const ready = models.filter(template => template.available)
+  const preview = ready[0] || models[0]
 
   return (
     <Link
@@ -29,7 +31,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
         )}
       </div>
 
-      {preview && <div className={`orbis-category-preview orbis-category-preview--${category.slug}`}><img src={category.slug === 'medico' ? '/images/medico/shared/hero-doctor.webp' : preview.preview} alt={`Direção visual da coleção ${category.name}`} width={640} height={400} loading="lazy" /><span>{category.slug === 'medico' ? 'Essencial Care' : preview.name}<ArrowUpRight size={16} /></span></div>}
+      {preview && <div className={`orbis-category-preview orbis-category-preview--${category.slug}`}><img src={category.slug === 'medico' ? '/images/medico/shared/hero-doctor.webp' : preview.preview} alt={`Prévia da coleção ${category.name}${ready.length ? '' : ' — modelos em preparação'}`} width={640} height={400} loading="lazy" decoding="async" /><span>{ready.length ? `${category.name} · ${ready.length} disponíveis` : `${category.name} · Em preparação`}<ArrowUpRight size={16} /></span></div>}
 
       <div className="category-card__content">
         <h3>{category.name}</h3>
@@ -38,7 +40,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
 
       <div className="category-card__footer">
         <span>
-          {category.templateCount} modelos · Explorar
+          {ready.length ? `${ready.length} modelos disponíveis · Explorar` : 'Modelos em preparação'}
         </span>
 
         <span className="category-card__arrow">

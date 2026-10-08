@@ -46,7 +46,7 @@ export const templates: LandingTemplate[] = [
       "Medicina"
     ],
     "route": "/medico/modelo-03",
-    "available": true,
+    "available": false,
     "preview": "/images/medico/modelo-03/preview.svg"
   },
   {
@@ -62,7 +62,7 @@ export const templates: LandingTemplate[] = [
       "Medicina"
     ],
     "route": "/medico/modelo-04",
-    "available": true,
+    "available": false,
     "preview": "/images/medico/modelo-04/preview.svg"
   },
   {
@@ -78,7 +78,7 @@ export const templates: LandingTemplate[] = [
       "Medicina"
     ],
     "route": "/medico/modelo-05",
-    "available": true,
+    "available": false,
     "preview": "/images/medico/modelo-05/preview.svg"
   },
   {
@@ -94,7 +94,7 @@ export const templates: LandingTemplate[] = [
       "Medicina"
     ],
     "route": "/medico/modelo-06",
-    "available": true,
+    "available": false,
     "preview": "/images/medico/modelo-06/preview.svg"
   },
   {
@@ -110,7 +110,7 @@ export const templates: LandingTemplate[] = [
       "Medicina"
     ],
     "route": "/medico/modelo-07",
-    "available": true,
+    "available": false,
     "preview": "/images/medico/modelo-07/preview.svg"
   },
   {
@@ -126,7 +126,7 @@ export const templates: LandingTemplate[] = [
       "Medicina"
     ],
     "route": "/medico/modelo-08",
-    "available": true,
+    "available": false,
     "preview": "/images/medico/modelo-08/preview.svg"
   },
   {
@@ -142,7 +142,7 @@ export const templates: LandingTemplate[] = [
       "Nutrição"
     ],
     "route": "/nutricionista/modelo-01",
-    "available": true,
+    "available": false,
     "preview": "/images/nutricionista/modelo-01/preview.svg"
   },
   {
@@ -158,7 +158,7 @@ export const templates: LandingTemplate[] = [
       "Nutrição"
     ],
     "route": "/nutricionista/modelo-02",
-    "available": true,
+    "available": false,
     "preview": "/images/nutricionista/modelo-02/preview.svg"
   },
   {
@@ -174,7 +174,7 @@ export const templates: LandingTemplate[] = [
       "Nutrição"
     ],
     "route": "/nutricionista/modelo-03",
-    "available": true,
+    "available": false,
     "preview": "/images/nutricionista/modelo-03/preview.svg"
   },
   {
@@ -190,7 +190,7 @@ export const templates: LandingTemplate[] = [
       "Nutrição"
     ],
     "route": "/nutricionista/modelo-04",
-    "available": true,
+    "available": false,
     "preview": "/images/nutricionista/modelo-04/preview.svg"
   },
   {
@@ -206,7 +206,7 @@ export const templates: LandingTemplate[] = [
       "Nutrição"
     ],
     "route": "/nutricionista/modelo-05",
-    "available": true,
+    "available": false,
     "preview": "/images/nutricionista/modelo-05/preview.svg"
   },
   {
@@ -222,7 +222,7 @@ export const templates: LandingTemplate[] = [
       "Nutrição"
     ],
     "route": "/nutricionista/modelo-06",
-    "available": true,
+    "available": false,
     "preview": "/images/nutricionista/modelo-06/preview.svg"
   },
   {
@@ -238,7 +238,7 @@ export const templates: LandingTemplate[] = [
       "Nutrição"
     ],
     "route": "/nutricionista/modelo-07",
-    "available": true,
+    "available": false,
     "preview": "/images/nutricionista/modelo-07/preview.svg"
   },
   {
@@ -254,7 +254,7 @@ export const templates: LandingTemplate[] = [
       "Nutrição"
     ],
     "route": "/nutricionista/modelo-08",
-    "available": true,
+    "available": false,
     "preview": "/images/nutricionista/modelo-08/preview.svg"
   },
   {
@@ -270,7 +270,7 @@ export const templates: LandingTemplate[] = [
       "Psicologia"
     ],
     "route": "/psicologo/modelo-01",
-    "available": true,
+    "available": false,
     "preview": "/images/psicologo/modelo-01/preview.svg"
   },
   {
@@ -286,7 +286,7 @@ export const templates: LandingTemplate[] = [
       "Psicologia"
     ],
     "route": "/psicologo/modelo-02",
-    "available": true,
+    "available": false,
     "preview": "/images/psicologo/modelo-02/preview.svg"
   },
   {
@@ -302,7 +302,7 @@ export const templates: LandingTemplate[] = [
       "Psicologia"
     ],
     "route": "/psicologo/modelo-03",
-    "available": true,
+    "available": false,
     "preview": "/images/psicologo/modelo-03/preview.svg"
   },
   {
@@ -318,7 +318,7 @@ export const templates: LandingTemplate[] = [
       "Psicologia"
     ],
     "route": "/psicologo/modelo-04",
-    "available": true,
+    "available": false,
     "preview": "/images/psicologo/modelo-04/preview.svg"
   },
   {
@@ -334,7 +334,7 @@ export const templates: LandingTemplate[] = [
       "Psicologia"
     ],
     "route": "/psicologo/modelo-05",
-    "available": true,
+    "available": false,
     "preview": "/images/psicologo/modelo-05/preview.svg"
   },
   {
@@ -350,7 +350,7 @@ export const templates: LandingTemplate[] = [
       "Psicologia"
     ],
     "route": "/psicologo/modelo-06",
-    "available": true,
+    "available": false,
     "preview": "/images/psicologo/modelo-06/preview.svg"
   },
   {
@@ -366,7 +366,7 @@ export const templates: LandingTemplate[] = [
       "Psicologia"
     ],
     "route": "/psicologo/modelo-07",
-    "available": true,
+    "available": false,
     "preview": "/images/psicologo/modelo-07/preview.svg"
   },
   {
@@ -382,7 +382,7 @@ export const templates: LandingTemplate[] = [
       "Psicologia"
     ],
     "route": "/psicologo/modelo-08",
-    "available": true,
+    "available": false,
     "preview": "/images/psicologo/modelo-08/preview.svg"
   },
   {
@@ -398,7 +398,7 @@ export const templates: LandingTemplate[] = [
       "Odontologia"
     ],
     "route": "/dentista/modelo-01",
-    "available": true,
+    "available": false,
     "preview": "/images/dentista/modelo-01/preview.svg"
   },
   {
@@ -414,7 +414,7 @@ export const templates: LandingTemplate[] = [
       "Odontologia"
     ],
     "route": "/dentista/modelo-02",
-    "available": true,
+    "available": false,
     "preview": "/images/dentista/modelo-02/preview.svg"
   },
   {
@@ -430,7 +430,7 @@ export const templates: LandingTemplate[] = [
       "Odontologia"
     ],
     "route": "/dentista/modelo-03",
-    "available": true,
+    "available": false,
     "preview": "/images/dentista/modelo-03/preview.svg"
   },
   {
@@ -446,7 +446,7 @@ export const templates: LandingTemplate[] = [
       "Odontologia"
     ],
     "route": "/dentista/modelo-04",
-    "available": true,
+    "available": false,
     "preview": "/images/dentista/modelo-04/preview.svg"
   },
   {
@@ -462,7 +462,7 @@ export const templates: LandingTemplate[] = [
       "Odontologia"
     ],
     "route": "/dentista/modelo-05",
-    "available": true,
+    "available": false,
     "preview": "/images/dentista/modelo-05/preview.svg"
   },
   {
@@ -478,7 +478,7 @@ export const templates: LandingTemplate[] = [
       "Odontologia"
     ],
     "route": "/dentista/modelo-06",
-    "available": true,
+    "available": false,
     "preview": "/images/dentista/modelo-06/preview.svg"
   },
   {
@@ -494,7 +494,7 @@ export const templates: LandingTemplate[] = [
       "Odontologia"
     ],
     "route": "/dentista/modelo-07",
-    "available": true,
+    "available": false,
     "preview": "/images/dentista/modelo-07/preview.svg"
   },
   {
@@ -510,7 +510,7 @@ export const templates: LandingTemplate[] = [
       "Odontologia"
     ],
     "route": "/dentista/modelo-08",
-    "available": true,
+    "available": false,
     "preview": "/images/dentista/modelo-08/preview.svg"
   },
   {
@@ -526,7 +526,7 @@ export const templates: LandingTemplate[] = [
       "Treinamento"
     ],
     "route": "/personal-trainer/modelo-01",
-    "available": true,
+    "available": false,
     "preview": "/images/personal-trainer/modelo-01/preview.svg"
   },
   {
@@ -542,7 +542,7 @@ export const templates: LandingTemplate[] = [
       "Treinamento"
     ],
     "route": "/personal-trainer/modelo-02",
-    "available": true,
+    "available": false,
     "preview": "/images/personal-trainer/modelo-02/preview.svg"
   },
   {
@@ -558,7 +558,7 @@ export const templates: LandingTemplate[] = [
       "Treinamento"
     ],
     "route": "/personal-trainer/modelo-03",
-    "available": true,
+    "available": false,
     "preview": "/images/personal-trainer/modelo-03/preview.svg"
   },
   {
@@ -574,7 +574,7 @@ export const templates: LandingTemplate[] = [
       "Treinamento"
     ],
     "route": "/personal-trainer/modelo-04",
-    "available": true,
+    "available": false,
     "preview": "/images/personal-trainer/modelo-04/preview.svg"
   },
   {
@@ -590,7 +590,7 @@ export const templates: LandingTemplate[] = [
       "Treinamento"
     ],
     "route": "/personal-trainer/modelo-05",
-    "available": true,
+    "available": false,
     "preview": "/images/personal-trainer/modelo-05/preview.svg"
   },
   {
@@ -606,7 +606,7 @@ export const templates: LandingTemplate[] = [
       "Treinamento"
     ],
     "route": "/personal-trainer/modelo-06",
-    "available": true,
+    "available": false,
     "preview": "/images/personal-trainer/modelo-06/preview.svg"
   },
   {
@@ -622,7 +622,7 @@ export const templates: LandingTemplate[] = [
       "Treinamento"
     ],
     "route": "/personal-trainer/modelo-07",
-    "available": true,
+    "available": false,
     "preview": "/images/personal-trainer/modelo-07/preview.svg"
   },
   {
@@ -638,7 +638,7 @@ export const templates: LandingTemplate[] = [
       "Treinamento"
     ],
     "route": "/personal-trainer/modelo-08",
-    "available": true,
+    "available": false,
     "preview": "/images/personal-trainer/modelo-08/preview.svg"
   },
   {
@@ -654,7 +654,7 @@ export const templates: LandingTemplate[] = [
       "Advocacia"
     ],
     "route": "/advogado/modelo-01",
-    "available": true,
+    "available": false,
     "preview": "/images/advogado/modelo-01/preview.svg"
   },
   {
@@ -670,7 +670,7 @@ export const templates: LandingTemplate[] = [
       "Advocacia"
     ],
     "route": "/advogado/modelo-02",
-    "available": true,
+    "available": false,
     "preview": "/images/advogado/modelo-02/preview.svg"
   },
   {
@@ -686,7 +686,7 @@ export const templates: LandingTemplate[] = [
       "Advocacia"
     ],
     "route": "/advogado/modelo-03",
-    "available": true,
+    "available": false,
     "preview": "/images/advogado/modelo-03/preview.svg"
   },
   {
@@ -702,7 +702,7 @@ export const templates: LandingTemplate[] = [
       "Advocacia"
     ],
     "route": "/advogado/modelo-04",
-    "available": true,
+    "available": false,
     "preview": "/images/advogado/modelo-04/preview.svg"
   },
   {
@@ -718,7 +718,7 @@ export const templates: LandingTemplate[] = [
       "Advocacia"
     ],
     "route": "/advogado/modelo-05",
-    "available": true,
+    "available": false,
     "preview": "/images/advogado/modelo-05/preview.svg"
   },
   {
@@ -734,7 +734,7 @@ export const templates: LandingTemplate[] = [
       "Advocacia"
     ],
     "route": "/advogado/modelo-06",
-    "available": true,
+    "available": false,
     "preview": "/images/advogado/modelo-06/preview.svg"
   },
   {
@@ -750,7 +750,7 @@ export const templates: LandingTemplate[] = [
       "Advocacia"
     ],
     "route": "/advogado/modelo-07",
-    "available": true,
+    "available": false,
     "preview": "/images/advogado/modelo-07/preview.svg"
   },
   {
@@ -766,7 +766,7 @@ export const templates: LandingTemplate[] = [
       "Advocacia"
     ],
     "route": "/advogado/modelo-08",
-    "available": true,
+    "available": false,
     "preview": "/images/advogado/modelo-08/preview.svg"
   },
   {
@@ -782,7 +782,7 @@ export const templates: LandingTemplate[] = [
       "Imóveis"
     ],
     "route": "/imobiliario/modelo-01",
-    "available": true,
+    "available": false,
     "preview": "/images/imobiliario/modelo-01/preview.svg"
   },
   {
@@ -798,7 +798,7 @@ export const templates: LandingTemplate[] = [
       "Imóveis"
     ],
     "route": "/imobiliario/modelo-02",
-    "available": true,
+    "available": false,
     "preview": "/images/imobiliario/modelo-02/preview.svg"
   },
   {
@@ -814,7 +814,7 @@ export const templates: LandingTemplate[] = [
       "Imóveis"
     ],
     "route": "/imobiliario/modelo-03",
-    "available": true,
+    "available": false,
     "preview": "/images/imobiliario/modelo-03/preview.svg"
   },
   {
@@ -830,7 +830,7 @@ export const templates: LandingTemplate[] = [
       "Imóveis"
     ],
     "route": "/imobiliario/modelo-04",
-    "available": true,
+    "available": false,
     "preview": "/images/imobiliario/modelo-04/preview.svg"
   },
   {
@@ -846,7 +846,7 @@ export const templates: LandingTemplate[] = [
       "Imóveis"
     ],
     "route": "/imobiliario/modelo-05",
-    "available": true,
+    "available": false,
     "preview": "/images/imobiliario/modelo-05/preview.svg"
   },
   {
@@ -862,7 +862,7 @@ export const templates: LandingTemplate[] = [
       "Imóveis"
     ],
     "route": "/imobiliario/modelo-06",
-    "available": true,
+    "available": false,
     "preview": "/images/imobiliario/modelo-06/preview.svg"
   },
   {
@@ -878,7 +878,7 @@ export const templates: LandingTemplate[] = [
       "Imóveis"
     ],
     "route": "/imobiliario/modelo-07",
-    "available": true,
+    "available": false,
     "preview": "/images/imobiliario/modelo-07/preview.svg"
   },
   {
@@ -894,136 +894,136 @@ export const templates: LandingTemplate[] = [
       "Imóveis"
     ],
     "route": "/imobiliario/modelo-08",
-    "available": true,
+    "available": false,
     "preview": "/images/imobiliario/modelo-08/preview.svg"
   },
   {
     "id": "estetica-beleza-01",
     "categorySlug": "estetica-beleza",
-    "name": "Pele & Essência",
+    "name": "Essenza Natural",
     "slug": "modelo-01",
-    "description": "Uma clínica de estética com atenção individual e uma experiência tranquila.",
-    "style": "Acolhedor",
+    "description": "Estética natural e bem-estar em uma experiência acolhedora.",
+    "style": "Natural",
     "tags": [
-      "Acolhedor",
-      "Avaliação estética",
+      "Natural",
+      "Avaliação individual",
       "Estética & Beleza"
     ],
     "route": "/estetica-beleza/modelo-01",
     "available": true,
-    "preview": "/images/estetica-beleza/modelo-01/preview.svg"
+    "preview": "/images/estetica-beleza/optimized/Retrato de beleza com pele radiante-640.jpg"
   },
   {
     "id": "estetica-beleza-02",
     "categorySlug": "estetica-beleza",
-    "name": "Lia Estética",
+    "name": "Lumière Aesthetic",
     "slug": "modelo-02",
-    "description": "Atendimento pessoal com escuta, delicadeza e atenção à sua rotina.",
-    "style": "Marca pessoal",
+    "description": "Clínica particular com assinatura editorial e uma experiência reservada.",
+    "style": "Premium",
     "tags": [
-      "Marca pessoal",
-      "Limpeza de pele",
+      "Premium",
+      "Avaliação individual",
       "Estética & Beleza"
     ],
     "route": "/estetica-beleza/modelo-02",
     "available": true,
-    "preview": "/images/estetica-beleza/modelo-02/preview.svg"
+    "preview": "/images/estetica-beleza/optimized/Retrato de beleza com pele iluminada-640.jpg"
   },
   {
     "id": "estetica-beleza-03",
     "categorySlug": "estetica-beleza",
-    "name": "Equilíbrio Facial",
+    "name": "Aura Skin",
     "slug": "modelo-03",
-    "description": "Uma abordagem de avaliação facial que prioriza informação, proporção e escolhas conscientes.",
-    "style": "Minimalista",
+    "description": "Skincare, análise da pele e cuidado facial em nude e rosé.",
+    "style": "Skincare",
     "tags": [
-      "Minimalista",
-      "Avaliação facial",
+      "Skincare",
+      "Avaliação individual",
       "Estética & Beleza"
     ],
     "route": "/estetica-beleza/modelo-03",
     "available": true,
-    "preview": "/images/estetica-beleza/modelo-03/preview.svg"
+    "preview": "/images/estetica-beleza/optimized/Retrato de beleza com pele radiante (1)-640.jpg"
   },
   {
     "id": "estetica-beleza-04",
     "categorySlug": "estetica-beleza",
-    "name": "Derma Studio",
+    "name": "Neo Aesthetic",
     "slug": "modelo-04",
-    "description": "Cuidados faciais com avaliação individual e atenção aos hábitos do dia a dia.",
-    "style": "Clássico",
+    "description": "Análise digital, equipamentos e recursos contemporâneos em navy e azul elétrico.",
+    "style": "Tecnológico",
     "tags": [
-      "Clássico",
-      "Avaliação da pele",
+      "Tecnológico",
+      "Avaliação individual",
       "Estética & Beleza"
     ],
     "route": "/estetica-beleza/modelo-04",
     "available": true,
-    "preview": "/images/estetica-beleza/modelo-04/preview.svg"
+    "preview": "/images/estetica-beleza/optimized/Análise Facial em Clínica Dermatológica-640.jpg"
   },
   {
     "id": "estetica-beleza-05",
     "categorySlug": "estetica-beleza",
-    "name": "Corpo Sereno",
+    "name": "Sculpt Body",
     "slug": "modelo-05",
-    "description": "Estética corporal em uma experiência reservada, com respeito ao corpo e às suas escolhas.",
-    "style": "Editorial",
+    "description": "Cuidado corporal com estratégia, acompanhamento e respeito à individualidade.",
+    "style": "Corporal",
     "tags": [
-      "Editorial",
-      "Avaliação corporal",
+      "Corporal",
+      "Avaliação individual",
       "Estética & Beleza"
     ],
     "route": "/estetica-beleza/modelo-05",
     "available": true,
-    "preview": "/images/estetica-beleza/modelo-05/preview.svg"
+    "preview": "/images/estetica-beleza/optimized/Tratamento corporal em clínica estética moderna-640.jpg"
   },
   {
     "id": "estetica-beleza-06",
     "categorySlug": "estetica-beleza",
-    "name": "Aura Beauty",
+    "name": "Maison Beauté",
     "slug": "modelo-06",
-    "description": "Um estúdio de beleza para experimentar, se expressar e cuidar dos detalhes.",
-    "style": "Impacto",
+    "description": "Estética editorial, fotografia ampla e uma abordagem minimalista de rosto, corpo e pele.",
+    "style": "Editorial",
     "tags": [
-      "Impacto",
-      "Design de sobrancelhas",
+      "Editorial",
+      "Avaliação individual",
       "Estética & Beleza"
     ],
     "route": "/estetica-beleza/modelo-06",
     "available": true,
-    "preview": "/images/estetica-beleza/modelo-06/preview.svg"
+    "preview": "/images/estetica-beleza/optimized/Retrato de beleza com pele radiante-640.jpg"
   },
   {
     "id": "estetica-beleza-07",
     "categorySlug": "estetica-beleza",
-    "name": "Maison Belle",
+    "name": "Clínica 360 Beauty",
     "slug": "modelo-07",
-    "description": "Um espaço particular de estética com atenção, conforto e uma experiência cuidadosamente planejada.",
-    "style": "Premium",
+    "description": "Catálogo pesquisável e cuidado integrado com tratamentos, equipe e estrutura.",
+    "style": "Integrado",
     "tags": [
-      "Premium",
-      "Ritual facial",
+      "Integrado",
+      "Avaliação individual",
       "Estética & Beleza"
     ],
     "route": "/estetica-beleza/modelo-07",
     "available": true,
-    "preview": "/images/estetica-beleza/modelo-07/preview.svg"
+    "preview": "/images/estetica-beleza/optimized/Equipe de Clínica Estética em Destaque-640.jpg"
   },
   {
     "id": "estetica-beleza-08",
     "categorySlug": "estetica-beleza",
-    "name": "Valentina Costa",
+    "name": "Élite Aesthetics",
     "slug": "modelo-08",
-    "description": "Uma marca pessoal de estética com olhar atento à individualidade e escolhas bem informadas.",
-    "style": "Criativo",
+    "description": "Private aesthetics, experiências reservadas e concierge em preto e champagne.",
+    "style": "Concierge",
     "tags": [
-      "Criativo",
-      "Avaliação estética",
+      "Concierge",
+      "Avaliação individual",
       "Estética & Beleza"
     ],
     "route": "/estetica-beleza/modelo-08",
     "available": true,
-    "preview": "/images/estetica-beleza/modelo-08/preview.svg"
+    "preview": "/images/estetica-beleza/optimized/Clínica de estética avançada luxuosa-640.jpg"
   }
 ]
 

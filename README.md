@@ -1,6 +1,6 @@
 # Landing Pages Hub
 
-Central de demonstração de landing pages profissionais: oito categorias, oito modelos por categoria, 64 páginas navegáveis.
+Central de demonstração de landing pages profissionais: oito categorias, oito modelos por categoria, 64 modelos cadastrados. Dez modelos concluídos estão disponíveis: dois médicos e os oito de estética. Os outros 54 permanecem em preparação e têm acesso bloqueado.
 
 React + TypeScript + Vite + React Router + Lucide + CSS. Projeto exclusivamente front-end.
 
@@ -14,6 +14,7 @@ React + TypeScript + Vite + React Router + Lucide + CSS. Projeto exclusivamente 
 - `npm run lint`: ESLint.
 - `npm run check:catalog`: renderização dos 64 modelos, integridade do catálogo, previews, âncoras e escopo dos estilos.
 - `npm run check:prime`: integridade das 12 páginas da Essencial Prime e limites do calendário de agendamento.
+- `npm run check:beauty`: 115 páginas de estética, links, imagens, filtros e bloqueio dos modelos em preparação.
 
 No PowerShell com scripts bloqueados, use `npm.cmd`.
 

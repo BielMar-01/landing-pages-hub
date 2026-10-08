@@ -19,7 +19,7 @@ try {
   }
   for (const template of templates) {
     const dir = `src/pages/templates/${template.categorySlug}/${template.slug}`
-    const filename = readdirSync(dir).find(file => file.endsWith('.tsx'))
+    const filename = readdirSync(dir).find(file => /Model\d{2}Page\.tsx$/.test(file)) || (template.id === 'medico-01' ? 'MedicalEssentialPage.tsx' : undefined)
     assert.ok(filename, `Page missing: ${template.route}`)
     assert.ok(existsSync(`public${template.preview}`), `Preview missing: ${template.route}`)
     const mod = await server.ssrLoadModule(`/${dir}/${filename}`)

@@ -1,125 +1,292 @@
-/* lp-estetica-beleza-1: independent stylesheet, scoped to this landing. */
-.lp-estetica-beleza-1 { --lp-bg:#f6f0e8; --lp-ink:#51453c; --lp-accent:#8b7056; --lp-soft:#e9decf; color:var(--lp-ink); background:var(--lp-bg); min-height:100vh; font-family:Georgia, 'Times New Roman', serif; }
-.lp-estetica-beleza-1 * { min-width:0; }
-.lp-estetica-beleza-1 .wrap { width:min(100% - 40px, 1200px); margin-inline:auto; }
-.lp-estetica-beleza-1 section[id] { scroll-margin-top:100px; }
-.lp-estetica-beleza-1 .back { display:inline-flex; align-items:center; gap:8px; font:12px Arial,sans-serif; padding:12px 0; opacity:.8; }
-.lp-estetica-beleza-1 header { border-bottom:1px solid color-mix(in srgb,var(--lp-ink) 18%,transparent); }
-.lp-estetica-beleza-1 .header-row { min-height:80px; display:flex; align-items:center; justify-content:space-between; gap:16px; position:relative; }
-.lp-estetica-beleza-1 .brand { font-size:20px; font-weight:700; letter-spacing:-.6px; }
-.lp-estetica-beleza-1 .brand small { display:block; font:10px Arial,sans-serif; text-transform:uppercase; letter-spacing:2px; margin-top:6px; opacity:.7; }
-.lp-estetica-beleza-1 .menu { display:grid; place-items:center; background:var(--lp-soft); color:var(--lp-ink); width:44px; height:44px; border-radius:6px; cursor:pointer; }
-.lp-estetica-beleza-1 nav { display:none; }
-.lp-estetica-beleza-1 nav.open { display:flex; position:absolute; top:100%; inset-inline:0; z-index:10; background:var(--lp-bg); padding:20px; box-shadow:0 18px 30px #0002; flex-direction:column; gap:16px; border:1px solid var(--lp-soft); }
-.lp-estetica-beleza-1 nav a { font:13px Arial,sans-serif; padding:10px 0; }
-.lp-estetica-beleza-1 .hero { padding:48px 0 64px; }
-.lp-estetica-beleza-1 .hero-grid { display:grid; gap:32px; align-items:center; }
-.lp-estetica-beleza-1 .eyebrow { display:block; font:11px Arial,sans-serif; text-transform:uppercase; letter-spacing:2px; color:var(--lp-accent); margin-bottom:24px; }
-.lp-estetica-beleza-1 h1 { font-size:clamp(36px,8.5vw,76px); line-height:1.05; letter-spacing:-.04em; font-weight:400; max-width:850px; margin-bottom:24px; text-wrap:balance; }
-.lp-estetica-beleza-1 h2 { font-size:clamp(28px,5vw,46px); line-height:1.14; font-weight:400; letter-spacing:-.025em; text-wrap:balance; }
-.lp-estetica-beleza-1 h3 { font-size:22px; line-height:1.25; font-weight:500; }
-.lp-estetica-beleza-1 p { font:16px/1.8 Arial,sans-serif; max-width:62ch; opacity:.86; }
-.lp-estetica-beleza-1 .lead { font-size:17px; }
-.lp-estetica-beleza-1 .actions { display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-top:30px; }
-.lp-estetica-beleza-1 .button { display:inline-flex; justify-content:center; align-items:center; gap:14px; background:var(--lp-accent); color:#fff; padding:16px 23px; min-height:48px; font:600 13px Arial,sans-serif; }
-.lp-estetica-beleza-1 .text-link { font:13px Arial,sans-serif; border-bottom:1px solid var(--lp-accent); padding:12px 0; }
-.lp-estetica-beleza-1 .visual { min-height:360px; background:var(--lp-soft); }
-.lp-estetica-beleza-1 .visual > img { object-position:50% 30%; }
-.lp-estetica-beleza-1 .photo-fallback { min-height:inherit; padding:36px; display:flex; flex-direction:column; justify-content:space-between; }
-.lp-estetica-beleza-1 .photo-fallback > span { font:11px Arial,sans-serif; letter-spacing:3px; text-transform:uppercase; }
-.lp-estetica-beleza-1 .photo-fallback strong { font-size:clamp(54px,14vw,120px); line-height:1; font-weight:400; color:var(--lp-accent); }
-.lp-estetica-beleza-1 .photo-fallback small { font:13px/1.7 Arial,sans-serif; }
-.lp-estetica-beleza-1 .facts { display:flex; flex-wrap:wrap; gap:24px; padding:25px 0; border-block:1px solid color-mix(in srgb,var(--lp-ink) 18%,transparent); font:12px Arial,sans-serif; }
-.lp-estetica-beleza-1 .facts strong { display:block; font-size:18px; margin-bottom:7px; }
-.lp-estetica-beleza-1 .section { padding:64px 0; }
-.lp-estetica-beleza-1 .section-title { display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px; align-items:end; margin-bottom:34px; }
-.lp-estetica-beleza-1 .section-title h2 { margin:0; max-width:700px; }
-.lp-estetica-beleza-1 .service-list { display:grid; gap:0; }
-.lp-estetica-beleza-1 .service { padding:25px 0; border-top:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
-.lp-estetica-beleza-1 .service > span { display:block; color:var(--lp-accent); font:12px Arial,sans-serif; margin-bottom:18px; }
-.lp-estetica-beleza-1 .service p { font-size:14px; }
-.lp-estetica-beleza-1 .service a { display:inline-block; padding:12px 0; font:12px Arial,sans-serif; color:var(--lp-accent); }
-.lp-estetica-beleza-1 .story { display:grid; gap:32px; align-items:center; }
-.lp-estetica-beleza-1 .story .visual { min-height:320px; }
-.lp-estetica-beleza-1 .steps { display:grid; gap:22px; counter-reset:step; }
-.lp-estetica-beleza-1 .step { border-left:2px solid var(--lp-accent); padding:8px 0 8px 22px; }
-.lp-estetica-beleza-1 .step strong { display:block; font-size:20px; margin-bottom:12px; }
-.lp-estetica-beleza-1 .step p { font-size:14px; }
-.lp-estetica-beleza-1 .credentials { padding:24px; background:var(--lp-soft); font:14px/1.8 Arial,sans-serif; }
-.lp-estetica-beleza-1 .credentials ul { padding-left:18px; }
-.lp-estetica-beleza-1 .feature { padding:32px; background:var(--lp-soft); }
-.lp-estetica-beleza-1 .feature-grid { display:grid; gap:24px; }
-.lp-estetica-beleza-1 .faq { max-width:850px; margin-inline:auto; }
-.lp-estetica-beleza-1 details { padding:22px 0; border-top:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
-.lp-estetica-beleza-1 summary { cursor:pointer; font:600 15px/1.5 Arial,sans-serif; padding:4px 0; }
-.lp-estetica-beleza-1 details p { margin-top:16px; font-size:14px; }
-.lp-estetica-beleza-1 .contact { background:var(--lp-soft); }
-.lp-estetica-beleza-1 .contact-grid { display:grid; gap:40px; }
-.lp-estetica-beleza-1 address { font:14px/1.9 Arial,sans-serif; font-style:normal; }
-.lp-estetica-beleza-1 .demo-inquiry { display:grid; gap:16px; font:14px Arial,sans-serif; }
-.lp-estetica-beleza-1 .demo-inquiry label { display:grid; gap:8px; }
-.lp-estetica-beleza-1 .demo-inquiry input,.lp-estetica-beleza-1 .demo-inquiry select,.lp-estetica-beleza-1 .demo-inquiry textarea { width:100%; min-height:48px; border:1px solid color-mix(in srgb,var(--lp-ink) 25%,transparent); color:var(--lp-ink); background:var(--lp-bg); padding:12px; border-radius:0; }
-.lp-estetica-beleza-1 .demo-inquiry button { cursor:pointer; display:flex; justify-content:space-between; min-height:48px; padding:16px; color:#fff; background:var(--lp-accent); }
-.lp-estetica-beleza-1 .demo-inquiry small { font-size:11px; line-height:1.7; }
-.lp-estetica-beleza-1 .demo-inquiry [role=status] { padding:16px; border:1px solid var(--lp-accent); font-size:14px; }
-.lp-estetica-beleza-1 footer { padding:36px 0; }
-.lp-estetica-beleza-1 .footer-row { display:flex; flex-wrap:wrap; gap:24px; justify-content:space-between; font:12px/1.8 Arial,sans-serif; }
-.lp-estetica-beleza-1 .footer-row p { font-size:11px; margin-bottom:0; }
-.lp-estetica-beleza-1 .filter-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
-.lp-estetica-beleza-1 .filter-row button { padding:12px 18px; cursor:pointer; background:var(--lp-soft); color:var(--lp-ink); border:1px solid transparent; }
-.lp-estetica-beleza-1 .filter-row button[aria-pressed=true] { border-color:var(--lp-accent); }
-.lp-estetica-beleza-1 .property-grid { display:grid; gap:24px; }
-.lp-estetica-beleza-1 .property .local-photo { min-height:230px; background:var(--lp-soft); }
-.lp-estetica-beleza-1 .property h3 { margin:18px 0 8px; }
-.lp-estetica-beleza-1 .property p { font-size:13px; }
-.lp-estetica-beleza-1 .gallery { display:grid; gap:12px; }
-.lp-estetica-beleza-1 .gallery .local-photo { min-height:240px; background:var(--lp-soft); }
-.lp-estetica-beleza-1 .gallery-caption { font:12px/1.8 Arial,sans-serif; margin:16px 0; }
-.lp-estetica-beleza-1 .article-list { display:grid; gap:25px; }
-.lp-estetica-beleza-1 .article-list article { border-top:1px solid var(--lp-accent); padding-top:22px; }
-.lp-estetica-beleza-1 .article-list p { font-size:14px; }
-.lp-estetica-beleza-1 .team-list { display:grid; gap:20px; }
-.lp-estetica-beleza-1 .team-person { background:var(--lp-soft); padding:24px; }
-.lp-estetica-beleza-1 .team-person strong { display:block; font-size:20px; margin-bottom:8px; }
-.lp-estetica-beleza-1 .team-person small { font:12px Arial,sans-serif; }
-.lp-estetica-beleza-1 .schedule { display:grid; gap:12px; }
-.lp-estetica-beleza-1 .schedule div { padding:20px; border:1px solid var(--lp-accent); font:14px/1.8 Arial,sans-serif; }
-.lp-estetica-beleza-1 .schedule strong { display:block; }
-.lp-estetica-beleza-1 .note { font:11px/1.8 Arial,sans-serif; opacity:.75; margin-top:20px; }
-.lp-estetica-beleza-1 .context-grid { display:grid; gap:26px; }
-.lp-estetica-beleza-1 .context-point { padding:24px; border:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
-.lp-estetica-beleza-1 .context-point strong { display:block; font-size:22px; margin-bottom:14px; }
-.lp-estetica-beleza-1 .context-letter { max-width:780px; border-left:3px solid var(--lp-accent); padding-left:28px; }
-.lp-estetica-beleza-1 .context-letter blockquote { font-size:clamp(24px,4vw,40px); line-height:1.5; margin:0 0 24px; }
-.lp-estetica-beleza-1 .context-letter cite { font:13px Arial,sans-serif; font-style:normal; }
-.lp-estetica-beleza-1 .context-table { width:100%; border-collapse:collapse; font:14px/1.8 Arial,sans-serif; }
-.lp-estetica-beleza-1 .context-table th,.lp-estetica-beleza-1 .context-table td { border-bottom:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); padding:20px 8px; text-align:left; }
-.lp-estetica-beleza-1 .topic-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:28px 0; }
-.lp-estetica-beleza-1 .topic-tabs button { padding:14px 18px; cursor:pointer; background:var(--lp-soft); color:var(--lp-ink); border:1px solid transparent; }
-.lp-estetica-beleza-1 .topic-tabs button[aria-pressed=true] { border-color:var(--lp-accent); }
-.lp-estetica-beleza-1 .topic-panel { padding:30px; background:var(--lp-soft); }
-.lp-estetica-beleza-1 .context-strip { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
-.lp-estetica-beleza-1 .context-strip span { border:1px solid var(--lp-accent); padding:14px 20px; font:12px Arial,sans-serif; border-radius:30px; }
-.lp-estetica-beleza-1 .context-index { display:grid; gap:24px; }
-.lp-estetica-beleza-1 .context-index article { display:grid; grid-template-columns:40px 1fr; gap:16px; border-top:1px solid var(--lp-accent); padding:20px 0; }
-.lp-estetica-beleza-1 .context-index span { font:13px Arial,sans-serif; color:var(--lp-accent); }
-.lp-estetica-beleza-1 .context-index h3 { margin:0 0 12px; }
-.lp-estetica-beleza-1 .context-index p { grid-column:2; font-size:14px; }
-.lp-estetica-beleza-1 :focus-visible { outline:3px solid var(--lp-accent); outline-offset:5px; }
-@media(min-width:768px) {
- .lp-estetica-beleza-1 .hero-grid,.lp-estetica-beleza-1 .story,.lp-estetica-beleza-1 .contact-grid { grid-template-columns:1fr 1fr; gap:48px; }
- .lp-estetica-beleza-1 .service-list,.lp-estetica-beleza-1 .steps,.lp-estetica-beleza-1 .property-grid,.lp-estetica-beleza-1 .team-list,.lp-estetica-beleza-1 .schedule,.lp-estetica-beleza-1 .article-list { grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px; }
- .lp-estetica-beleza-1 .feature-grid,.lp-estetica-beleza-1 .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
- .lp-estetica-beleza-1 .context-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
- .lp-estetica-beleza-1 .visual { min-height:480px; }
- .lp-estetica-beleza-1 .section { padding:88px 0; }
+.lp-estetica-beleza-1 { --en-green:#365c50; --en-light:#668276; --en-sage:#aabba8; --en-cream:#f5f0e7; --en-white:#fcfaf6; --en-terra:#c78368; --en-text:#263d36; --en-muted:#728078; --en-border:#e1e5de; background:var(--en-white); color:var(--en-text); font:16px/1.75 'DM Sans',Arial,sans-serif; }
+.lp-estetica-beleza-1 h1,.lp-estetica-beleza-1 h2,.lp-estetica-beleza-1 h3,.lp-estetica-beleza-1 p { margin:0; }
+.lp-estetica-beleza-1 h1,.lp-estetica-beleza-1 h2,.lp-estetica-beleza-1 h3,.lp-estetica-beleza-1 blockquote { font-family:'Lora',Georgia,serif; font-weight:400; letter-spacing:-.045em; line-height:1.16; }
+.lp-estetica-beleza-1 h1 { font-size:clamp(2.7rem,5.5vw,5rem); }
+.lp-estetica-beleza-1 h2 { font-size:clamp(2rem,3.5vw,3.2rem); }
+.lp-estetica-beleza-1 h3 { font-size:1.4rem; }
+.lp-estetica-beleza-1 em { color:var(--en-green); font-weight:400; }
+.lp-estetica-beleza-1 p { color:#5f6c63; margin:20px 0; max-width:60ch; }
+.lp-estetica-beleza-1 button { cursor:pointer; }
+.lp-estetica-beleza-1 :focus-visible { outline:3px solid var(--en-terra); outline-offset:5px; }
+.lp-estetica-beleza-1 ::selection { background:var(--en-green); color:var(--en-white); }
+.lp-estetica-beleza-1 .en-container { max-width:1280px; padding-inline:clamp(20px,4vw,64px); margin:auto; }
+.lp-estetica-beleza-1 .en-section { padding-block:clamp(64px,7vw,96px); }
+.lp-estetica-beleza-1 .en-section--cream { background:var(--en-cream); }
+.lp-estetica-beleza-1 .en-label { display:block; text-transform:uppercase; font-size:.7rem; letter-spacing:.17em; font-weight:500; color:var(--en-green); margin-bottom:20px; }
+.lp-estetica-beleza-1 .en-button,.lp-estetica-beleza-1 .bi-submit { display:inline-flex; align-items:center; justify-content:center; min-height:50px; gap:16px; padding:13px 24px; border:1px solid var(--en-green); border-radius:999px; background:var(--en-green); color:var(--en-white); font-size:.875rem; line-height:1.4; font-weight:500; transition:background 180ms,transform 180ms; }
+.lp-estetica-beleza-1 .en-button:hover,.lp-estetica-beleza-1 .bi-submit:hover { background:#263d36; transform:translateY(-2px); }
+.lp-estetica-beleza-1 .en-button--outline { background:transparent; color:var(--en-green); }
+.lp-estetica-beleza-1 .en-button--outline:hover { background:#365c500b; }
+.lp-estetica-beleza-1 .en-link,.lp-estetica-beleza-1 .bi-return { display:inline-flex; align-items:center; gap:12px; min-height:44px; border:0; padding:8px 0; background:transparent; font-size:.875rem; font-weight:500; color:var(--en-green); }
+.lp-estetica-beleza-1 .en-link svg { flex-shrink:0; transition:transform 180ms; }
+.lp-estetica-beleza-1 .en-link:hover svg { transform:translateX(3px); }
+.lp-estetica-beleza-1 .en-actions { display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-top:30px; }
+.lp-estetica-beleza-1 .en-section-title { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:36px; }
+.lp-estetica-beleza-1 .en-section-title>.en-link { flex-shrink:0; }
+.lp-estetica-beleza-1 .bi-photo { display:block; width:100%; height:auto; object-fit:cover; background:var(--en-cream); }
+.lp-estetica-beleza-1 .en-header { position:fixed; z-index:40; inset:20px 20px auto; max-width:1280px; margin:auto; border:1px solid #e1e5de80; border-radius:24px; background:#fcfaf6ec; backdrop-filter:blur(18px); transition:box-shadow 350ms; }
+.lp-estetica-beleza-1 .en-header.is-scrolled { box-shadow:0 12px 40px #263d3612; }
+.lp-estetica-beleza-1 .en-header>div { display:flex; align-items:center; justify-content:space-between; min-height:84px; padding:12px 26px; gap:24px; }
+.lp-estetica-beleza-1 .en-logo { display:flex; align-items:center; gap:10px; color:var(--en-green); }
+.lp-estetica-beleza-1 .en-logo svg { width:40px; height:54px; }
+.lp-estetica-beleza-1 .en-logo>span { font:400 1.1rem/1.1 'DM Sans',Arial,sans-serif; letter-spacing:.1em; }
+.lp-estetica-beleza-1 .en-logo small { font-size:.45rem; display:block; letter-spacing:.16em; margin-top:7px; white-space:nowrap; }
+.lp-estetica-beleza-1 .en-desktop-nav { display:flex; gap:21px; align-items:center; }
+.lp-estetica-beleza-1 .en-desktop-nav a { display:flex; align-items:center; min-height:44px; font-size:.7rem; white-space:nowrap; border-bottom:1px solid transparent; }
+.lp-estetica-beleza-1 .en-desktop-nav a.active { border-color:var(--en-green); }
+.lp-estetica-beleza-1 .en-header .en-button { font-size:.75rem; min-height:46px; padding:12px 20px; }
+.lp-estetica-beleza-1 .en-menu-button { display:none; width:44px; height:44px; border-radius:50%; background:transparent; color:var(--en-green); }
+.lp-estetica-beleza-1 .en-skip { position:fixed; top:-100px; left:20px; z-index:100; padding:15px; background:var(--en-green); color:white; }
+.lp-estetica-beleza-1 .en-skip:focus { top:15px; }
+.lp-estetica-beleza-1 .en-home-hero { padding-top:120px; background:var(--en-cream); position:relative; border-radius:0 0 65px 65px; overflow:hidden; }
+.lp-estetica-beleza-1 .en-hero-grid { display:grid; grid-template-columns:1fr 1.1fr; align-items:center; gap:30px; min-height:650px; }
+.lp-estetica-beleza-1 .en-hero-copy { padding-block:70px; z-index:2; }
+.lp-estetica-beleza-1 .en-hero-copy p { max-width:39ch; }
+.lp-estetica-beleza-1 .en-hero-image { position:relative; align-self:stretch; margin-right:calc(-1 * clamp(20px,4vw,64px)); }
+.lp-estetica-beleza-1 .en-hero-image>img { height:100%; object-position:55% 35%; border-radius:180px 0 0 25px; }
+.lp-estetica-beleza-1 .en-hero-image>span { position:absolute; bottom:35px; right:40px; background:#fcfaf6e6; padding:22px 26px; border-radius:50% 50% 30% 30%; font:400 1.1rem/1.5 'Lora',Georgia,serif; text-align:center; }
+.lp-estetica-beleza-1 .en-leaf-art { position:absolute; width:190px; bottom:-10px; left:-80px; color:var(--en-green); opacity:.3; }
+.lp-estetica-beleza-1 .en-hero-values { display:flex; flex-wrap:wrap; gap:25px; margin-top:40px; font-size:.75rem; }
+.lp-estetica-beleza-1 .en-hero-values>span { display:flex; align-items:center; gap:10px; }
+.lp-estetica-beleza-1 .en-manifesto { display:grid; grid-template-columns:1fr 1.1fr; gap:60px; align-items:center; }
+.lp-estetica-beleza-1 .en-manifesto>img { height:490px; border-radius:40px 100px 40px 40px; }
+.lp-estetica-beleza-1 .en-values { display:flex; gap:25px; flex-wrap:wrap; margin-block:30px; }
+.lp-estetica-beleza-1 .en-values>span { display:flex; flex-direction:column; gap:12px; font-size:.75rem; align-items:center; }
+.lp-estetica-beleza-1 .en-values svg { stroke-width:1; color:var(--en-green); }
+.lp-estetica-beleza-1 .en-treatment-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
+.lp-estetica-beleza-1 .en-treatment { border-radius:24px; background:var(--en-white); border:1px solid var(--en-border); overflow:hidden; transition:transform 300ms,box-shadow 300ms; }
+.lp-estetica-beleza-1 .en-treatment:hover { transform:translateY(-5px); box-shadow:0 12px 32px #263d3610; }
+.lp-estetica-beleza-1 .en-treatment>a { display:block; height:100%; }
+.lp-estetica-beleza-1 .en-treatment img { aspect-ratio:1.25; }
+.lp-estetica-beleza-1 .en-treatment> a>div { padding:24px 22px; }
+.lp-estetica-beleza-1 .en-treatment .en-label { margin-bottom:12px; font-size:.6rem; }
+.lp-estetica-beleza-1 .en-treatment p { font-size:.875rem; margin:15px 0; }
+.lp-estetica-beleza-1 .en-treatment .en-link { font-size:.75rem; }
+.lp-estetica-beleza-1 .en-philosophy { background:var(--en-green); color:var(--en-white); overflow:hidden; }
+.lp-estetica-beleza-1 .en-philosophy>div { display:grid; grid-template-columns:1.1fr 1fr; gap:65px; padding-block:65px; position:relative; }
+.lp-estetica-beleza-1 .en-philosophy>div>div { position:relative; z-index:1; }
+.lp-estetica-beleza-1 .en-philosophy>div>div+div { border-left:1px solid #aabba850; padding-left:45px; }
+.lp-estetica-beleza-1 .en-philosophy p { color:#e1e5de; margin-top:0; }
+.lp-estetica-beleza-1 .en-philosophy em,.lp-estetica-beleza-1 .en-philosophy .en-label { color:#d5dfcf; }
+.lp-estetica-beleza-1 .en-philosophy .en-button--outline { color:white; border-color:#aabba8; }
+.lp-estetica-beleza-1 .en-philosophy>div>svg { position:absolute; right:-40px; bottom:-50px; color:#aabba8; opacity:.2; }
+.lp-estetica-beleza-1 .en-journey { display:grid; grid-template-columns:1fr 1fr 1.1fr; gap:35px; align-items:center; }
+.lp-estetica-beleza-1 .en-journey>img { height:450px; border-radius:100px 30px 30px 30px; }
+.lp-estetica-beleza-1 .en-journey ol { list-style:none; padding:0; margin:0; }
+.lp-estetica-beleza-1 .en-journey li { display:flex; gap:16px; margin-block:20px; }
+.lp-estetica-beleza-1 .en-journey li>span { border:1px solid #aabba8; border-radius:50%; width:40px; height:40px; display:grid; place-items:center; flex-shrink:0; font-size:.75rem; }
+.lp-estetica-beleza-1 .en-journey h3 { font:500 .875rem 'DM Sans',Arial,sans-serif; letter-spacing:0; }
+.lp-estetica-beleza-1 .en-journey li p { font-size:.75rem; margin:8px 0 0; }
+.lp-estetica-beleza-1 .en-team-home { display:grid; grid-template-columns:1.3fr 1fr .8fr; gap:30px; align-items:center; }
+.lp-estetica-beleza-1 .en-team-home>img { height:420px; border-radius:100px 100px 30px 30px; }
+.lp-estetica-beleza-1 .en-team-home>img:last-child { height:290px; border-radius:30px; }
+.lp-estetica-beleza-1 .en-spaces-home { display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:20px; }
+.lp-estetica-beleza-1 .en-spaces-home img { aspect-ratio:1.15; border-radius:24px; }
+.lp-estetica-beleza-1 .en-spaces-home span { display:flex; align-items:center; justify-content:space-between; min-height:50px; font-size:.875rem; }
+.lp-estetica-beleza-1 .en-testimonial { display:grid; grid-template-columns:.75fr 1.2fr; gap:65px; align-items:center; }
+.lp-estetica-beleza-1 .en-testimonial>img { aspect-ratio:1.1; border-radius:50% 50% 30px 30px; }
+.lp-estetica-beleza-1 .en-testimonial blockquote { font-size:clamp(1.5rem,2.5vw,2rem); line-height:1.5; margin:20px 0 25px; }
+.lp-estetica-beleza-1 .en-testimonial strong { font-size:.875rem; }
+.lp-estetica-beleza-1 .en-carousel-controls,.lp-estetica-beleza-1 .bi-gallery-controls { display:flex; align-items:center; gap:20px; margin-top:24px; font-size:.75rem; }
+.lp-estetica-beleza-1 .en-carousel-controls button,.lp-estetica-beleza-1 .bi-gallery-controls button { width:44px; height:44px; background:transparent; border:1px solid var(--en-sage); border-radius:50%; display:grid; place-items:center; }
+.lp-estetica-beleza-1 .en-wellness { display:grid; grid-template-columns:1fr 1.15fr; gap:60px; align-items:center; }
+.lp-estetica-beleza-1 .en-wellness img { aspect-ratio:1.4; border-radius:40px 40px 100px 40px; }
+.lp-estetica-beleza-1 .en-articles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin-top:30px; }
+.lp-estetica-beleza-1 .en-articles img { aspect-ratio:1.5; border-radius:22px; margin-bottom:24px; }
+.lp-estetica-beleza-1 .en-articles h3 { font-size:1.5rem; }
+.lp-estetica-beleza-1 .en-articles p { font-size:.875rem; }
+.lp-estetica-beleza-1 .en-booking-home { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+.lp-estetica-beleza-1 .en-booking-home>div:first-child { position:relative; overflow:hidden; border-radius:40px; }
+.lp-estetica-beleza-1 .en-booking-home>div:first-child>img { height:660px; }
+.lp-estetica-beleza-1 .en-booking-home>div:first-child>div { position:absolute; bottom:0; inset-inline:0; padding:40px; background:linear-gradient(0deg,#263d36fa,#263d36cb,transparent); color:var(--en-white); }
+.lp-estetica-beleza-1 .en-booking-home>div:first-child em,.lp-estetica-beleza-1 .en-booking-home>div:first-child .en-label,.lp-estetica-beleza-1 .en-booking-home>div:first-child p { color:var(--en-cream); }
+.lp-estetica-beleza-1 .en-footer { padding-top:65px; background:var(--en-cream); border-radius:55px 55px 0 0; }
+.lp-estetica-beleza-1 .en-footer-grid { display:grid; grid-template-columns:1.2fr 1fr 1.1fr 1.3fr; gap:35px; padding-bottom:45px; }
+.lp-estetica-beleza-1 .en-footer h3 { font:500 .875rem 'DM Sans',Arial,sans-serif; letter-spacing:0; margin-bottom:20px; }
+.lp-estetica-beleza-1 .en-footer p { font-size:.875rem; }
+.lp-estetica-beleza-1 .en-footer-grid>div>a:not(.en-button) { min-height:44px; display:flex; align-items:center; font-size:.875rem; }
+.lp-estetica-beleza-1 .en-footer-bottom { display:flex; align-items:center; justify-content:space-between; border-top:1px solid #aabba855; padding-block:22px; gap:24px; }
+.lp-estetica-beleza-1 .en-footer-bottom small { font-size:.7rem; }
+.lp-estetica-beleza-1 .en-footer-bottom>div { display:flex; flex-wrap:wrap; gap:20px; }
+.lp-estetica-beleza-1 .en-footer-bottom button,.lp-estetica-beleza-1 .en-footer-bottom a { display:inline-flex; gap:8px; align-items:center; min-height:44px; background:transparent; font-size:.75rem; padding:0; }
+.lp-estetica-beleza-1 .en-concierge { position:fixed; bottom:24px; right:24px; display:grid; place-items:center; z-index:35; width:54px; height:54px; border:1px solid #aabba8; border-radius:50%; background:var(--en-green); color:white; box-shadow:0 5px 20px #263d3625; }
+.lp-estetica-beleza-1 .en-inner-hero { padding-top:160px; padding-bottom:60px; background:var(--en-cream); border-radius:0 0 50px 50px; }
+.lp-estetica-beleza-1 .en-inner-grid { display:grid; grid-template-columns:1fr .9fr; gap:60px; align-items:center; }
+.lp-estetica-beleza-1 .en-inner-grid .en-label { margin-top:22px; }
+.lp-estetica-beleza-1 .en-inner-grid>img { aspect-ratio:1.25; border-radius:100px 30px 30px 30px; }
+.lp-estetica-beleza-1 .en-treatment-grid--catalog { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.lp-estetica-beleza-1 .en-catalog-tools { display:flex; flex-wrap:wrap; gap:25px; align-items:center; justify-content:space-between; margin-bottom:30px; }
+.lp-estetica-beleza-1 .en-search { display:flex; align-items:center; background:white; border:1px solid var(--en-border); border-radius:999px; width:min(420px,100%); padding-right:20px; }
+.lp-estetica-beleza-1 .en-search input { min-width:0; width:100%; min-height:52px; padding:12px 20px; border:0; border-radius:999px; background:transparent; font-size:.875rem; color:var(--en-text); outline:none; }
+.lp-estetica-beleza-1 .en-search:focus-within { outline:2px solid var(--en-green); }
+.lp-estetica-beleza-1 .en-filters { display:flex; flex-wrap:wrap; gap:8px; }
+.lp-estetica-beleza-1 .en-filters button { border:1px solid var(--en-border); background:var(--en-cream); border-radius:999px; min-height:44px; padding:10px 17px; font-size:.75rem; }
+.lp-estetica-beleza-1 .en-filters button[aria-pressed='true'] { background:var(--en-green); color:white; border-color:var(--en-green); }
+.lp-estetica-beleza-1 .en-empty { text-align:center; padding:50px 25px; border-radius:28px; background:var(--en-cream); }
+.lp-estetica-beleza-1 .en-empty>svg,.lp-estetica-beleza-1 .en-empty p { margin-inline:auto; }
+.lp-estetica-beleza-1 .en-detail-nav { display:flex; gap:30px; padding-block:20px; border-bottom:1px solid var(--en-border); }
+.lp-estetica-beleza-1 .en-detail-nav a { min-height:44px; display:flex; align-items:center; font-size:.875rem; }
+.lp-estetica-beleza-1 .en-detail-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:70px; }
+.lp-estetica-beleza-1 .en-detail-booking,.lp-estetica-beleza-1 .en-contact-form { background:var(--en-cream); border:1px solid var(--en-border); border-radius:28px; padding:35px; }
+.lp-estetica-beleza-1 .en-detail-booking h3 { font-size:1.9rem; }
+.lp-estetica-beleza-1 .en-detail-booking a { width:100%; margin-top:14px; }
+.lp-estetica-beleza-1 .en-process-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:25px; }
+.lp-estetica-beleza-1 .en-process-grid article { background:var(--en-white); border:1px solid var(--en-border); border-radius:24px; padding:30px; }
+.lp-estetica-beleza-1 .en-process-grid article>span { display:block; color:var(--en-terra); font:400 2.4rem 'Lora',Georgia,serif; margin-bottom:25px; }
+.lp-estetica-beleza-1 .en-process-grid article>svg { color:var(--en-green); margin-bottom:25px; }
+.lp-estetica-beleza-1 .en-process-grid p { font-size:.875rem; }
+.lp-estetica-beleza-1 .en-faq-split,.lp-estetica-beleza-1 .en-about-story,.lp-estetica-beleza-1 .en-contact-grid,.lp-estetica-beleza-1 .en-booking-page { display:grid; grid-template-columns:1fr 1.1fr; gap:65px; align-items:start; }
+.lp-estetica-beleza-1 .en-about-story { align-items:center; }
+.lp-estetica-beleza-1 .en-about-story>img { border-radius:40px; aspect-ratio:1.1; }
+.lp-estetica-beleza-1 .en-professionals-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+.lp-estetica-beleza-1 .en-professionals-grid article { display:grid; grid-template-columns:1fr 1fr; background:var(--en-cream); border-radius:28px; overflow:hidden; }
+.lp-estetica-beleza-1 .en-professionals-grid img { height:100%; object-position:50% 30%; }
+.lp-estetica-beleza-1 .en-professionals-grid article>div { padding:30px 25px; }
+.lp-estetica-beleza-1 .en-professionals-grid small { display:block; color:#617067; font-size:.7rem; }
+.lp-estetica-beleza-1 .en-professionals-grid .en-label { font-size:.6rem; }
+.lp-estetica-beleza-1 .en-closing { background:var(--en-green); color:var(--en-white); padding-block:55px; }
+.lp-estetica-beleza-1 .en-closing>div { display:flex; align-items:center; justify-content:space-between; gap:30px; }
+.lp-estetica-beleza-1 .en-closing .en-label,.lp-estetica-beleza-1 .en-closing em { color:#d5dfcf; }
+.lp-estetica-beleza-1 .en-closing .en-button { background:var(--en-cream); border-color:var(--en-cream); color:var(--en-green); }
+.lp-estetica-beleza-1 .en-contact-channels { display:grid; gap:12px; margin-block:30px; }
+.lp-estetica-beleza-1 .en-contact-channels button { display:flex; align-items:center; gap:20px; min-height:80px; padding:20px; background:var(--en-cream); border:1px solid var(--en-border); border-radius:20px; text-align:left; }
+.lp-estetica-beleza-1 .en-contact-channels strong,.lp-estetica-beleza-1 .en-contact-channels small { display:block; }
+.lp-estetica-beleza-1 .en-contact-channels small { font-size:.75rem; }
+.lp-estetica-beleza-1 .en-contact-channels button>svg:last-child { margin-left:auto; }
+.lp-estetica-beleza-1 .en-location-card { padding:30px; border-radius:28px; background:linear-gradient(130deg,#aabba833,#f5f0e7); border:1px solid var(--en-border); }
+.lp-estetica-beleza-1 .en-location-card>svg { margin-bottom:20px; }
+.lp-estetica-beleza-1 .bi-dialog { margin:auto; width:min(660px,calc(100% - 32px)); max-height:calc(100svh - 32px); padding:0; border:1px solid var(--en-border); border-radius:28px; background:var(--en-white); color:var(--en-text); box-shadow:0 20px 80px #263d3630; }
+.lp-estetica-beleza-1 .bi-dialog::backdrop { background:#263d36b0; backdrop-filter:blur(5px); }
+.lp-estetica-beleza-1 .bi-dialog-body { padding:50px 35px 35px; position:relative; }
+.lp-estetica-beleza-1 .bi-dialog h2 { font-size:2rem; padding-right:20px; margin-bottom:25px; }
+.lp-estetica-beleza-1 .bi-close { position:absolute; top:12px; right:12px; width:44px; height:44px; border:1px solid var(--en-border); border-radius:50%; display:grid; place-items:center; background:transparent; }
+.lp-estetica-beleza-1 .bi-dialog--menu { height:100svh; max-height:100svh; width:100%; margin:0; border-radius:0; background:var(--en-cream); }
+.lp-estetica-beleza-1 .bi-dialog--menu .bi-dialog-body { max-width:500px; margin:auto; padding-top:65px; }
+.lp-estetica-beleza-1 .bi-dialog--menu h2 { font-size:.75rem; font-family:'DM Sans',Arial,sans-serif; letter-spacing:.05em; }
+.lp-estetica-beleza-1 .bi-dialog--menu nav { display:grid; margin-top:25px; }
+.lp-estetica-beleza-1 .bi-dialog--menu nav>a:not(.en-button) { display:flex; align-items:center; justify-content:space-between; min-height:55px; border-bottom:1px solid #aabba855; font-size:1.2rem; }
+.lp-estetica-beleza-1 .bi-dialog--menu .en-button { margin-top:30px; }
+.lp-estetica-beleza-1 .en-menu-leaf { position:absolute; bottom:-50px; right:20px; opacity:.14; pointer-events:none; }
+.lp-estetica-beleza-1 .bi-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:25px; }
+.lp-estetica-beleza-1 .bi-gallery button { border:0; padding:0; background:transparent; text-align:left; border-radius:25px; }
+.lp-estetica-beleza-1 .bi-gallery img { aspect-ratio:1.5; border-radius:25px; }
+.lp-estetica-beleza-1 .bi-gallery span { display:flex; align-items:center; justify-content:space-between; min-height:55px; font-size:.875rem; }
+.lp-estetica-beleza-1 .bi-accordion { border:1px solid var(--en-border); border-radius:16px; margin-bottom:12px; background:var(--en-white); transition:background 300ms; }
+.lp-estetica-beleza-1 .bi-accordion h3 { font-family:'DM Sans',Arial,sans-serif; letter-spacing:0; }
+.lp-estetica-beleza-1 .bi-accordion button { width:100%; min-height:65px; display:flex; align-items:center; justify-content:space-between; gap:25px; border:0; border-radius:16px; background:transparent; padding:20px; font-size:.875rem; line-height:1.6; text-align:left; }
+.lp-estetica-beleza-1 .bi-accordion svg { flex-shrink:0; transition:transform 300ms; }
+.lp-estetica-beleza-1 .bi-accordion p { font-size:.875rem; margin:0; padding:0 20px 22px; }
+.lp-estetica-beleza-1 .bi-accordion.is-open { background:var(--en-cream); }
+.lp-estetica-beleza-1 .bi-accordion.is-open svg { transform:rotate(180deg); }
+.lp-estetica-beleza-1 .bi-form { display:grid; gap:20px; }
+.lp-estetica-beleza-1 .bi-form label { display:grid; gap:8px; font-size:.875rem; font-weight:500; }
+.lp-estetica-beleza-1 .bi-form input,.lp-estetica-beleza-1 .bi-form select { min-width:0; width:100%; min-height:52px; border:1px solid #c8d0c4; border-radius:14px; padding:12px 15px; background:var(--en-white); color:var(--en-text); font-size:.875rem; color-scheme:light; }
+.lp-estetica-beleza-1 .bi-form-row { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.lp-estetica-beleza-1 .bi-form .bi-consent { display:flex; align-items:start; flex-direction:row; gap:12px; font-size:.75rem; font-weight:400; }
+.lp-estetica-beleza-1 .bi-consent input { width:20px; height:20px; min-height:20px; margin-top:3px; flex-shrink:0; accent-color:var(--en-green); }
+.lp-estetica-beleza-1 .bi-note { color:#657167; font-size:.75rem; margin:15px 0; }
+.lp-estetica-beleza-1 .bi-error { font-size:.875rem; color:#a2372b; }
+.lp-estetica-beleza-1 .bi-success { border:1px solid #aabba8; background:#aabba81c; padding:30px; border-radius:25px; }
+.lp-estetica-beleza-1 .bi-success>svg { color:var(--en-green); margin-bottom:20px; }
+.lp-estetica-beleza-1 .bi-success h3 { font-size:1.9rem; }
+.lp-estetica-beleza-1 .bi-success .bi-return { display:flex; margin-top:15px; }
+.lp-estetica-beleza-1 .bi-form-actions { display:flex; gap:20px; justify-content:space-between; }
+.lp-estetica-beleza-1 .bi-submit { width:100%; }
+.lp-estetica-beleza-1 main section[id] { scroll-margin-top:130px; }
+.lp-estetica-beleza-1.reveal-enabled [data-reveal] { transition:opacity 600ms,transform 600ms cubic-bezier(.2,.7,.2,1); }
+.lp-estetica-beleza-1.reveal-enabled [data-reveal]:not(.is-visible) { opacity:0; transform:translateY(20px); }
+@media(max-width:1023px) {
+.lp-estetica-beleza-1 .en-desktop-nav { display:none; }
+.lp-estetica-beleza-1 .en-menu-button { display:grid; place-items:center; }
+.lp-estetica-beleza-1 .en-header>div { gap:16px; }
+.lp-estetica-beleza-1 .en-header .en-button { margin-left:auto; }
+.lp-estetica-beleza-1 .en-treatment-grid,.lp-estetica-beleza-1 .en-process-grid,.lp-estetica-beleza-1 .en-treatment-grid--catalog { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.lp-estetica-beleza-1 .en-team-home { grid-template-columns:1fr 1fr; }
+.lp-estetica-beleza-1 .en-team-home>img:last-child { display:none; }
+.lp-estetica-beleza-1 .en-journey { grid-template-columns:1fr 1fr; }
+.lp-estetica-beleza-1 .en-journey>img { grid-column:1/-1; height:400px; }
+.lp-estetica-beleza-1 .en-professionals-grid article { grid-template-columns:1fr; }
+.lp-estetica-beleza-1 .en-professionals-grid img { aspect-ratio:1.3; height:auto; }
+.lp-estetica-beleza-1 .en-footer-grid { grid-template-columns:1fr 1fr; }
+.lp-estetica-beleza-1 .en-footer-bottom { flex-direction:column; align-items:start; }
+.lp-estetica-beleza-1 .en-manifesto,.lp-estetica-beleza-1 .en-inner-grid,.lp-estetica-beleza-1 .en-contact-grid,.lp-estetica-beleza-1 .en-detail-grid,.lp-estetica-beleza-1 .en-booking-page { gap:30px; }
 }
-@media(min-width:960px) {
- .lp-estetica-beleza-1 .menu { display:none; }
- .lp-estetica-beleza-1 nav,.lp-estetica-beleza-1 nav.open { position:static; display:flex; flex-direction:row; padding:0; box-shadow:none; border:0; align-items:center; gap:26px; background:transparent; }
- .lp-estetica-beleza-1 .hero { padding:70px 0 90px; }
-}
-.lp-estetica-beleza-1 .brand { letter-spacing:0; } .lp-estetica-beleza-1 .hero .visual { border-radius:46% 46% 12px 12px; min-height:400px; } .lp-estetica-beleza-1 .hero .photo-fallback { padding-top:80px; } .lp-estetica-beleza-1 h1 { font-style:italic; } .lp-estetica-beleza-1 .service { padding:30px; background:var(--lp-soft); border:0; border-radius:30px 4px 30px 4px; } .lp-estetica-beleza-1 .facts { border:0; background:var(--lp-soft); padding:24px; border-radius:22px; } .lp-estetica-beleza-1 .button { border-radius:40px; }
-@media(prefers-reduced-motion:reduce) { .lp-estetica-beleza-1 * { scroll-behavior:auto; transition:none; animation:none; } }
+@media(max-width:767px) {
+.lp-estetica-beleza-1 .en-header { inset:12px 12px auto; border-radius:18px; }
+.lp-estetica-beleza-1 .en-header>div { min-height:72px; padding:10px 18px; }
+.lp-estetica-beleza-1 .en-header .en-button { display:none; }
+.lp-estetica-beleza-1 .en-logo svg { width:31px; height:44px; }
+.lp-estetica-beleza-1 .en-logo>span { font-size:.95rem; }
+.lp-estetica-beleza-1 .en-logo small { font-size:.4rem; }
+.lp-estetica-beleza-1 .en-home-hero { padding-top:100px; border-radius:0 0 30px 30px; }
+.lp-estetica-beleza-1 .en-hero-grid { display:flex; flex-direction:column; gap:0; padding-inline:20px; }
+.lp-estetica-beleza-1 .en-hero-image { order:-1; width:100%; height:auto; margin:0; }
+.lp-estetica-beleza-1 .en-hero-image>img { height:auto; aspect-ratio:4/5; border-radius:100px 25px 25px 25px; object-position:58% 40%; }
+.lp-estetica-beleza-1 .en-hero-image>span { right:16px; bottom:18px; font-size:.9rem; padding:15px 20px; }
+.lp-estetica-beleza-1 .en-leaf-art { width:120px; left:-15px; bottom:-20px; }
+.lp-estetica-beleza-1 .en-hero-copy { padding:32px 0 40px; width:100%; }
+.lp-estetica-beleza-1 .en-hero-copy h1 { font-size:clamp(2.6rem,10.5vw,4rem); }
 
-.lp-estetica-beleza-1 .story .photo-fallback strong { font-size:clamp(36px,4vw,64px); }
+
+.lp-estetica-beleza-1 .en-actions { display:grid; grid-template-columns:1fr; }
+.lp-estetica-beleza-1 .en-hero-values { gap:15px; margin-top:25px; font-size:.65rem; }
+.lp-estetica-beleza-1 .en-manifesto,.lp-estetica-beleza-1 .en-wellness,.lp-estetica-beleza-1 .en-testimonial,.lp-estetica-beleza-1 .en-booking-home,.lp-estetica-beleza-1 .en-inner-grid,.lp-estetica-beleza-1 .en-detail-grid,.lp-estetica-beleza-1 .en-about-story,.lp-estetica-beleza-1 .en-faq-split,.lp-estetica-beleza-1 .en-contact-grid,.lp-estetica-beleza-1 .en-booking-page { grid-template-columns:1fr; gap:32px; }
+.lp-estetica-beleza-1 .en-manifesto>img { height:auto; aspect-ratio:1.1; border-radius:30px 70px 30px 30px; }
+.lp-estetica-beleza-1 .en-section-title { display:block; }
+.lp-estetica-beleza-1 .en-section-title>.en-link { margin-top:16px; }
+.lp-estetica-beleza-1 .en-treatment-grid { gap:14px; }
+.lp-estetica-beleza-1 .en-treatment>a>div { padding:20px 15px; }
+.lp-estetica-beleza-1 .en-treatment h3 { font-size:1.25rem; }
+.lp-estetica-beleza-1 .en-treatment p { font-size:.75rem; }
+.lp-estetica-beleza-1 .en-treatment .en-link { font-size:.7rem; gap:8px; }
+.lp-estetica-beleza-1 .en-philosophy>div { grid-template-columns:1fr; gap:25px; padding-block:50px; }
+.lp-estetica-beleza-1 .en-philosophy>div>div+div { border-left:0; border-top:1px solid #aabba850; padding:25px 0 0; }
+.lp-estetica-beleza-1 .en-journey { grid-template-columns:1fr; }
+.lp-estetica-beleza-1 .en-journey ol { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.lp-estetica-beleza-1 .en-journey li { margin:0; flex-direction:column; }
+.lp-estetica-beleza-1 .en-journey>img { height:auto; aspect-ratio:1.2; border-radius:40px; }
+.lp-estetica-beleza-1 .en-team-home { grid-template-columns:1fr; }
+.lp-estetica-beleza-1 .en-team-home>img { height:auto; aspect-ratio:1; border-radius:60px 60px 25px 25px; }
+.lp-estetica-beleza-1 .en-spaces-home { grid-template-columns:1fr 1fr; gap:15px; }
+.lp-estetica-beleza-1 .en-spaces-home>a:first-child { grid-column:1/-1; }
+.lp-estetica-beleza-1 .en-spaces-home>a:first-child img { aspect-ratio:1.5; }
+.lp-estetica-beleza-1 .en-spaces-home span { font-size:.75rem; gap:10px; }
+.lp-estetica-beleza-1 .en-testimonial>img { width:90px; height:90px; border-radius:50%; }
+.lp-estetica-beleza-1 .en-testimonial { gap:25px; }
+.lp-estetica-beleza-1 .en-testimonial blockquote { font-size:1.45rem; }
+.lp-estetica-beleza-1 .en-articles { grid-template-columns:1fr; }
+.lp-estetica-beleza-1 .en-articles article:not(:first-child) { display:grid; grid-template-columns:100px 1fr; gap:5px 20px; padding-top:25px; border-top:1px solid var(--en-border); }
+.lp-estetica-beleza-1 .en-articles article:not(:first-child) img { grid-row:1/5; aspect-ratio:1; border-radius:15px; margin:0; }
+.lp-estetica-beleza-1 .en-articles article:not(:first-child) .en-label { margin-bottom:8px; }
+.lp-estetica-beleza-1 .en-articles article:not(:first-child) p { display:none; }
+.lp-estetica-beleza-1 .en-articles article:not(:first-child) h3 { font-size:1.25rem; }
+.lp-estetica-beleza-1 .en-booking-home>div:first-child>img { height:420px; }
+.lp-estetica-beleza-1 .en-booking-home>div:first-child>div { padding:28px; }
+.lp-estetica-beleza-1 .en-footer { border-radius:30px 30px 0 0; }
+.lp-estetica-beleza-1 .en-footer-grid { gap:32px 18px; }
+.lp-estetica-beleza-1 .en-footer-grid>div:first-child,.lp-estetica-beleza-1 .en-footer-grid>div:last-child { grid-column:1/-1; }
+.lp-estetica-beleza-1 .en-footer-bottom { padding-bottom:90px; }
+.lp-estetica-beleza-1 .en-concierge { width:50px; height:50px; bottom:18px; right:18px; }
+.lp-estetica-beleza-1 .en-inner-hero { padding-top:115px; padding-bottom:40px; border-radius:0 0 30px 30px; }
+.lp-estetica-beleza-1 .en-inner-grid>img { aspect-ratio:4/5; border-radius:70px 25px 25px 25px; }
+.lp-estetica-beleza-1 .en-detail-nav { gap:18px; flex-wrap:wrap; }
+.lp-estetica-beleza-1 .en-detail-nav a { font-size:.75rem; }
+.lp-estetica-beleza-1 .en-process-grid { gap:15px; }
+.lp-estetica-beleza-1 .en-process-grid article { padding:24px 18px; }
+.lp-estetica-beleza-1 .en-process-grid h3 { font-size:1.25rem; }
+.lp-estetica-beleza-1 .en-process-grid p { font-size:.75rem; }
+.lp-estetica-beleza-1 .en-professionals-grid { grid-template-columns:1fr; }
+.lp-estetica-beleza-1 .en-contact-form,.lp-estetica-beleza-1 .en-detail-booking { padding:28px 22px; }
+.lp-estetica-beleza-1 .en-closing>div { display:block; }
+.lp-estetica-beleza-1 .en-closing svg { margin-bottom:22px; }
+.lp-estetica-beleza-1 .en-closing .en-button { width:100%; margin-top:30px; }
+.lp-estetica-beleza-1 .en-search { width:100%; }
+.lp-estetica-beleza-1 .bi-form-row { grid-template-columns:1fr; }
+.lp-estetica-beleza-1 .bi-dialog-body { padding:55px 24px 25px; }
+.lp-estetica-beleza-1 .bi-gallery { gap:15px; }
+.lp-estetica-beleza-1 .bi-gallery span { font-size:.75rem; gap:12px; }
+}
+@media(prefers-reduced-motion:reduce) {
+.lp-estetica-beleza-1 *,.lp-estetica-beleza-1 *::before,.lp-estetica-beleza-1 *::after { transition:none!important; animation:none!important; scroll-behavior:auto!important; }
+.lp-estetica-beleza-1.reveal-enabled [data-reveal]:not(.is-visible) { opacity:1; transform:none; }
+}

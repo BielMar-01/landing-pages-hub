@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "check:catalog": "node scripts/check-catalog.mjs",
     "check:prime": "node scripts/check-prime.mjs",
+    "check:beauty": "node scripts/check-beauty.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

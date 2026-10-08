@@ -1,213 +1,28 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, Menu, X } from 'lucide-react';
-import { LocalPhoto } from '../../../../components/common/LocalPhoto';
-import { DemoInquiry } from '../../../../components/common/DemoInquiry';
-import './modelo-01.css';
+﻿import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ChevronLeft, ChevronRight, Heart, Leaf, Quote, ShieldCheck } from 'lucide-react'
+import { BeautyBookingForm, BeautyPhoto } from '../shared/BeautyInteractions'
+import { beautyArticles, beautyTreatments, essenzaPath } from '../shared/beauty-data'
+import { EssenzaButton, EssenzaLayout, EssenzaTitle } from './EssenzaLayout'
+
+const stories = [
+  ['Mariana C.', 'Gostei de encontrar um espaço em que minhas perguntas tiveram tempo e lugar. Me senti acolhida desde a primeira conversa.'],
+  ['Ana P.', 'Os pequenos detalhes e a tranquilidade do ambiente fizeram o encontro ser um momento só meu.'],
+  ['Clara M.', 'Uma experiência delicada, com clareza e atenção à minha história. O cuidado aparece na forma de ouvir.'],
+]
 export default function EsteticaBelezaModel01Page() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    return <div className="lp-estetica-beleza-1">
-      <div className="wrap">
-        <Link to="/estetica-beleza" className="back">
-          <ArrowLeft size={15}/> Voltar aos modelos de Estética & Beleza</Link>
-      </div>
-      
-      <header>
-        <div className="wrap header-row">
-          <a href="#inicio" className="brand">Pele & Essência<small>Estética & Beleza </small>
-          </a>
-          <nav id="lp-estetica-beleza-1-nav" className={menuOpen ? 'open' : ''} aria-label="Navegação de Pele & Essência">
-            <a href="#servicos" onClick={() => setMenuOpen(false)}>Áreas de atuação</a>
-            <a href="#sobre" onClick={() => setMenuOpen(false)}>Conheça</a>
-            <a href="#contato" onClick={() => setMenuOpen(false)}>Contato ↗</a>
-          </nav>
-          <button className="menu" type="button" aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menuOpen} aria-controls="lp-estetica-beleza-1-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={22}/> : <Menu size={22}/>}</button>
-        </div>
-      </header>
-      <main>
-        <section className="hero" id="inicio">
-          <div className="wrap">
-            <div className="hero-grid">
-              <div className="hero-copy">
-                <span className="eyebrow">Estética & Beleza · Acolhedor</span>
-                <h1>Cuidar de si pode começar por uma pausa.</h1>
-                <p className="lead">Uma clínica de estética com atenção individual e uma experiência tranquila.</p>
-                <div className="actions">
-                  <a className="button" href="#contato">Reservar uma avaliação <ArrowUpRight size={17}/>
-                  </a>
-                  <a className="text-link" href="#servicos">Conheça o trabalho</a>
-                </div>
-              </div>
-              <LocalPhoto src="/images/estetica-beleza/modelo-01/hero.webp" alt="Estética & Beleza: profissional em seu ambiente de atendimento — fotografia demonstrativa" className="visual" eager>
-                <div className="photo-fallback">
-                  <span>Estética & Beleza / 01</span>
-                  <strong>EE</strong>
-                  <small>Um momento de atenção para você.</small>
-                </div>
-              </LocalPhoto>
-            </div>
-            <div className="facts">
-                <div><strong>Escuta</strong>Expectativas e escolhas pessoais</div>
-                <div><strong>Individual</strong>Respeito às suas características</div>
-                <div><strong>Informação</strong>Possibilidades discutidas com clareza</div>
-              </div>
-            </div>
-          </section>
-        <section className="section" id="servicos">
-          <div className="wrap">
-            <div className="section-title">
-              <div>
-                <span className="eyebrow">Áreas de atuação</span>
-                <h2>Uma atenção que começa no essencial.</h2>
-              </div>
-            </div>
-            <div className="service-list">
-              <article className="service">
-                <span>01</span>
-                <h3>Avaliação estética</h3>
-                <p>Avaliação individual para compreender suas expectativas e necessidades.</p>
-                <a href="#contato">Conversar sobre avaliação estética ↗</a>
-              </article>
-              <article className="service">
-                <span>02</span>
-                <h3>Cuidados faciais</h3>
-                <p>Informações sobre possibilidades e cuidados antes de qualquer decisão.</p>
-                <a href="#contato">Conversar sobre cuidados faciais ↗</a>
-              </article>
-              <article className="service">
-                <span>03</span>
-                <h3>Cuidados corporais</h3>
-                <p>Atenção aos detalhes, com orientações adaptadas à sua rotina.</p>
-                <a href="#contato">Conversar sobre cuidados corporais ↗</a>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="wrap">
-            <span className="eyebrow">Estética & Beleza / 01</span>
-            <h2>Seu cuidado merece atenção individual</h2>
-            <p>Cada experiência começa com escuta e informações sobre os cuidados.</p>
-            <div className="context-grid">
-              <article className="context-point">
-                <span className="eyebrow">01</span>
-                <strong>Avaliação</strong>
-                <p>Avaliação faz parte da primeira conversa. Cada experiência começa com escuta e informações sobre os cuidados.</p>
-              </article>
-              <article className="context-point">
-                <span className="eyebrow">02</span>
-                <strong>Escolhas</strong>
-                <p>Conheça as possibilidades de escolhas no seu contexto. A avaliação respeita suas características, expectativas e necessidades. Possibilidades e cuidados são conversados antes de qualquer escolha.</p>
-              </article>
-              <article className="context-point">
-                <span className="eyebrow">03</span>
-                <strong>Orientações</strong>
-                <p>Orientações merece espaço no planejamento. As orientações são conversadas e podem ser revistas ao longo do processo.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section className="section" id="sobre">
-          <div className="wrap story">
-            <LocalPhoto src="/images/estetica-beleza/modelo-01/space.webp" alt="Ambiente de atendimento de Pele & Essência — fotografia demonstrativa" className="visual">
-              <div className="photo-fallback">
-                <span>Estética & Beleza / 01</span>
-                <strong>Presença</strong>
-                <small>Um espaço pensado para você.</small>
-              </div>
-            </LocalPhoto>
-            <div>
-              <span className="eyebrow">Nossa proposta</span>
-              <h2>Equipe Essência</h2>
-              <p>A avaliação respeita suas características, expectativas e necessidades. Possibilidades e cuidados são conversados antes de qualquer escolha.</p>
-              <p>Uma clínica de estética com atenção individual e uma experiência tranquila. Cada encontro é uma oportunidade de compreender melhor o que faz sentido para você.</p>
-              <p className="note">Dados profissionais demonstrativos · Nomes, equipe e dados fictícios.</p>
-              <a href="#contato" className="text-link">Reservar uma avaliação ↗</a>
-            </div>
-          </div>
-        </section>
-        <section className="section" id="processo">
-          <div className="wrap">
-            <span className="eyebrow">O próximo passo</span>
-            <h2>Um processo que você entende.</h2>
-            <div className="steps">
-              <article className="step">
-                <span className="eyebrow">01</span>
-                <strong>Escuta e avaliação</strong>
-                <p>Compartilhe suas necessidades e tire as primeiras dúvidas sobre o atendimento.</p>
-              </article>
-              <article className="step">
-                <span className="eyebrow">02</span>
-                <strong>Orientação individual</strong>
-                <p>As informações são consideradas para conversar sobre as opções e definir os próximos passos.</p>
-              </article>
-              <article className="step">
-                <span className="eyebrow">03</span>
-                <strong>Cuidados e acompanhamento</strong>
-                <p>O planejamento pode ser revisado conforme seu contexto e as orientações profissionais.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section className="section" id="destaque">
-          <div className="wrap">
-            <div className="feature">
-              <span className="eyebrow">Um olhar mais próximo</span>
-              <h2>Uma pausa para cuidar de você</h2>
-              <div className="feature-grid">
-                <div>
-                  <h3>Avaliação estética</h3>
-                  <p>Uma clínica de estética com atenção individual e uma experiência tranquila. A avaliação respeita suas características, expectativas e necessidades. Possibilidades e cuidados são conversados antes de qualquer escolha.</p>
-                </div>
-                <div>
-                  <h3>O que levar para o primeiro encontro</h3>
-                  <p>Traga suas dúvidas, expectativas e informações que considera importantes. A proposta é começar com uma conversa clara, respeitando seu contexto.</p>
-                  <a href="#contato" className="text-link">Conversar com Equipe Essência ↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="wrap faq">
-            <span className="eyebrow">Perguntas frequentes</span>
-            <h2>Antes de dar o próximo passo.</h2>
-            <details>
-              <summary>É possível garantir um resultado estético?</summary>
-              <p>Não. Indicações e resultados dependem de avaliação profissional e variam individualmente. Os serviços apresentados são demonstrativos.</p>
-            </details>
-            <details>
-              <summary>Como solicitar avaliação?</summary>
-              <p>Escolha seu interesse no formulário desta página. Neste modelo, o envio é apenas uma simulação e não gera atendimento real.</p>
-            </details>
-            <details>
-              <summary>Como conhecer as condições e horários?</summary>
-              <p>Em um atendimento real, condições, valores e disponibilidade seriam esclarecidos no contato inicial, antes de qualquer confirmação. Não há cobrança ou reserva neste site.</p>
-            </details>
-          </div>
-        </section>
-        <section className="section contact" id="contato">
-          <div className="wrap contact-grid">
-            <div>
-              <span className="eyebrow">Vamos conversar</span>
-              <h2>O primeiro passo pode ser uma conversa.</h2>
-              <p>Uma clínica de estética com atenção individual e uma experiência tranquila.</p>
-              <address>Rua Exemplo, 100 · Jardim Modelo<br />São Paulo, SP · endereço fictício<br />Segunda a sexta, 9h às 18h<br />contato@example.com</address>
-              <p className="note">Site de demonstração. Não há atendimento real ou envio de dados.</p>
-            </div>
-            <DemoInquiry services={["Avaliação estética", "Cuidados faciais", "Cuidados corporais"]} action="Reservar uma avaliação"/>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div className="wrap footer-row">
-          <div>
-            <strong>Pele & Essência</strong>
-            <p>Dados profissionais demonstrativos · Dados e profissionais fictícios.<br />Demonstração do Landing Pages Hub.</p>
-          </div>
-          <a href="#inicio">Voltar ao início ↑</a>
-          <Link to="/estetica-beleza">Explorar outros modelos ↗</Link>
-        </div>
-      </footer>
-    </div>;
+  const [story, setStory] = useState(0)
+  return <EssenzaLayout>
+    <section className="en-home-hero"><div className="en-container en-hero-grid"><div className="en-hero-copy"><span className="en-label">Estética natural · Bem-estar</span><h1>Beleza que<br />respeita a sua<br /><em>essência.</em></h1><p>Um olhar atento para você. Cuidado estético, acolhimento e uma experiência que respeita a sua individualidade.</p><div className="en-actions"><EssenzaButton /><EssenzaButton outline to={essenzaPath('tratamentos')}>Conhecer tratamentos</EssenzaButton></div><div className="en-hero-values"><span><Leaf size={23} strokeWidth={1} />Sua beleza, sua história</span><span><ShieldCheck size={23} strokeWidth={1} />Atenção individual</span></div></div><div className="en-hero-image"><BeautyPhoto image="naturalHero" alt="Retrato ilustrativo de beleza natural em um ambiente acolhedor" eager /><span>O essencial<br /><em>é ser você.</em></span><svg className="en-leaf-art" viewBox="0 0 200 300" fill="none" aria-hidden="true"><path d="M80 290Q120 130 10 10Q170 30 80 290M90 210Q200 130 190 40Q80 80 90 210M84 250Q0 190 5 100Q90 140 84 250" stroke="currentColor" /></svg></div></div></section>
+    <section className="en-section"><div className="en-container en-manifesto" data-reveal><BeautyPhoto image="relaxed" alt="Um momento de pausa e acolhimento" /><div><span className="en-label">Nossa essência</span><h2>Cuidar da beleza<br />também é cuidar de<br /><em>como você se sente.</em></h2><p>Uma experiência que começa pela escuta. Acreditamos em um cuidado que respeita sua história, seu ritmo e suas escolhas.</p><div className="en-values"><span><Leaf />Individualidade</span><span><Heart />Bem-estar</span><span><ShieldCheck />Clareza</span></div><Link className="en-link" to={essenzaPath('sobre')}>Conheça nossa filosofia<ArrowRight size={17} /></Link></div></div></section>
+    <section className="en-section en-section--cream"><div className="en-container" data-reveal><EssenzaTitle label="Nossos tratamentos" title={<>Diferentes cuidados.<br /><em>A mesma essência.</em></>} to={essenzaPath('tratamentos')} link="Todos os tratamentos" /><div className="en-treatment-grid">{beautyTreatments.slice(0, 4).map(item => <article className="en-treatment" key={item.slug}><Link to={essenzaPath(`tratamentos/${item.slug}`)}><BeautyPhoto image={item.image} alt={`Experiência ilustrativa de ${item.name}`} /><div><span className="en-label">{item.category}</span><h3>{item.name}</h3><p>{item.text}</p><span className="en-link">Conhecer o cuidado<ArrowRight size={16} /></span></div></Link></article>)}</div></div></section>
+    <section className="en-philosophy"><div className="en-container" data-reveal><div><span className="en-label">Nossa filosofia</span><h2>Beleza natural.<br /><em>Cuidado individual.</em></h2></div><div><p>Cada pessoa tem uma história, um tempo e uma beleza única. O primeiro passo é compreender o que faz sentido para você.</p><EssenzaButton outline to={essenzaPath('sobre')}>Conheça nossa essência</EssenzaButton></div><Leaf size={220} strokeWidth={.35} aria-hidden="true" /></div></section>
+    <section className="en-section"><div className="en-container en-journey" data-reveal><div><span className="en-label">Como funciona</span><h2>Uma jornada<br /><em>pensada para você.</em></h2><p>Do primeiro contato ao acompanhamento, atenção em cada conversa.</p><Link className="en-link" to={essenzaPath('agendamento')}>Começar minha jornada<ArrowRight size={17} /></Link></div><ol>{[['Conversamos', 'Conhecemos suas expectativas e prioridades.'], ['Avaliamos', 'Uma conversa individual com o profissional.'], ['Planejamos', 'Possibilidades discutidas com clareza.'], ['Acompanhamos', 'Uma proposta de cuidado que valoriza o vínculo.']].map(([title, text], i) => <li key={title}><span>0{i + 1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol><BeautyPhoto image="evaluation" alt="Avaliação facial ilustrativa em um ambiente reservado" /></div></section>
+    <section className="en-section en-section--cream"><div className="en-container en-team-home" data-reveal><div><span className="en-label">Pessoas que cuidam</span><h2>Técnica, presença<br /><em>e um olhar humano.</em></h2><p>Conheça os profissionais que representam a experiência Essenza. Uma proposta de cuidado com escuta e atenção.</p><EssenzaButton outline to={essenzaPath('profissionais')}>Conheça nossa equipe</EssenzaButton><p className="bi-note">Perfis e trajetórias demonstrativos.</p></div><BeautyPhoto image="professional1" alt="Retrato ilustrativo de profissional de estética" /><BeautyPhoto image="teamCandid" alt="Equipe em uma conversa ilustrativa" /></div></section>
+    <section className="en-section"><div className="en-container" data-reveal><EssenzaTitle label="Nossa estrutura" title={<>Um ambiente para<br /><em>se sentir bem.</em></>} to={essenzaPath('estrutura')} link="Explore a clínica" /><div className="en-spaces-home">{[{ image: 'reception', label: 'Uma chegada acolhedora' }, { image: 'room', label: 'Espaços reservados' }, { image: 'waiting', label: 'Conforto para estar presente' }].map(item => <Link key={item.image} to={essenzaPath('estrutura')}><BeautyPhoto image={item.image as 'reception' | 'room' | 'waiting'} alt={`${item.label} — ambiente ilustrativo`} /><span>{item.label}<ArrowRight size={17} /></span></Link>)}</div></div></section>
+    <section className="en-section en-section--cream"><div className="en-container en-testimonial" data-reveal><BeautyPhoto image="patient" alt="Retrato ilustrativo de paciente" /><div aria-live="polite"><span className="en-label">Histórias de acolhimento</span><Quote size={38} strokeWidth={1} /><blockquote>“{stories[story][1]}”</blockquote><strong>{stories[story][0]}</strong><p className="bi-note">Relato fictício, criado para ilustrar a experiência.</p><div className="en-carousel-controls"><button aria-label="Depoimento anterior" onClick={() => setStory((story + stories.length - 1) % stories.length)}><ChevronLeft size={20} /></button><span>{story + 1} / {stories.length}</span><button aria-label="Próximo depoimento" onClick={() => setStory((story + 1) % stories.length)}><ChevronRight size={20} /></button></div></div></div></section>
+    <section className="en-section"><div className="en-container en-wellness" data-reveal><div><span className="en-label">Uma pausa faz parte</span><h2>Bem-estar<br /><em>em cada detalhe.</em></h2><p>Texturas naturais, luz acolhedora e tempo para desacelerar. O cuidado também acontece no jeito de receber você.</p><EssenzaButton outline to={essenzaPath('tratamentos/ritual-wellness')}>Conheça o ritual wellness</EssenzaButton></div><BeautyPhoto image="detail" alt="Toalhas, aromas e elementos acolhedores em um ambiente de spa" /></div></section>
+    <section className="en-section en-section--cream"><div className="en-container" data-reveal><EssenzaTitle label="Conteúdos Essenza" title={<>Um espaço para ler.<br /><em>E olhar para você.</em></>} to={essenzaPath('conteudos')} link="Todos os conteúdos" /><div className="en-articles">{beautyArticles.map(item => <article key={item.slug}><BeautyPhoto image={item.image} alt="Cena ilustrativa sobre autocuidado e bem-estar" /><span className="en-label">{item.category}</span><h3>{item.title}</h3><p>{item.text}</p><Link className="en-link" to={`${essenzaPath('conteudos')}?artigo=${item.slug}`}>Ler conteúdo<ArrowRight size={16} /></Link></article>)}</div></div></section>
+    <section className="en-section"><div className="en-container en-booking-home" data-reveal><div><BeautyPhoto image="booking" alt="Agendamento ilustrativo pelo celular" /><div><span className="en-label">Seu primeiro encontro</span><h2>Um momento só seu.<br /><em>Vamos começar?</em></h2><p>O cuidado começa com uma conversa.</p></div></div><div><span className="en-label">Agende sua avaliação</span><h2>O primeiro passo<br />pode ser simples.</h2><p className="bi-note">Experimente a solicitação demonstrativa.</p><BeautyBookingForm homePath={essenzaPath()} /></div></div></section>
+  </EssenzaLayout>
 }

@@ -1,0 +1,19 @@
+/* Aura Skin — base tokens. Consulte branding.md para a paleta canônica. */
+:root {
+  --est-container: 1280px;
+  --est-page-padding: clamp(20px, 4vw, 64px);
+  --est-radius-sm: 12px;
+  --est-radius-md: 20px;
+  --est-radius-lg: 28px;
+  --est-transition-fast: 180ms ease;
+  --est-transition-ui: 300ms ease;
+  --est-transition-reveal: 600ms cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

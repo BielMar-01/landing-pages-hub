@@ -6,6 +6,8 @@ import { HubPage } from '../pages/Hub/HubPage'
 import { NotFoundPage } from '../pages/NotFound/NotFoundPage'
 import { landingRoutes } from './landingRoutes'
 import { primeRoutes } from './primeRoutes'
+import { beautyRoutes } from './beautyRoutes'
+import { TemplateAccess } from './TemplateAccess'
 import { RouteScroll } from '../components/common/RouteScroll'
 import { PageTransition } from '../components/common/PageTransition'
 
@@ -27,11 +29,11 @@ export function AppRoutes() {
       }>
         <PageTransition><Routes>
           <Route path="/" element={<HubPage />} />
-          <Route path="/medico/modelo-01" element={<MedicalEssentialPage />} />
+          <Route path="/medico/modelo-01" element={<TemplateAccess path="/medico/modelo-01"><MedicalEssentialPage /></TemplateAccess>} />
           <Route path="/404" element={<NotFoundPage />} />
 
-          {[...landingRoutes, ...primeRoutes].map(({ path, component: Page }) => (
-            <Route key={path} path={path} element={<Page />} />
+          {[...landingRoutes, ...primeRoutes, ...beautyRoutes].map(({ path, component: Page }) => (
+            <Route key={path} path={path} element={<TemplateAccess path={path}><Page /></TemplateAccess>} />
           ))}
 
           <Route path="/personal" element={<LegacyCategory category="personal-trainer" />} />

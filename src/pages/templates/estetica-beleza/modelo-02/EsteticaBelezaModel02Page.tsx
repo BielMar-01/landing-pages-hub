@@ -1,204 +1,26 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, Menu, X } from 'lucide-react';
-import { LocalPhoto } from '../../../../components/common/LocalPhoto';
-import { DemoInquiry } from '../../../../components/common/DemoInquiry';
-import './modelo-02.css';
+﻿import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
+import { BeautyBookingForm, BeautyPhoto } from '../shared/BeautyInteractions'
+import { beautyTreatments, lumierePath } from '../shared/beauty-data'
+import { LumiereButton, LumiereHeading, LumiereLayout } from './LumiereLayout'
+
+const reviews = [
+  ['Marina S.', 'O ambiente, a atenção e o tempo dedicado à conversa tornaram a experiência especial. Cada detalhe parece pensado para acolher.'],
+  ['Beatriz L.', 'Encontrei um espaço reservado para falar sobre minhas expectativas com calma e clareza.'],
+  ['Helena P.', 'Um encontro tranquilo, com atenção à minha história. A experiência começa na forma de receber.'],
+]
 export default function EsteticaBelezaModel02Page() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    return <div className="lp-estetica-beleza-2">
-      <div className="wrap">
-        <Link to="/estetica-beleza" className="back">
-          <ArrowLeft size={15}/> Voltar aos modelos de Estética & Beleza</Link>
-      </div>
-      
-      <header>
-        <div className="wrap header-row">
-          <a href="#inicio" className="brand">Lia Estética<small>Estética & Beleza · Lia Fernandes</small>
-          </a>
-          <nav id="lp-estetica-beleza-2-nav" className={menuOpen ? 'open' : ''} aria-label="Navegação de Lia Estética">
-            <a href="#servicos" onClick={() => setMenuOpen(false)}>Áreas de atuação</a>
-            <a href="#sobre" onClick={() => setMenuOpen(false)}>Conheça</a>
-            <a href="#contato" onClick={() => setMenuOpen(false)}>Contato ↗</a>
-          </nav>
-          <button className="menu" type="button" aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menuOpen} aria-controls="lp-estetica-beleza-2-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={22}/> : <Menu size={22}/>}</button>
-        </div>
-      </header>
-      <main>
-        <section className="hero" id="inicio">
-          <div className="wrap">
-            <div className="hero-grid">
-              <div className="hero-copy">
-                <span className="eyebrow">Estética & Beleza · Marca pessoal</span>
-                <h1>Seu cuidado, feito de perto.</h1>
-                <p className="lead">Atendimento pessoal com escuta, delicadeza e atenção à sua rotina.</p>
-                <div className="actions">
-                  <a className="button" href="#contato">Reservar uma avaliação <ArrowUpRight size={17}/>
-                  </a>
-                  <a className="text-link" href="#servicos">Conheça o trabalho</a>
-                </div>
-                <div className="hero-credit">Lia Fernandes<br />Dados profissionais demonstrativos · profissional fictício</div>
-              </div>
-              <LocalPhoto src="/images/estetica-beleza/modelo-02/hero.webp" alt="Estética & Beleza: profissional em seu ambiente de atendimento — fotografia demonstrativa" className="visual" eager>
-                <div className="photo-fallback">
-                  <span>Estética & Beleza / 02</span>
-                  <strong>F</strong>
-                  <small>Um momento de atenção para você.</small>
-                </div>
-              </LocalPhoto>
-            </div>
-            <div className="facts">
-                <div><strong>Escuta</strong>Expectativas e escolhas pessoais</div>
-                <div><strong>Individual</strong>Respeito às suas características</div>
-                <div><strong>Informação</strong>Possibilidades discutidas com clareza</div>
-              </div>
-            </div>
-          </section>
-        <section className="section">
-          <div className="wrap">
-            <div className="story">
-              <div>
-                <span className="eyebrow">Estética & Beleza / 02</span>
-                <h2>Uma conversa antes de qualquer ritual</h2>
-                <p>Atendimento pessoal para entender o que faz sentido para você.</p>
-                <a className="button" href="#contato">Conhecer a experiência ↗</a>
-              </div>
-              <div className="context-index">
-                <article>
-                  <span>01</span>
-                  <h3>Rotina</h3>
-                  <p>Rotina faz parte da primeira conversa. Atendimento pessoal para entender o que faz sentido para você.</p>
-                </article>
-                <article>
-                  <span>02</span>
-                  <h3>Preferências</h3>
-                  <p>Conheça as possibilidades de preferências no seu contexto. A avaliação respeita suas características, expectativas e necessidades. Possibilidades e cuidados são conversados antes de qualquer escolha.</p>
-                </article>
-                <article>
-                  <span>03</span>
-                  <h3>Expectativas</h3>
-                  <p>Expectativas merece espaço no planejamento. As orientações são conversadas e podem ser revistas ao longo do processo.</p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="section" id="sobre">
-          <div className="wrap story">
-            <LocalPhoto src="/images/estetica-beleza/modelo-02/space.webp" alt="Ambiente de atendimento de Lia Estética — fotografia demonstrativa" className="visual">
-              <div className="photo-fallback">
-                <span>Estética & Beleza / 02</span>
-                <strong>Presença</strong>
-                <small>Um espaço pensado para você.</small>
-              </div>
-            </LocalPhoto>
-            <div>
-              <span className="eyebrow">Conheça o profissional</span>
-              <h2>Lia Fernandes</h2>
-              <p>A avaliação respeita suas características, expectativas e necessidades. Possibilidades e cuidados são conversados antes de qualquer escolha.</p>
-              <p>Atendimento pessoal com escuta, delicadeza e atenção à sua rotina. Cada encontro é uma oportunidade de compreender melhor o que faz sentido para você.</p>
-              <div className="credentials">
-                <strong>Uma prática com responsabilidade</strong>
-                <ul>
-                  <li>Limpeza de pele como área de atuação.</li>
-                  <li>Atenção à comunicação e às decisões individuais.</li>
-                  <li>Orientação clara em cada etapa.</li>
-                </ul>
-                <small>Dados profissionais demonstrativos · Perfil e trajetória demonstrativos.</small>
-              </div>
-              <a href="#contato" className="text-link">Reservar uma avaliação ↗</a>
-            </div>
-          </div>
-        </section>
-        <section className="section" id="destaque">
-          <div className="wrap">
-            <div className="feature">
-              <span className="eyebrow">Um olhar mais próximo</span>
-              <h2>Proximidade nos pequenos detalhes</h2>
-              <div className="feature-grid">
-                <div>
-                  <h3>Limpeza de pele</h3>
-                  <p>Atendimento pessoal com escuta, delicadeza e atenção à sua rotina. A avaliação respeita suas características, expectativas e necessidades. Possibilidades e cuidados são conversados antes de qualquer escolha.</p>
-                </div>
-                <div>
-                  <h3>O que levar para o primeiro encontro</h3>
-                  <p>Traga suas dúvidas, expectativas e informações que considera importantes. A proposta é começar com uma conversa clara, respeitando seu contexto.</p>
-                  <a href="#contato" className="text-link">Conversar com Lia Fernandes ↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="section" id="servicos">
-          <div className="wrap">
-            <div className="section-title">
-              <div>
-                <span className="eyebrow">Áreas de atuação</span>
-                <h2>O cuidado também está nos detalhes.</h2>
-              </div>
-            </div>
-            <div className="service-list">
-              <article className="service">
-                <span>01</span>
-                <h3>Limpeza de pele</h3>
-                <p>Avaliação individual para compreender suas expectativas e necessidades.</p>
-                <a href="#contato">Conversar sobre limpeza de pele ↗</a>
-              </article>
-              <article className="service">
-                <span>02</span>
-                <h3>Hidratação facial</h3>
-                <p>Informações sobre possibilidades e cuidados antes de qualquer decisão.</p>
-                <a href="#contato">Conversar sobre hidratação facial ↗</a>
-              </article>
-              <article className="service">
-                <span>03</span>
-                <h3>Orientação de cuidados</h3>
-                <p>Atenção aos detalhes, com orientações adaptadas à sua rotina.</p>
-                <a href="#contato">Conversar sobre orientação de cuidados ↗</a>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="wrap faq">
-            <span className="eyebrow">Perguntas frequentes</span>
-            <h2>Antes de dar o próximo passo.</h2>
-            <details>
-              <summary>É possível garantir um resultado estético?</summary>
-              <p>Não. Indicações e resultados dependem de avaliação profissional e variam individualmente. Os serviços apresentados são demonstrativos.</p>
-            </details>
-            <details>
-              <summary>Como solicitar avaliação?</summary>
-              <p>Escolha seu interesse no formulário desta página. Neste modelo, o envio é apenas uma simulação e não gera atendimento real.</p>
-            </details>
-            <details>
-              <summary>Como conhecer as condições e horários?</summary>
-              <p>Em um atendimento real, condições, valores e disponibilidade seriam esclarecidos no contato inicial, antes de qualquer confirmação. Não há cobrança ou reserva neste site.</p>
-            </details>
-          </div>
-        </section>
-        <section className="section contact" id="contato">
-          <div className="wrap contact-grid">
-            <div>
-              <span className="eyebrow">Vamos conversar</span>
-              <h2>O primeiro passo pode ser uma conversa.</h2>
-              <p>Atendimento pessoal com escuta, delicadeza e atenção à sua rotina.</p>
-              <address>Rua Exemplo, 110 · Jardim Modelo<br />São Paulo, SP · endereço fictício<br />Segunda a sexta, 9h às 18h<br />contato@example.com</address>
-              <p className="note">Site de demonstração. Não há atendimento real ou envio de dados.</p>
-            </div>
-            <DemoInquiry services={["Limpeza de pele", "Hidratação facial", "Orientação de cuidados"]} action="Reservar uma avaliação"/>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div className="wrap footer-row">
-          <div>
-            <strong>Lia Estética</strong>
-            <p>Dados profissionais demonstrativos · Dados e profissionais fictícios.<br />Demonstração do Landing Pages Hub.</p>
-          </div>
-          <a href="#inicio">Voltar ao início ↑</a>
-          <Link to="/estetica-beleza">Explorar outros modelos ↗</Link>
-        </div>
-      </footer>
-    </div>;
+  const [review, setReview] = useState(0)
+  return <LumiereLayout>
+    <section className="lm-home-hero"><BeautyPhoto image="premiumHero" alt="Retrato ilustrativo da experiência Lumière Aesthetic" eager /><div className="lm-container"><div className="lm-hero-copy"><span className="lm-label">Private aesthetics · São Paulo</span><h1>A excelência<br />também pode<br /><em>ser sentida.</em></h1><p>Estética particular, tempo e um olhar atento à sua individualidade. Um novo jeito de viver o cuidado.</p><div className="lm-actions"><LumiereButton /><LumiereButton outline to={lumierePath('tratamentos')}>Conhecer tratamentos</LumiereButton></div></div><div className="lm-hero-bottom"><span>BELEZA REAL. PRESENÇA. CUIDADO.</span><Link to={lumierePath('experiencia')}>Descubra a experiência<ArrowRight size={17} /></Link></div></div><svg className="lm-hero-lines" viewBox="0 0 300 600" fill="none" aria-hidden="true"><path d="M290 0Q-90 400 300 590M275 0Q-80 400 300 570M260 0Q-70 400 300 550" stroke="currentColor" /></svg></section>
+    <section className="lm-section lm-section--ivory"><div className="lm-container lm-experience" data-reveal><div className="lm-experience-photo"><BeautyPhoto image="reception2" alt="Recepção de uma clínica de estética ilustrativa" /><span>L / EXPERIENCE</span></div><div><span className="lm-label"><b>01</b>The experience</span><h2>Há detalhes<br />que você vê.<br /><em>Outros, você sente.</em></h2><p>Uma chegada tranquila. Uma conversa com tempo. Um espaço que respeita sua privacidade e uma atenção que considera a sua história.</p><p>A Lumière reúne esses detalhes em uma proposta de cuidado particular, contemporânea e pessoal.</p><LumiereButton outline to={lumierePath('experiencia')}>Conheça a Lumière</LumiereButton></div></div></section>
+    <section className="lm-section"><div className="lm-container" data-reveal><LumiereHeading number="02" label="Signature treatments" title={<>Um cuidado escolhido.<br /><em>Uma experiência individual.</em></>} to={lumierePath('tratamentos')} link="Todos os tratamentos" /><div className="lm-signature-grid">{[beautyTreatments[0], beautyTreatments[3], beautyTreatments[2]].map((item, index) => <article key={item.slug}><Link to={lumierePath(`tratamentos/${item.slug}`)}><BeautyPhoto image={item.image} alt={`Experiência ilustrativa de ${item.name}`} /><div><span className="lm-label">0{index + 1} / {item.category}</span><h3>{item.name}</h3><p>{item.text}</p><span className="lm-text-link">Explore o tratamento<ArrowRight size={17} /></span></div></Link></article>)}</div></div></section>
+    <section className="lm-private"><BeautyPhoto image="privateConsultation" alt="Consulta particular ilustrativa, com escuta e atenção individual" /><div className="lm-container" data-reveal><span className="lm-label">Private consultation</span><h2>Tempo para ouvir.<br /><em>Presença para cuidar.</em></h2><p>Uma conversa reservada sobre suas expectativas. O começo de qualquer planejamento é compreender você.</p><LumiereButton to={lumierePath('consulta-particular')}>Conheça a consulta particular</LumiereButton></div></section>
+    <section className="lm-section lm-section--ivory"><div className="lm-container lm-technology" data-reveal><div><span className="lm-label"><b>03</b>Technology & care</span><h2>Tecnologia como recurso.<br /><em>Você como prioridade.</em></h2><p>Recursos contemporâneos fazem parte de uma conversa individual sobre possibilidades, limites e escolhas. O cuidado nunca começa por um equipamento.</p><ul><li>Planejamento individual</li><li>Clareza sobre cada etapa</li><li>Discussão de possibilidades e alternativas</li></ul><LumiereButton outline to={lumierePath('tratamentos/tecnologia-estetica')}>Conhecer nossa proposta</LumiereButton></div><BeautyPhoto image="technology" alt="Equipamento de estética em ambiente ilustrativo" /></div></section>
+    <section className="lm-section"><div className="lm-container lm-specialist-home" data-reveal><BeautyPhoto image="professional2" alt="Retrato ilustrativo de especialista de estética" /><div><span className="lm-label"><b>04</b>The specialists</span><h2>O cuidado tem<br /><em>um olhar humano.</em></h2><p>Profissionais que representam uma proposta de estética com escuta, presença e atenção à sua história.</p><LumiereButton outline to={lumierePath('profissionais')}>Conheça os especialistas</LumiereButton><p className="bi-note">Perfis, registros e trajetórias fictícios.</p></div></div></section>
+    <section className="lm-section lm-section--ivory"><div className="lm-container" data-reveal><LumiereHeading number="05" label="The clinic" title={<>Um espaço para estar.<br /><em>Um lugar para sentir.</em></>} to={lumierePath('estrutura')} link="Explore a clínica" /><div className="lm-clinic-home">{[{ image: 'reception' as const, title: 'A chegada' }, { image: 'room' as const, title: 'O encontro' }, { image: 'corridor' as const, title: 'Os detalhes' }].map(item => <Link key={item.image} to={lumierePath('estrutura')}><BeautyPhoto image={item.image} alt={`${item.title} — ambiente demonstrativo`} /><span>{item.title}<ArrowRight size={16} /></span></Link>)}</div></div></section>
+    <section className="lm-section"><div className="lm-container lm-reviews" data-reveal><div><span className="lm-label"><b>06</b>Histórias de cuidado</span><Quote size={38} strokeWidth={.7} /><div aria-live="polite"><blockquote>“{reviews[review][1]}”</blockquote><strong>{reviews[review][0]}</strong></div><p className="bi-note">Depoimentos demonstrativos, sem avaliações reais.</p><div className="lm-review-controls"><button aria-label="Depoimento anterior" onClick={() => setReview((review + reviews.length - 1) % reviews.length)}><ChevronLeft size={20} /></button><span>0{review + 1} / 0{reviews.length}</span><button aria-label="Próximo depoimento" onClick={() => setReview((review + 1) % reviews.length)}><ChevronRight size={20} /></button></div></div><BeautyPhoto image="mature" alt="Retrato ilustrativo de paciente em um ambiente sereno" /></div></section>
+    <section className="lm-section lm-section--ivory"><div className="lm-container lm-private-booking" data-reveal><div><BeautyPhoto image="booking" alt="Solicitação de avaliação pelo celular — cena ilustrativa" /><span>PRIVATE BY NATURE.</span></div><div><span className="lm-label"><b>07</b>Private booking</span><h2>Seu próximo momento.<br /><em>Começa aqui.</em></h2><p>Escolha sua preferência e conheça a experiência de solicitação. Simulação sem envio real de dados.</p><BeautyBookingForm steps homePath={lumierePath()} /></div></div></section>
+  </LumiereLayout>
 }
