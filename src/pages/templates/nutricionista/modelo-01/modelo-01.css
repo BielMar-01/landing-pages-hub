@@ -1,125 +1,161 @@
-/* lp-nutricionista-1: independent stylesheet, scoped to this landing. */
-.lp-nutricionista-1 { --lp-bg:#f4f6ec; --lp-ink:#2e3c25; --lp-accent:#536b32; --lp-soft:#e2e9d1; color:var(--lp-ink); background:var(--lp-bg); min-height:100vh; font-family:Arial, Helvetica, sans-serif; }
-.lp-nutricionista-1 * { min-width:0; }
-.lp-nutricionista-1 .wrap { width:min(100% - 40px, 1200px); margin-inline:auto; }
-.lp-nutricionista-1 section[id] { scroll-margin-top:100px; }
-.lp-nutricionista-1 .back { display:inline-flex; align-items:center; gap:8px; font:12px Arial,sans-serif; padding:12px 0; opacity:.8; }
-.lp-nutricionista-1 header { border-bottom:1px solid color-mix(in srgb,var(--lp-ink) 18%,transparent); }
-.lp-nutricionista-1 .header-row { min-height:80px; display:flex; align-items:center; justify-content:space-between; gap:16px; position:relative; }
-.lp-nutricionista-1 .brand { font-size:20px; font-weight:700; letter-spacing:-.6px; }
-.lp-nutricionista-1 .brand small { display:block; font:10px Arial,sans-serif; text-transform:uppercase; letter-spacing:2px; margin-top:6px; opacity:.7; }
-.lp-nutricionista-1 .menu { display:grid; place-items:center; background:var(--lp-soft); color:var(--lp-ink); width:44px; height:44px; border-radius:6px; cursor:pointer; }
-.lp-nutricionista-1 nav { display:none; }
-.lp-nutricionista-1 nav.open { display:flex; position:absolute; top:100%; inset-inline:0; z-index:10; background:var(--lp-bg); padding:20px; box-shadow:0 18px 30px #0002; flex-direction:column; gap:16px; border:1px solid var(--lp-soft); }
-.lp-nutricionista-1 nav a { font:13px Arial,sans-serif; padding:10px 0; }
-.lp-nutricionista-1 .hero { padding:48px 0 64px; }
-.lp-nutricionista-1 .hero-grid { display:grid; gap:32px; align-items:center; }
-.lp-nutricionista-1 .eyebrow { display:block; font:11px Arial,sans-serif; text-transform:uppercase; letter-spacing:2px; color:var(--lp-accent); margin-bottom:24px; }
-.lp-nutricionista-1 h1 { font-size:clamp(36px,8.5vw,76px); line-height:1.05; letter-spacing:-.04em; font-weight:400; max-width:850px; margin-bottom:24px; text-wrap:balance; }
-.lp-nutricionista-1 h2 { font-size:clamp(28px,5vw,46px); line-height:1.14; font-weight:400; letter-spacing:-.025em; text-wrap:balance; }
-.lp-nutricionista-1 h3 { font-size:22px; line-height:1.25; font-weight:500; }
-.lp-nutricionista-1 p { font:16px/1.8 Arial,sans-serif; max-width:62ch; opacity:.86; }
-.lp-nutricionista-1 .lead { font-size:17px; }
-.lp-nutricionista-1 .actions { display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-top:30px; }
-.lp-nutricionista-1 .button { display:inline-flex; justify-content:center; align-items:center; gap:14px; background:var(--lp-accent); color:#fff; padding:16px 23px; min-height:48px; font:600 13px Arial,sans-serif; }
-.lp-nutricionista-1 .text-link { font:13px Arial,sans-serif; border-bottom:1px solid var(--lp-accent); padding:12px 0; }
-.lp-nutricionista-1 .visual { min-height:360px; background:var(--lp-soft); }
-.lp-nutricionista-1 .visual > img { object-position:50% 30%; }
-.lp-nutricionista-1 .photo-fallback { min-height:inherit; padding:36px; display:flex; flex-direction:column; justify-content:space-between; }
-.lp-nutricionista-1 .photo-fallback > span { font:11px Arial,sans-serif; letter-spacing:3px; text-transform:uppercase; }
-.lp-nutricionista-1 .photo-fallback strong { font-size:clamp(54px,14vw,120px); line-height:1; font-weight:400; color:var(--lp-accent); }
-.lp-nutricionista-1 .photo-fallback small { font:13px/1.7 Arial,sans-serif; }
-.lp-nutricionista-1 .facts { display:flex; flex-wrap:wrap; gap:24px; padding:25px 0; border-block:1px solid color-mix(in srgb,var(--lp-ink) 18%,transparent); font:12px Arial,sans-serif; }
-.lp-nutricionista-1 .facts strong { display:block; font-size:18px; margin-bottom:7px; }
-.lp-nutricionista-1 .section { padding:64px 0; }
-.lp-nutricionista-1 .section-title { display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px; align-items:end; margin-bottom:34px; }
-.lp-nutricionista-1 .section-title h2 { margin:0; max-width:700px; }
-.lp-nutricionista-1 .service-list { display:grid; gap:0; }
-.lp-nutricionista-1 .service { padding:25px 0; border-top:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
-.lp-nutricionista-1 .service > span { display:block; color:var(--lp-accent); font:12px Arial,sans-serif; margin-bottom:18px; }
-.lp-nutricionista-1 .service p { font-size:14px; }
-.lp-nutricionista-1 .service a { display:inline-block; padding:12px 0; font:12px Arial,sans-serif; color:var(--lp-accent); }
-.lp-nutricionista-1 .story { display:grid; gap:32px; align-items:center; }
-.lp-nutricionista-1 .story .visual { min-height:320px; }
-.lp-nutricionista-1 .steps { display:grid; gap:22px; counter-reset:step; }
-.lp-nutricionista-1 .step { border-left:2px solid var(--lp-accent); padding:8px 0 8px 22px; }
-.lp-nutricionista-1 .step strong { display:block; font-size:20px; margin-bottom:12px; }
-.lp-nutricionista-1 .step p { font-size:14px; }
-.lp-nutricionista-1 .credentials { padding:24px; background:var(--lp-soft); font:14px/1.8 Arial,sans-serif; }
-.lp-nutricionista-1 .credentials ul { padding-left:18px; }
-.lp-nutricionista-1 .feature { padding:32px; background:var(--lp-soft); }
-.lp-nutricionista-1 .feature-grid { display:grid; gap:24px; }
-.lp-nutricionista-1 .faq { max-width:850px; margin-inline:auto; }
-.lp-nutricionista-1 details { padding:22px 0; border-top:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
-.lp-nutricionista-1 summary { cursor:pointer; font:600 15px/1.5 Arial,sans-serif; padding:4px 0; }
-.lp-nutricionista-1 details p { margin-top:16px; font-size:14px; }
-.lp-nutricionista-1 .contact { background:var(--lp-soft); }
-.lp-nutricionista-1 .contact-grid { display:grid; gap:40px; }
-.lp-nutricionista-1 address { font:14px/1.9 Arial,sans-serif; font-style:normal; }
-.lp-nutricionista-1 .demo-inquiry { display:grid; gap:16px; font:14px Arial,sans-serif; }
-.lp-nutricionista-1 .demo-inquiry label { display:grid; gap:8px; }
-.lp-nutricionista-1 .demo-inquiry input,.lp-nutricionista-1 .demo-inquiry select,.lp-nutricionista-1 .demo-inquiry textarea { width:100%; min-height:48px; border:1px solid color-mix(in srgb,var(--lp-ink) 25%,transparent); color:var(--lp-ink); background:var(--lp-bg); padding:12px; border-radius:0; }
-.lp-nutricionista-1 .demo-inquiry button { cursor:pointer; display:flex; justify-content:space-between; min-height:48px; padding:16px; color:#fff; background:var(--lp-accent); }
-.lp-nutricionista-1 .demo-inquiry small { font-size:11px; line-height:1.7; }
-.lp-nutricionista-1 .demo-inquiry [role=status] { padding:16px; border:1px solid var(--lp-accent); font-size:14px; }
-.lp-nutricionista-1 footer { padding:36px 0; }
-.lp-nutricionista-1 .footer-row { display:flex; flex-wrap:wrap; gap:24px; justify-content:space-between; font:12px/1.8 Arial,sans-serif; }
-.lp-nutricionista-1 .footer-row p { font-size:11px; margin-bottom:0; }
-.lp-nutricionista-1 .filter-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
-.lp-nutricionista-1 .filter-row button { padding:12px 18px; cursor:pointer; background:var(--lp-soft); color:var(--lp-ink); border:1px solid transparent; }
-.lp-nutricionista-1 .filter-row button[aria-pressed=true] { border-color:var(--lp-accent); }
-.lp-nutricionista-1 .property-grid { display:grid; gap:24px; }
-.lp-nutricionista-1 .property .local-photo { min-height:230px; background:var(--lp-soft); }
-.lp-nutricionista-1 .property h3 { margin:18px 0 8px; }
-.lp-nutricionista-1 .property p { font-size:13px; }
-.lp-nutricionista-1 .gallery { display:grid; gap:12px; }
-.lp-nutricionista-1 .gallery .local-photo { min-height:240px; background:var(--lp-soft); }
-.lp-nutricionista-1 .gallery-caption { font:12px/1.8 Arial,sans-serif; margin:16px 0; }
-.lp-nutricionista-1 .article-list { display:grid; gap:25px; }
-.lp-nutricionista-1 .article-list article { border-top:1px solid var(--lp-accent); padding-top:22px; }
-.lp-nutricionista-1 .article-list p { font-size:14px; }
-.lp-nutricionista-1 .team-list { display:grid; gap:20px; }
-.lp-nutricionista-1 .team-person { background:var(--lp-soft); padding:24px; }
-.lp-nutricionista-1 .team-person strong { display:block; font-size:20px; margin-bottom:8px; }
-.lp-nutricionista-1 .team-person small { font:12px Arial,sans-serif; }
-.lp-nutricionista-1 .schedule { display:grid; gap:12px; }
-.lp-nutricionista-1 .schedule div { padding:20px; border:1px solid var(--lp-accent); font:14px/1.8 Arial,sans-serif; }
-.lp-nutricionista-1 .schedule strong { display:block; }
-.lp-nutricionista-1 .note { font:11px/1.8 Arial,sans-serif; opacity:.75; margin-top:20px; }
-.lp-nutricionista-1 .context-grid { display:grid; gap:26px; }
-.lp-nutricionista-1 .context-point { padding:24px; border:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); }
-.lp-nutricionista-1 .context-point strong { display:block; font-size:22px; margin-bottom:14px; }
-.lp-nutricionista-1 .context-letter { max-width:780px; border-left:3px solid var(--lp-accent); padding-left:28px; }
-.lp-nutricionista-1 .context-letter blockquote { font-size:clamp(24px,4vw,40px); line-height:1.5; margin:0 0 24px; }
-.lp-nutricionista-1 .context-letter cite { font:13px Arial,sans-serif; font-style:normal; }
-.lp-nutricionista-1 .context-table { width:100%; border-collapse:collapse; font:14px/1.8 Arial,sans-serif; }
-.lp-nutricionista-1 .context-table th,.lp-nutricionista-1 .context-table td { border-bottom:1px solid color-mix(in srgb,var(--lp-ink) 20%,transparent); padding:20px 8px; text-align:left; }
-.lp-nutricionista-1 .topic-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:28px 0; }
-.lp-nutricionista-1 .topic-tabs button { padding:14px 18px; cursor:pointer; background:var(--lp-soft); color:var(--lp-ink); border:1px solid transparent; }
-.lp-nutricionista-1 .topic-tabs button[aria-pressed=true] { border-color:var(--lp-accent); }
-.lp-nutricionista-1 .topic-panel { padding:30px; background:var(--lp-soft); }
-.lp-nutricionista-1 .context-strip { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
-.lp-nutricionista-1 .context-strip span { border:1px solid var(--lp-accent); padding:14px 20px; font:12px Arial,sans-serif; border-radius:30px; }
-.lp-nutricionista-1 .context-index { display:grid; gap:24px; }
-.lp-nutricionista-1 .context-index article { display:grid; grid-template-columns:40px 1fr; gap:16px; border-top:1px solid var(--lp-accent); padding:20px 0; }
-.lp-nutricionista-1 .context-index span { font:13px Arial,sans-serif; color:var(--lp-accent); }
-.lp-nutricionista-1 .context-index h3 { margin:0 0 12px; }
-.lp-nutricionista-1 .context-index p { grid-column:2; font-size:14px; }
-.lp-nutricionista-1 :focus-visible { outline:3px solid var(--lp-accent); outline-offset:5px; }
-@media(min-width:768px) {
- .lp-nutricionista-1 .hero-grid,.lp-nutricionista-1 .story,.lp-nutricionista-1 .contact-grid { grid-template-columns:1fr 1fr; gap:48px; }
- .lp-nutricionista-1 .service-list,.lp-nutricionista-1 .steps,.lp-nutricionista-1 .property-grid,.lp-nutricionista-1 .team-list,.lp-nutricionista-1 .schedule,.lp-nutricionista-1 .article-list { grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px; }
- .lp-nutricionista-1 .feature-grid,.lp-nutricionista-1 .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
- .lp-nutricionista-1 .context-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
- .lp-nutricionista-1 .visual { min-height:480px; }
- .lp-nutricionista-1 .section { padding:88px 0; }
-}
-@media(min-width:960px) {
- .lp-nutricionista-1 .menu { display:none; }
- .lp-nutricionista-1 nav,.lp-nutricionista-1 nav.open { position:static; display:flex; flex-direction:row; padding:0; box-shadow:none; border:0; align-items:center; gap:26px; background:transparent; }
- .lp-nutricionista-1 .hero { padding:70px 0 90px; }
-}
-.lp-nutricionista-1 .hero-grid { gap:40px; } .lp-nutricionista-1 .visual { border-radius:12px; } .lp-nutricionista-1 .service-list { border-bottom:1px solid var(--lp-accent); }
-@media(prefers-reduced-motion:reduce) { .lp-nutricionista-1 * { scroll-behavior:auto; transition:none; animation:none; } }
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600&display=swap');
+.lp-nutricionista-1.nutri-essenza-page { --ni-primary:#294A3C;--ni-bg:#F7F4EB;--ni-surface:#FFFEFB;--ni-accent:#C98F73;--ni-soft:#E7EEE5;--ni-text:#24392F;--ni-muted:#606e64;--ni-action:#294A3C;--ni-button-text:#ffffff;background:var(--ni-bg);color:var(--ni-text);font:16px/1.7 'DM Sans',sans-serif;overflow:clip; }
+.lp-nutricionista-1.nutri-essenza-page * { box-sizing:border-box; }
+.lp-nutricionista-1.nutri-essenza-page h1,.lp-nutricionista-1.nutri-essenza-page h2,.lp-nutricionista-1.nutri-essenza-page h3,.lp-nutricionista-1.nutri-essenza-page p { margin:0; }
+.lp-nutricionista-1.nutri-essenza-page h1,.lp-nutricionista-1.nutri-essenza-page h2,.lp-nutricionista-1.nutri-essenza-page h3 { font-family:'Lora',Georgia,serif;font-weight:400;line-height:1.12;letter-spacing:-.04em; }
+.lp-nutricionista-1.nutri-essenza-page h1 { font-size:clamp(2.6rem,5.6vw,4.75rem); }
+.lp-nutricionista-1.nutri-essenza-page h2 { font-size:clamp(2rem,3.8vw,3.25rem); }
+.lp-nutricionista-1.nutri-essenza-page h3 { font-size:1.5rem; }
+.lp-nutricionista-1.nutri-essenza-page em { font-weight:400;color:#294A3C; }
+.lp-nutricionista-1.nutri-essenza-page p { color:var(--ni-muted);margin-top:22px;max-width:62ch; }
+.lp-nutricionista-1.nutri-essenza-page a { color:inherit;text-decoration:none; }
+.lp-nutricionista-1.nutri-essenza-page button,.lp-nutricionista-1.nutri-essenza-page input,.lp-nutricionista-1.nutri-essenza-page select,.lp-nutricionista-1.nutri-essenza-page textarea { font:inherit; }
+.lp-nutricionista-1.nutri-essenza-page button { cursor:pointer; }
+.lp-nutricionista-1.nutri-essenza-page :focus-visible { outline:2px solid #294A3C;outline-offset:5px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-wrap { max-width:1280px;padding-inline:clamp(20px,4vw,64px);margin:auto; }
+.lp-nutricionista-1.nutri-essenza-page .ni-section { padding-block:clamp(64px,8vw,112px); }
+.lp-nutricionista-1.nutri-essenza-page .ni-eyebrow { display:block;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:#294A3C;margin-bottom:24px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-photo { display:block;width:100%;height:auto;object-fit:cover; }
+.lp-nutricionista-1.nutri-essenza-page .ni-button { display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:50px;padding:13px 24px;border:1px solid var(--ni-action);border-radius:40px;background:var(--ni-action);color:var(--ni-button-text);font-size:.85rem;transition:transform .2s,opacity .2s;margin-top:28px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-button:hover { transform:translateY(-2px);opacity:.92; }
+.lp-nutricionista-1.nutri-essenza-page .ni-button--outline { background:transparent;color:#294A3C;border-color:#294A3C; }
+.lp-nutricionista-1.nutri-essenza-page .ni-actions { display:flex;flex-wrap:wrap;gap:14px;margin-top:30px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-actions .ni-button { margin:0; }
+.lp-nutricionista-1.nutri-essenza-page .ni-text-link { display:inline-flex;align-items:center;gap:12px;min-height:44px;color:#294A3C;font-size:.8rem;margin-top:15px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-header { position:sticky;top:0;z-index:30;background:var(--ni-bg);border-bottom:1px solid color-mix(in srgb,var(--ni-text) 12%,transparent); }
+.lp-nutricionista-1.nutri-essenza-page .ni-header.is-scrolled { box-shadow:0 12px 30px #00000008; }
+.lp-nutricionista-1.nutri-essenza-page .ni-header>.ni-wrap { display:flex;align-items:center;gap:25px;min-height:84px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-logo { display:flex;align-items:center;gap:12px;flex-shrink:0; }
+.lp-nutricionista-1.nutri-essenza-page .ni-logo svg { width:36px;height:36px;color:#294A3C; }
+.lp-nutricionista-1.nutri-essenza-page .ni-logo>span { display:flex;flex-direction:column;font:500 1.35rem/1.15 'Lora',serif; }
+.lp-nutricionista-1.nutri-essenza-page .ni-logo small { font:.45rem/1.6 'DM Sans',sans-serif;letter-spacing:.17em;margin-top:6px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-header nav { display:flex;align-items:center;gap:22px;margin-left:auto; }
+.lp-nutricionista-1.nutri-essenza-page .ni-header nav a { display:flex;align-items:center;min-height:44px;font-size:.72rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-header nav a.active { border-bottom:1px solid var(--ni-action); }
+.lp-nutricionista-1.nutri-essenza-page .ni-header-action .ni-button { margin:0;font-size:.72rem;padding:10px 18px;min-height:46px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-menu { display:none;width:44px;height:44px;place-items:center;border:1px solid var(--ni-action);background:transparent;color:inherit;border-radius:50%; }
+.lp-nutricionista-1.nutri-essenza-page .ni-skip { position:fixed;top:-100px;left:20px;z-index:80;background:var(--ni-bg);padding:12px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-skip:focus { top:10px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-strip { display:flex;justify-content:space-between;gap:25px;border-block:1px solid color-mix(in srgb,var(--ni-text) 16%,transparent);padding-block:26px;font-size:.8rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-heading { display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:45px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-services { display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-service { display:block; }
+.lp-nutricionista-1.nutri-essenza-page .ni-service .ni-photo { aspect-ratio:1.2; }
+.lp-nutricionista-1.nutri-essenza-page .ni-service>div { padding:25px 0; }
+.lp-nutricionista-1.nutri-essenza-page .ni-service p { font-size:.85rem;margin-top:14px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-split { display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center; }
+.lp-nutricionista-1.nutri-essenza-page .ni-split>.ni-photo { aspect-ratio:1; }
+.lp-nutricionista-1.nutri-essenza-page .ni-journey { display:grid;grid-template-columns:repeat(3,1fr);gap:30px;list-style:none;padding:0;margin:50px 0 0; }
+.lp-nutricionista-1.nutri-essenza-page .ni-journey li { border-top:1px solid color-mix(in srgb,var(--ni-text) 30%,transparent);padding-top:25px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-journey li>span { display:block;font:400 2.5rem/1 'Lora',sans-serif;color:#294A3C;margin-bottom:25px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-journey p { font-size:.85rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-values { display:grid;grid-template-columns:repeat(4,1fr);gap:25px;margin-top:70px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-values article { padding:28px;background:var(--ni-soft);color:#24392F; }
+.lp-nutricionista-1.nutri-essenza-page .ni-values p { font-size:.8rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-values span { display:block;margin-bottom:25px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-booking-grid { display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:start; }
+.lp-nutricionista-1.nutri-essenza-page .ni-note { font-size:.75rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-form { display:grid;gap:20px;background:var(--ni-surface);padding:35px;border:1px solid color-mix(in srgb,var(--ni-text) 15%,transparent);border-radius:24px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-form label { display:grid;gap:8px;font-size:.8rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-form input:not([type=checkbox]),.lp-nutricionista-1.nutri-essenza-page .ni-form select,.lp-nutricionista-1.nutri-essenza-page .ni-form textarea { width:100%;min-width:0;min-height:50px;padding:12px 14px;border:1px solid color-mix(in srgb,var(--ni-text) 25%,transparent);border-radius:6px;background:var(--ni-bg);color:var(--ni-text);color-scheme:light; }
+.lp-nutricionista-1.nutri-essenza-page .ni-form textarea { resize:vertical; }
+.lp-nutricionista-1.nutri-essenza-page .ni-form-row { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-form .ni-consent { display:flex;gap:12px;align-items:start;font-size:.75rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-consent input { width:20px;height:20px;flex-shrink:0;accent-color:var(--ni-action); }
+.lp-nutricionista-1.nutri-essenza-page .ni-form .ni-button { margin:0; }
+.lp-nutricionista-1.nutri-essenza-page .ni-form .ni-note { margin:0; }
+.lp-nutricionista-1.nutri-essenza-page .ni-error { color:#a32929;font-size:.8rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-success { padding:40px;background:var(--ni-soft);border:1px solid var(--ni-action); }
+.lp-nutricionista-1.nutri-essenza-page .ni-faq { border-bottom:1px solid color-mix(in srgb,var(--ni-text) 20%,transparent); }
+.lp-nutricionista-1.nutri-essenza-page .ni-faq h3 button { display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:70px;width:100%;padding:20px 0;text-align:left;font:.875rem/1.6 'DM Sans',sans-serif;background:transparent;border:0;color:inherit; }
+.lp-nutricionista-1.nutri-essenza-page .ni-faq [aria-expanded=true] svg { transform:rotate(180deg); }
+.lp-nutricionista-1.nutri-essenza-page .ni-faq p { margin:0;padding-bottom:25px;font-size:.85rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-dialog { width:min(680px,calc(100% - 32px));max-height:calc(100svh - 32px);margin:auto;padding:0;border:1px solid var(--ni-action);background:var(--ni-bg);color:var(--ni-text);border-radius:12px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-dialog>div { padding:60px 38px 38px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-dialog h2 { font-size:2.5rem;margin-bottom:25px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-dialog::backdrop { background:#071018bb;backdrop-filter:blur(8px); }
+.lp-nutricionista-1.nutri-essenza-page .ni-close { position:absolute;top:14px;right:14px;width:44px;height:44px;border:1px solid var(--ni-action);border-radius:50%;background:transparent;color:inherit; }
+.lp-nutricionista-1.nutri-essenza-page .ni-dialog--menu { width:min(460px,100%);height:100svh;max-height:100svh;margin:0 0 0 auto;border-radius:0; }
+.lp-nutricionista-1.nutri-essenza-page .ni-dialog--menu nav { display:grid; }
+.lp-nutricionista-1.nutri-essenza-page .ni-dialog--menu nav a { display:flex;align-items:center;justify-content:space-between;min-height:60px;border-bottom:1px solid color-mix(in srgb,var(--ni-text) 20%,transparent); }
+.lp-nutricionista-1.nutri-essenza-page .ni-floating { position:fixed;right:22px;bottom:22px;z-index:20;width:52px;height:52px;border:1px solid var(--ni-action);background:var(--ni-action);color:var(--ni-button-text);border-radius:50%;display:grid;place-items:center; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer { border-top:1px solid color-mix(in srgb,var(--ni-text) 20%,transparent);padding-top:65px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer-grid { display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:55px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer-brand { font:2rem/1.2 'Lora',serif; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer h3 { font:.7rem/1.5 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer a,.lp-nutricionista-1.nutri-essenza-page .ni-footer button { display:flex;align-items:center;min-height:44px;font-size:.8rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer button { border:0;background:transparent;color:inherit;padding:0; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer .ni-footer-brand { font-size:2rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer .ni-button { display:inline-flex; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer-bottom { display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid color-mix(in srgb,var(--ni-text) 20%,transparent);padding-block:25px;font-size:.7rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-footer-bottom a { gap:12px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-closing { padding-block:85px;background:var(--ni-soft);text-align:left; }
+.lp-nutricionista-1.nutri-essenza-page .ni-closing h2 { max-width:850px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-inner { padding-block:55px;background:var(--ni-soft); }
+.lp-nutricionista-1.nutri-essenza-page .ni-inner-grid { display:grid;grid-template-columns:.95fr 1.05fr;gap:65px;align-items:center; }
+.lp-nutricionista-1.nutri-essenza-page .ni-inner .ni-photo { aspect-ratio:1.1;border-radius:80px 25px 80px 25px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-breadcrumb { display:flex;gap:12px;flex-wrap:wrap;font-size:.7rem;margin-bottom:25px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-breadcrumb a { display:flex;align-items:center;min-height:44px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-breadcrumb>span { display:flex;align-items:center; }
+.lp-nutricionista-1.nutri-essenza-page .ni-detail { display:grid;grid-template-columns:1.2fr .8fr;gap:70px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-detail aside { padding:35px;background:var(--ni-soft); }
+.lp-nutricionista-1.nutri-essenza-page .ni-detail ul { padding-left:20px;margin-top:25px;font-size:.85rem;line-height:2; }
+.lp-nutricionista-1.nutri-essenza-page .ni-questions { margin-top:65px;max-width:800px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-about { display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center; }
+.lp-nutricionista-1.nutri-essenza-page .ni-about>.ni-photo { aspect-ratio:1; }
+.lp-nutricionista-1.nutri-essenza-page .ni-filter-tools { display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap; }
+.lp-nutricionista-1.nutri-essenza-page .ni-search { display:flex;align-items:center;gap:12px;min-height:52px;padding:0 16px;border:1px solid color-mix(in srgb,var(--ni-text) 25%,transparent);width:min(100%,420px);background:var(--ni-surface);border-radius:8px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-search input { min-width:0;width:100%;min-height:50px;border:0;background:transparent;color:inherit;font-size:.875rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-chips { display:flex;flex-wrap:wrap;gap:8px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-chips button { min-height:44px;padding:8px 16px;background:transparent;border:1px solid color-mix(in srgb,var(--ni-text) 25%,transparent);color:inherit;border-radius:30px;font-size:.75rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-chips [aria-pressed=true] { background:var(--ni-action);color:var(--ni-button-text); }
+.lp-nutricionista-1.nutri-essenza-page .ni-result { font-size:.75rem;margin:20px 0 35px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-service-catalog { display:grid;grid-template-columns:1fr 1fr;gap:45px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-service-catalog h2 { font-size:2rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-empty { padding:45px;background:var(--ni-soft);text-align:center; }
+.lp-nutricionista-1.nutri-essenza-page .ni-journal { display:grid;grid-template-columns:repeat(3,1fr);gap:30px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-journal .ni-photo { aspect-ratio:1.3;margin-bottom:25px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-journal .ni-eyebrow { margin-bottom:15px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-journal h2 { font-size:2rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-journal p { font-size:.85rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-article-body { max-width:740px;margin:auto; }
+.lp-nutricionista-1.nutri-essenza-page .ni-article-body p { font-size:1.05rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-article-body .ni-note { font-size:.75rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-modalities { display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:70px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-modalities article { padding:35px;background:var(--ni-soft); }
+.lp-nutricionista-1.nutri-essenza-page .ni-contact-grid { display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center; }
+.lp-nutricionista-1.nutri-essenza-page .ni-contact-grid>.ni-photo { aspect-ratio:1.1; }
+.lp-nutricionista-1.nutri-essenza-page .ni-contact-channels { margin-top:30px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-contact-channels button { display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:20px 0;min-height:85px;background:transparent;color:inherit;border:0;border-bottom:1px solid color-mix(in srgb,var(--ni-text) 20%,transparent);text-align:left; }
+.lp-nutricionista-1.nutri-essenza-page .ni-contact-channels small { display:block;font-size:.7rem;color:var(--ni-muted);margin-top:5px; }
+.lp-nutricionista-1.nutri-essenza-page.reveal-enabled [data-reveal] { transition:opacity .6s,transform .6s; }
+.lp-nutricionista-1.nutri-essenza-page.reveal-enabled [data-reveal]:not(.is-visible) { opacity:0;transform:translateY(18px); }
+@media(max-width:1100px){ .lp-nutricionista-1.nutri-essenza-page .ni-header nav { display:none; } .lp-nutricionista-1.nutri-essenza-page .ni-header-action { margin-left:auto; } .lp-nutricionista-1.nutri-essenza-page .ni-menu { display:grid; } .lp-nutricionista-1.nutri-essenza-page .ni-services { grid-template-columns:1fr 1fr; } .lp-nutricionista-1.nutri-essenza-page .ni-split,.lp-nutricionista-1.nutri-essenza-page .ni-booking-grid,.lp-nutricionista-1.nutri-essenza-page .ni-inner-grid,.lp-nutricionista-1.nutri-essenza-page .ni-contact-grid,.lp-nutricionista-1.nutri-essenza-page .ni-about { gap:35px; } }
+@media(max-width:767px){ .lp-nutricionista-1.nutri-essenza-page h1 { font-size:clamp(2.4rem,10vw,3.4rem); } .lp-nutricionista-1.nutri-essenza-page .ni-header>.ni-wrap { min-height:68px;justify-content:space-between;gap:15px; } .lp-nutricionista-1.nutri-essenza-page .ni-header-action { display:none; } .lp-nutricionista-1.nutri-essenza-page .ni-logo>span { font-size:1.15rem; } .lp-nutricionista-1.nutri-essenza-page .ni-logo svg { width:30px; } .lp-nutricionista-1.nutri-essenza-page .ni-logo small { font-size:.4rem; } .lp-nutricionista-1.nutri-essenza-page .ni-strip { display:grid;grid-template-columns:1fr 1fr;gap:18px;font-size:.7rem; } .lp-nutricionista-1.nutri-essenza-page .ni-heading { display:block;margin-bottom:30px; } .lp-nutricionista-1.nutri-essenza-page .ni-split,.lp-nutricionista-1.nutri-essenza-page .ni-booking-grid,.lp-nutricionista-1.nutri-essenza-page .ni-inner-grid,.lp-nutricionista-1.nutri-essenza-page .ni-detail,.lp-nutricionista-1.nutri-essenza-page .ni-contact-grid,.lp-nutricionista-1.nutri-essenza-page .ni-about { grid-template-columns:1fr;gap:30px; } .lp-nutricionista-1.nutri-essenza-page .ni-inner .ni-photo { aspect-ratio:1.3; } .lp-nutricionista-1.nutri-essenza-page .ni-journey { grid-template-columns:1fr 1fr;gap:30px 20px; } .lp-nutricionista-1.nutri-essenza-page .ni-journey h3 { font-size:1.25rem; } .lp-nutricionista-1.nutri-essenza-page .ni-services { gap:25px 16px; } .lp-nutricionista-1.nutri-essenza-page .ni-service h3 { font-size:1.2rem; } .lp-nutricionista-1.nutri-essenza-page .ni-service p { font-size:.75rem; } .lp-nutricionista-1.nutri-essenza-page .ni-form { padding:28px 22px; } .lp-nutricionista-1.nutri-essenza-page .ni-form-row { grid-template-columns:1fr; } .lp-nutricionista-1.nutri-essenza-page .ni-dialog>div { padding:60px 24px 30px; } .lp-nutricionista-1.nutri-essenza-page .ni-footer-grid { grid-template-columns:1fr 1fr;gap:30px; } .lp-nutricionista-1.nutri-essenza-page .ni-footer-grid>div:first-child { grid-column:1/-1; } .lp-nutricionista-1.nutri-essenza-page .ni-footer-bottom { display:block;padding-bottom:90px; } .lp-nutricionista-1.nutri-essenza-page .ni-service-catalog { grid-template-columns:1fr;gap:40px; } .lp-nutricionista-1.nutri-essenza-page .ni-journal { grid-template-columns:1fr;gap:40px; } .lp-nutricionista-1.nutri-essenza-page .ni-modalities { grid-template-columns:1fr; } .lp-nutricionista-1.nutri-essenza-page .ni-values { grid-template-columns:1fr 1fr;gap:16px; } .lp-nutricionista-1.nutri-essenza-page .ni-values article { padding:24px 20px; } }
+@media(prefers-reduced-motion:reduce){ .lp-nutricionista-1.nutri-essenza-page * { animation:none!important;transition:none!important;scroll-behavior:auto!important; } .lp-nutricionista-1.nutri-essenza-page.reveal-enabled [data-reveal]:not(.is-visible) { opacity:1;transform:none; } }
 
-.lp-nutricionista-1 .story .photo-fallback strong { font-size:clamp(36px,4vw,64px); }
+.lp-nutricionista-1.nutri-essenza-page .en-hero { padding-block:60px 80px;background:linear-gradient(120deg,#f7f4eb,#e7eee5);border-radius:0 0 60px 60px; }
+.lp-nutricionista-1.nutri-essenza-page .en-hero-grid { display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center; }
+.lp-nutricionista-1.nutri-essenza-page .en-portrait { position:relative;padding-left:45px;padding-bottom:45px; }
+.lp-nutricionista-1.nutri-essenza-page .en-portrait>.ni-photo { aspect-ratio:.8;border-radius:150px 150px 30px 30px;object-position:50% 30%; }
+.lp-nutricionista-1.nutri-essenza-page .en-bowl { position:absolute;left:0;bottom:0;width:44%;border:8px solid #f7f4eb;border-radius:25px;overflow:hidden;background:#fffefb;box-shadow:0 16px 40px #294a3c12; }
+.lp-nutricionista-1.nutri-essenza-page .en-bowl .ni-photo { aspect-ratio:1.2; }
+.lp-nutricionista-1.nutri-essenza-page .en-bowl span { display:block;padding:14px 16px;font:1.1rem/1.25 'Lora',serif; }
+.lp-nutricionista-1.nutri-essenza-page .en-caption { display:block;margin-top:35px;font-size:.7rem;color:#69776d; }
+.lp-nutricionista-1.nutri-essenza-page .en-soft,.lp-nutricionista-1.nutri-essenza-page .model-booking { background:#e7eee5; }
+.lp-nutricionista-1.nutri-essenza-page .ni-services { grid-template-columns:1.3fr 1fr;gap:30px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-services .ni-service { display:grid;grid-template-columns:.8fr 1fr;gap:24px;align-items:center;padding:20px;border:1px solid #79917b33;border-radius:24px;background:#fffefb; }
+.lp-nutricionista-1.nutri-essenza-page .ni-services .ni-service .ni-photo { height:100%;aspect-ratio:1;border-radius:18px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-services .ni-service>div { padding:5px 0; }
+.lp-nutricionista-1.nutri-essenza-page .ni-services .ni-eyebrow { font-size:.6rem;margin-bottom:12px; }
+.lp-nutricionista-1.nutri-essenza-page .ni-services .ni-service h3 { font-size:1.35rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-services .ni-service p { font-size:.75rem; }
+.lp-nutricionista-1.nutri-essenza-page .ni-split>.ni-photo { border-radius:30px 100px 30px 30px; }
+.lp-nutricionista-1.nutri-essenza-page .en-method { background:#294a3c;--ni-text:#fffefb;--ni-muted:#d4dfd2;--ni-action:#e7eee5;--ni-button-text:#294a3c; }
+.lp-nutricionista-1.nutri-essenza-page .en-method .ni-eyebrow,.lp-nutricionista-1.nutri-essenza-page .en-method .ni-journey li>span { color:#d4dfd2; }
+.lp-nutricionista-1.nutri-essenza-page .en-consult { display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center; }
+.lp-nutricionista-1.nutri-essenza-page .en-consult .ni-photo { aspect-ratio:1.1;border-radius:80px 25px; }
+.lp-nutricionista-1.nutri-essenza-page .model-journal .ni-journal { grid-template-columns:1.15fr 1fr;gap:40px; }
+.lp-nutricionista-1.nutri-essenza-page .model-journal .ni-photo { border-radius:25px; }
+@media(max-width:1023px){ .lp-nutricionista-1.nutri-essenza-page .en-hero-grid,.lp-nutricionista-1.nutri-essenza-page .en-consult { gap:35px; } .lp-nutricionista-1.nutri-essenza-page .ni-services { grid-template-columns:1fr; } }
+@media(max-width:767px){ .lp-nutricionista-1.nutri-essenza-page .en-hero { padding-block:35px 55px;border-radius:0 0 30px 30px; } .lp-nutricionista-1.nutri-essenza-page .en-hero-grid,.lp-nutricionista-1.nutri-essenza-page .en-consult { grid-template-columns:1fr; } .lp-nutricionista-1.nutri-essenza-page .en-portrait { grid-row:1;padding-left:35px;padding-bottom:35px; } .lp-nutricionista-1.nutri-essenza-page .en-portrait>.ni-photo { aspect-ratio:1.15;object-position:50% 27%;border-radius:80px 80px 25px 25px; } .lp-nutricionista-1.nutri-essenza-page .en-bowl { width:38%;border-width:5px; } .lp-nutricionista-1.nutri-essenza-page .en-bowl span { padding:10px;font-size:.85rem; } .lp-nutricionista-1.nutri-essenza-page .ni-services .ni-service { gap:18px;padding:16px; } .lp-nutricionista-1.nutri-essenza-page .ni-services .ni-service h3 { font-size:1.2rem; } .lp-nutricionista-1.nutri-essenza-page .model-journal .ni-journal { grid-template-columns:1fr; } }

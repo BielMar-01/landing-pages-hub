@@ -1,0 +1,14 @@
+:root {
+  --nutri-essenza-primary: #294A3C;
+  --nutri-essenza-secondary: #79917B;
+  --nutri-essenza-background: #F7F4EB;
+  --nutri-essenza-surface: #FFFEFB;
+  --nutri-essenza-accent: #C98F73;
+  --nutri-essenza-text: #24392F;
+  --nutri-essenza-muted: #69776D;
+  --nutri-essenza-soft: #E7EEE5;
+  --nutri-essenza-font-body: "DM Sans", Arial, sans-serif;
+  --nutri-essenza-font-display: "Lora", Georgia, serif;
+  --nutri-essenza-radius-card: 24px;
+  --nutri-essenza-radius-button: 999px;
+}

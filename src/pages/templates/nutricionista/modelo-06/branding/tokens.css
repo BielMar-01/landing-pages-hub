@@ -1,0 +1,14 @@
+:root {
+  --nutri-forma-primary: #202320;
+  --nutri-forma-secondary: #5F685F;
+  --nutri-forma-background: #FAFAF7;
+  --nutri-forma-surface: #FFFFFF;
+  --nutri-forma-accent: #B7AD9C;
+  --nutri-forma-text: #202320;
+  --nutri-forma-muted: #8D918B;
+  --nutri-forma-soft: #E8E4DB;
+  --nutri-forma-font-body: "Inter", Arial, sans-serif;
+  --nutri-forma-font-display: "Instrument Serif", Georgia, serif;
+  --nutri-forma-radius-card: 24px;
+  --nutri-forma-radius-button: 999px;
+}

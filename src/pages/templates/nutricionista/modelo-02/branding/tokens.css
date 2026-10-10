@@ -1,0 +1,14 @@
+:root {
+  --nutri-maison-primary: #343B2F;
+  --nutri-maison-secondary: #6E765D;
+  --nutri-maison-background: #F8F5EF;
+  --nutri-maison-surface: #FFFFFF;
+  --nutri-maison-accent: #C8A77C;
+  --nutri-maison-text: #242622;
+  --nutri-maison-muted: #73756D;
+  --nutri-maison-soft: #ECE8DE;
+  --nutri-maison-font-body: "Manrope", Arial, sans-serif;
+  --nutri-maison-font-display: "Cormorant Garamond", Georgia, serif;
+  --nutri-maison-radius-card: 24px;
+  --nutri-maison-radius-button: 999px;
+}

@@ -1,0 +1,14 @@
+:root {
+  --nutri-nutriva-primary: #123F4A;
+  --nutri-nutriva-secondary: #3CA7A3;
+  --nutri-nutriva-background: #F5FAFA;
+  --nutri-nutriva-surface: #FFFFFF;
+  --nutri-nutriva-accent: #69B8B5;
+  --nutri-nutriva-text: #183B43;
+  --nutri-nutriva-muted: #647A80;
+  --nutri-nutriva-soft: #EAF5F6;
+  --nutri-nutriva-font-body: "Source Sans 3", Arial, sans-serif;
+  --nutri-nutriva-font-display: "Plus Jakarta Sans", Georgia, serif;
+  --nutri-nutriva-radius-card: 24px;
+  --nutri-nutriva-radius-button: 999px;
+}

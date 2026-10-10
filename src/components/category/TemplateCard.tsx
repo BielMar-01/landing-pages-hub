@@ -3,9 +3,16 @@ import { Link } from 'react-router-dom'
 import type { LandingTemplate } from '../../types/template'
 import { beautyPhoto } from '../../pages/templates/estetica-beleza/shared/beauty-data'
 import { beautyModels } from '../../pages/templates/estetica-beleza/shared/beauty-models'
+import type { CSSProperties } from 'react'
+import { nutritionModels } from '../../pages/templates/nutricionista/shared/nutrition-models'
+import { nutritionPhoto } from '../../pages/templates/nutricionista/shared/nutrition-images'
 
 interface TemplateCardProps { template: LandingTemplate; index: number }
 function PreviewContent({ template }: { template: LandingTemplate }) {
+  if (template.categorySlug === 'nutricionista') {
+    const model = nutritionModels.find(item => item.model === template.slug.slice(-2))
+    if (model) return <div className={`orbis-nutrition-preview orbis-nutrition-preview--${model.model}`} style={{ '--preview-bg': model.background, '--preview-text': model.text, '--preview-accent': model.accent } as CSSProperties}><img src={nutritionPhoto(model.hero,640)} alt={`Prévia de ${model.name}`} loading="lazy" width={640} height={427} /><div><span>{model.name}</span><strong>{model.tagline}</strong><small>{model.positioning} ↗</small></div></div>
+  }
   if (template.id === 'medico-01') return <div className="orbis-care-preview"><div><span>ESSENCIAL CARE</span><strong>Cuidado médico<br />que começa<br /><em>ouvindo você.</em></strong><small>Agendar consulta →</small></div><img src="/images/medico/shared/hero-doctor.webp" alt="Prévia fotográfica da Essencial Care" loading="lazy" width={1672} height={941} /></div>
   if (template.id === 'medico-02') return <div className="orbis-prime-preview"><img src="/images/medico/shared/clinic-reception-02.webp" alt="Prévia da Essencial Prime" loading="lazy" width={1536} height={1024} /><div><span>ESSENCIAL PRIME</span><strong>Um novo padrão<br />de cuidado.<br /><em>Para você.</em></strong><small>Agendar consulta →</small></div></div>
   if (template.categorySlug === 'estetica-beleza') {

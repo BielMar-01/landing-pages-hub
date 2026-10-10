@@ -6,6 +6,7 @@ import { HubPage } from '../pages/Hub/HubPage'
 import { NotFoundPage } from '../pages/NotFound/NotFoundPage'
 import { landingRoutes } from './landingRoutes'
 import { primeRoutes } from './primeRoutes'
+import { nutritionRoutes } from './nutritionRoutes'
 import { beautyRoutes } from './beautyRoutes'
 import { TemplateAccess } from './TemplateAccess'
 import { RouteScroll } from '../components/common/RouteScroll'
@@ -32,7 +33,7 @@ export function AppRoutes() {
           <Route path="/medico/modelo-01" element={<TemplateAccess path="/medico/modelo-01"><MedicalEssentialPage /></TemplateAccess>} />
           <Route path="/404" element={<NotFoundPage />} />
 
-          {[...landingRoutes, ...primeRoutes, ...beautyRoutes].map(({ path, component: Page }) => (
+          {[...landingRoutes, ...primeRoutes, ...beautyRoutes, ...nutritionRoutes].map(({ path, component: Page }) => (
             <Route key={path} path={path} element={<TemplateAccess path={path}><Page /></TemplateAccess>} />
           ))}
 

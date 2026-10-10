@@ -1,6 +1,6 @@
 # Landing Pages Hub
 
-Central de demonstração de landing pages profissionais: oito categorias, oito modelos por categoria, 64 modelos cadastrados. Dez modelos concluídos estão disponíveis: dois médicos e os oito de estética. Os outros 54 permanecem em preparação e têm acesso bloqueado.
+Central de demonstração de landing pages profissionais: oito categorias, oito modelos por categoria, 64 modelos cadastrados. Dezoito modelos concluídos estão disponíveis: dois médicos, oito de estética e oito de nutrição. Os outros 46 permanecem em preparação e têm acesso bloqueado. A Central mostra apenas as três categorias com pelo menos um modelo disponível.
 
 React + TypeScript + Vite + React Router + Lucide + CSS. Projeto exclusivamente front-end.
 
@@ -20,7 +20,7 @@ No PowerShell com scripts bloqueados, use `npm.cmd`.
 
 ## Coleções
 
-`/medico`, `/nutricionista`, `/psicologo`, `/dentista`, `/personal-trainer`, `/advogado`, `/imobiliario` e `/estetica-beleza`. Cada uma possui `/modelo-01` a `/modelo-08`.
+`/medico`, `/nutricionista`, `/psicologo`, `/dentista`, `/personal-trainer`, `/advogado`, `/imobiliario` e `/estetica-beleza`. Cada uma possui `/modelo-01` a `/modelo-08` no catálogo; somente Médico, Nutricionista e Estética & Beleza aparecem na Central. As categorias sem modelos concluídos redirecionam para a página 404.
 
 As páginas têm JSX e CSS próprios em `src/pages/templates`. O catálogo está em `src/data/templates.ts` e os imports dinâmicos em `src/routes/landingRoutes.ts`. A Central e a CategoryPage existentes foram mantidas.
 

@@ -1,0 +1,14 @@
+:root {
+  --nutri-nutrisync-primary: #0B1024;
+  --nutri-nutrisync-secondary: #25284B;
+  --nutri-nutrisync-background: #090E1E;
+  --nutri-nutrisync-surface: #161D35;
+  --nutri-nutrisync-accent: #7657F2;
+  --nutri-nutrisync-text: #F7F8FF;
+  --nutri-nutrisync-muted: #ADB7D1;
+  --nutri-nutrisync-soft: #3CD6D0;
+  --nutri-nutrisync-font-body: "Inter", Arial, sans-serif;
+  --nutri-nutrisync-font-display: "Sora", Georgia, serif;
+  --nutri-nutrisync-radius-card: 24px;
+  --nutri-nutrisync-radius-button: 999px;
+}

@@ -1,0 +1,14 @@
+:root {
+  --nutri-fuel-primary: #101820;
+  --nutri-fuel-secondary: #26343D;
+  --nutri-fuel-background: #0B1117;
+  --nutri-fuel-surface: #17212A;
+  --nutri-fuel-accent: #C7F464;
+  --nutri-fuel-text: #F7F9F5;
+  --nutri-fuel-muted: #A8B0B5;
+  --nutri-fuel-soft: #24313A;
+  --nutri-fuel-font-body: "Inter", Arial, sans-serif;
+  --nutri-fuel-font-display: "Space Grotesk", Georgia, serif;
+  --nutri-fuel-radius-card: 24px;
+  --nutri-fuel-radius-button: 999px;
+}

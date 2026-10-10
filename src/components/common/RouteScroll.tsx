@@ -1,3 +1,5 @@
+import { nutritionTitles } from '../../pages/templates/nutricionista/shared/nutrition-types'
+import { nutritionRouteTitles } from '../../pages/templates/nutricionista/shared/nutrition-route-titles'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { templates } from '../../data/templates'
@@ -21,6 +23,11 @@ export function RouteScroll() {
     if (owner?.available && owner.categorySlug === 'estetica-beleza') {
       const page = pathname.slice(owner.route.length + 1)
       const title = beautyTitles[page] || nextBeautyPages[owner.slug.slice(-2)]?.find(item => item.slug === page)?.title || beautyTreatments.find(item => page === `tratamentos/${item.slug}`)?.name
+      document.title = `${title ? `${title} | ` : ''}${owner.name} | OrbisCore`
+    }
+    if (owner?.available && owner.categorySlug === 'nutricionista') {
+      const page = pathname.slice(owner.route.length + 1)
+      const title = nutritionTitles[page] || nutritionRouteTitles[owner.slug.slice(-2)]?.[page]
       document.title = `${title ? `${title} | ` : ''}${owner.name} | OrbisCore`
     }
     const frame = requestAnimationFrame(() => {

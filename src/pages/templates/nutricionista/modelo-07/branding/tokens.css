@@ -1,0 +1,14 @@
+:root {
+  --nutri-raizes-primary: #4E7059;
+  --nutri-raizes-secondary: #A9C9AD;
+  --nutri-raizes-background: #FFF9ED;
+  --nutri-raizes-surface: #FFFFFF;
+  --nutri-raizes-accent: #E8C96B;
+  --nutri-raizes-text: #34483B;
+  --nutri-raizes-muted: #747A6D;
+  --nutri-raizes-soft: #E9B5A2;
+  --nutri-raizes-font-body: "DM Sans", Arial, sans-serif;
+  --nutri-raizes-font-display: "Quicksand", Georgia, serif;
+  --nutri-raizes-radius-card: 24px;
+  --nutri-raizes-radius-button: 999px;
+}

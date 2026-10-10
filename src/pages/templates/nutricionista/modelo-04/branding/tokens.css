@@ -1,0 +1,14 @@
+:root {
+  --nutri-levemente-primary: #A9514A;
+  --nutri-levemente-secondary: #EF8D78;
+  --nutri-levemente-background: #FFF9F2;
+  --nutri-levemente-surface: #FFFFFF;
+  --nutri-levemente-accent: #C8B8E8;
+  --nutri-levemente-text: #4A3739;
+  --nutri-levemente-muted: #79696B;
+  --nutri-levemente-soft: #FFD8C5;
+  --nutri-levemente-font-body: "Nunito Sans", Arial, sans-serif;
+  --nutri-levemente-font-display: "Fraunces", Georgia, serif;
+  --nutri-levemente-radius-card: 24px;
+  --nutri-levemente-radius-button: 999px;
+}

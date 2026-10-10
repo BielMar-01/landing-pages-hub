@@ -132,130 +132,130 @@ export const templates: LandingTemplate[] = [
   {
     "id": "nutricionista-01",
     "categorySlug": "nutricionista",
-    "name": "Nutrir Clínica",
+    "name": "Essenza Nutri",
     "slug": "modelo-01",
-    "description": "Nutrição clínica que considera seu histórico, suas escolhas e a vida fora do consultório.",
-    "style": "Clássico",
+    "description": "Nutrição leve para uma vida em equilíbrio.",
+    "style": "Natural e humanizado",
     "tags": [
-      "Clássico",
-      "Avaliação nutricional",
-      "Nutrição"
+      "Natural e humanizado",
+      "Nutrição",
+      "Responsivo"
     ],
     "route": "/nutricionista/modelo-01",
-    "available": false,
-    "preview": "/images/nutricionista/modelo-01/preview.svg"
+    "available": true,
+    "preview": "/images/nutricionista/optimized/Retrato de nutricionista em escritório acolhedor-640.jpg"
   },
   {
     "id": "nutricionista-02",
     "categorySlug": "nutricionista",
-    "name": "Fuel Performance",
+    "name": "Maison Nutrition",
     "slug": "modelo-02",
-    "description": "Nutrição esportiva para conectar treinamento, recuperação e uma alimentação possível.",
-    "style": "Impacto",
+    "description": "A arte de nutrir o seu melhor.",
+    "style": "Premium e sofisticado",
     "tags": [
-      "Impacto",
-      "Nutrição esportiva",
-      "Nutrição"
+      "Premium e sofisticado",
+      "Nutrição",
+      "Responsivo"
     ],
     "route": "/nutricionista/modelo-02",
-    "available": false,
-    "preview": "/images/nutricionista/modelo-02/preview.svg"
+    "available": true,
+    "preview": "/images/nutricionista/optimized/Mesa Colorida de Alimentos Frescos-640.jpg"
   },
   {
     "id": "nutricionista-03",
     "categorySlug": "nutricionista",
-    "name": "Leve Hábitos",
+    "name": "Fuel Performance",
     "slug": "modelo-03",
-    "description": "Um espaço sem julgamentos para reconstruir a relação com a alimentação e com a rotina.",
-    "style": "Acolhedor",
+    "description": "Alimente sua evolução.",
+    "style": "Esportivo e performance",
     "tags": [
-      "Acolhedor",
-      "Organização alimentar",
-      "Nutrição"
+      "Esportivo e performance",
+      "Nutrição",
+      "Responsivo"
     ],
     "route": "/nutricionista/modelo-03",
-    "available": false,
-    "preview": "/images/nutricionista/modelo-03/preview.svg"
+    "available": true,
+    "preview": "/images/nutricionista/optimized/Corrida ao pôr do sol à beira d’água-640.jpg"
   },
   {
     "id": "nutricionista-04",
     "categorySlug": "nutricionista",
-    "name": "Raiz Funcional",
+    "name": "LeveMente Nutrição",
     "slug": "modelo-04",
-    "description": "Escuta clínica e comida de verdade em um acompanhamento atento às suas particularidades.",
-    "style": "Editorial",
+    "description": "Comer bem também é viver bem.",
+    "style": "Comportamental e acolhedor",
     "tags": [
-      "Editorial",
-      "Nutrição funcional",
-      "Nutrição"
+      "Comportamental e acolhedor",
+      "Nutrição",
+      "Responsivo"
     ],
     "route": "/nutricionista/modelo-04",
-    "available": false,
-    "preview": "/images/nutricionista/modelo-04/preview.svg"
+    "available": true,
+    "preview": "/images/nutricionista/optimized/Consulta de Nutrição e Hábitos Saudáveis (1)-640.jpg"
   },
   {
     "id": "nutricionista-05",
     "categorySlug": "nutricionista",
-    "name": "Ciclo Nutrição",
+    "name": "Nutriva Clinic",
     "slug": "modelo-05",
-    "description": "Nutrição feminina com atenção às diferentes fases da vida e às necessidades individuais.",
-    "style": "Contemporâneo",
+    "description": "Ciência aplicada à sua saúde.",
+    "style": "Clínico e científico",
     "tags": [
-      "Contemporâneo",
-      "Saúde da mulher",
-      "Nutrição"
+      "Clínico e científico",
+      "Nutrição",
+      "Responsivo"
     ],
     "route": "/nutricionista/modelo-05",
-    "available": false,
-    "preview": "/images/nutricionista/modelo-05/preview.svg"
+    "available": true,
+    "preview": "/images/nutricionista/optimized/Profissional de saúde com tablet e alimentos frescos-640.jpg"
   },
   {
     "id": "nutricionista-06",
     "categorySlug": "nutricionista",
-    "name": "Primeiras Colheres",
+    "name": "Forma Nutri",
     "slug": "modelo-06",
-    "description": "Orientação nutricional para famílias, da gestação às primeiras experiências à mesa.",
-    "style": "Criativo",
+    "description": "O essencial para se sentir bem.",
+    "style": "Minimalista e editorial",
     "tags": [
-      "Criativo",
-      "Nutrição na gestação",
-      "Nutrição"
+      "Minimalista e editorial",
+      "Nutrição",
+      "Responsivo"
     ],
     "route": "/nutricionista/modelo-06",
-    "available": false,
-    "preview": "/images/nutricionista/modelo-06/preview.svg"
+    "available": true,
+    "preview": "/images/nutricionista/optimized/Natureza em Grãos e Cores-640.jpg"
   },
   {
     "id": "nutricionista-07",
     "categorySlug": "nutricionista",
-    "name": "Maison Nutri",
+    "name": "Raízes Nutrição",
     "slug": "modelo-07",
-    "description": "Nutrição particular com tempo para compreender seu estilo de vida e planejar com cuidado.",
-    "style": "Premium",
+    "description": "Cuidando de cada fase da vida.",
+    "style": "Familiar e materno-infantil",
     "tags": [
-      "Premium",
-      "Consulta particular",
-      "Nutrição"
+      "Familiar e materno-infantil",
+      "Nutrição",
+      "Responsivo"
     ],
     "route": "/nutricionista/modelo-07",
-    "available": false,
-    "preview": "/images/nutricionista/modelo-07/preview.svg"
+    "available": true,
+    "preview": "/images/nutricionista/optimized/Refeição Saudável em Família-640.jpg"
   },
   {
     "id": "nutricionista-08",
     "categorySlug": "nutricionista",
-    "name": "Beatriz Amaral",
+    "name": "NutriSync",
     "slug": "modelo-08",
-    "description": "Ciência, escuta e prática no trabalho de uma nutricionista que acredita em autonomia.",
-    "style": "Marca pessoal",
+    "description": "Sua nutrição conectada à sua evolução.",
+    "style": "Digital e tecnológico",
     "tags": [
-      "Marca pessoal",
-      "Nutrição clínica",
-      "Nutrição"
+      "Digital e tecnológico",
+      "Nutrição",
+      "Responsivo"
     ],
     "route": "/nutricionista/modelo-08",
-    "available": false,
-    "preview": "/images/nutricionista/modelo-08/preview.svg"
+    "available": true,
+    "preview": "/images/nutricionista/optimized/Consulta Nutricional Online em Ambiente Acolhedor-640.jpg"
   },
   {
     "id": "psicologo-01",

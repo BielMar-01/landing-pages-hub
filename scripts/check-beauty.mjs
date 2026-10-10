@@ -9,7 +9,7 @@ try {
   const { templates } = await server.ssrLoadModule('/src/data/templates.ts')
   const { TemplateAccess } = await server.ssrLoadModule('/src/routes/TemplateAccess.tsx')
   const { TemplateCard } = await server.ssrLoadModule('/src/components/category/TemplateCard.tsx')
-  assert.equal(templates.filter(t=>t.available).length,10)
+  assert.equal(templates.filter(t=>t.available).length,18)
   assert.equal(templates.filter(t=>t.categorySlug==='estetica-beleza' && t.available).length,8)
   for(const template of templates.filter(t=>!t.available)) {
     const blocked=renderToString(h(MemoryRouter,{initialEntries:[template.route]},h(TemplateAccess,{path:template.route},h('div',null,'FORBIDDEN_CONTENT'))))

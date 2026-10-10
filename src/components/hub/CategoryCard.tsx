@@ -13,7 +13,8 @@ export function CategoryCard({ category }: CategoryCardProps) {
   const Icon = category.icon
   const models = getTemplatesByCategory(category.slug)
   const ready = models.filter(template => template.available)
-  const preview = ready[0] || models[0]
+  const preview = ready[0]
+  if (!preview) return null
 
   return (
     <Link
